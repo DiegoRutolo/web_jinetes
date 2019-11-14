@@ -1,0 +1,13 @@
+"dic": {
+	"fue": "Fuerza",
+	"des": "Destreza",
+	"con": "Constitucion",
+	"car": "Carisma",
+	"int": "Inteligencia",
+	"sab": "Sabiduria",
+
+	"st": "Aguante",
+	"mn": "Mana",
+	"dv": "Devoción",
+	"ki": "Ki"
+}

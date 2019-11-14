@@ -1,0 +1,308 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	width: 1200px;
+	margin: auto;
+}
+
+@media only screen and (max-width: 1600px) {
+	body {
+		width: 800px;
+	}
+}
+/*
+@media only screen and (max-width: 850px) {
+	body {
+		width: 500px;
+	}
+}
+*/
+
+img.separador {
+	width: 100%;
+	margin: 2px 0;
+}
+
+.row {
+	width: 100%;
+	padding: 20px 0;
+	/*border: 1px solid red;*/
+}
+
+.row::after {
+	contet: "";
+	clear: both;
+	display: table;
+}
+
+[class*="col"] {
+	float: left;
+	padding: 5px;
+}
+
+output {
+	border: 2px solid black;
+	border-radius: 5px;
+	display: block;
+	margin: auto;
+}
+
+.lineaTexto {
+	width: 75%;
+	border: 0;
+	border-bottom: 1px solid black;
+	font-size: 110%;
+	font-style: italic;
+}
+
+/* Encabezado */
+
+#iTitulo {
+	margin: 20px auto;
+}
+
+header .col {
+	width: 33%;
+}
+
+header [id*="l"] {
+	width: 34%;
+}
+
+header [id*="i"] {
+	width: 66%;
+}
+
+[onclick] {
+	cursor: pointer;
+}
+
+/* Atributos */
+.atributos h2 {
+	text-align: center;
+}
+
+.atributos .primarios .atom {
+	width: 15%;
+	float: left;
+	margin: 2px;
+}
+
+.atributos .primarios .atom * {
+	text-align: center;
+	width: 100%;
+}
+
+.atributos .primarios .atom p {
+	font-weight: normal;
+}
+
+.atributos .primarios .atom input {
+	font-size: 200%;
+	border: 2px solid black;
+	border-radius: 5px;
+}
+
+.atributos .primarios .atom output {
+	font-size: 150%;
+	width: 80%;
+}
+
+.atributos .secundarios {
+	font-size: 120%;
+}
+
+.atributos .secundarios output {
+	width: 80%;
+	text-align: center;
+}
+
+.atributos .secundarios input {
+	width: 100%;
+	text-align: center;
+	border: 2px solid black;
+	border-radius: 5px;
+	font-size: 110%;
+}
+
+
+.atributos .secundarios button {
+	border: 2px solid black;
+	border-radius: 5px;
+	width: 3em;
+	cursor: pointer;
+}
+
+.atributos .secundarios .col-A {
+	width: 60%;
+	/*border: 1px solid red;*/
+}
+
+.atributos .secundarios .col-A-A {
+	width: 33%;
+	/*border: 1px solid red;*/
+}
+
+.atributos .secundarios .col-A-B {
+	width: 67%;
+	/*border: 1px solid red;*/
+}
+
+.atributos .secundarios .col-A-B input {
+	width: 45%;
+}
+
+.atributos .secundarios .col-B {
+	width: 40%;
+	/*border: 1px solid red;*/
+	text-align: center;
+}
+
+.atributos .secundarios .col-B output {
+	width: 100%;
+}
+
+.atributos .secundarios .col-B * {
+	padding: 0;
+	margin: 2px;
+}
+
+.atributos .secundarios .col-B table {
+	table-layout: fixed;
+}
+
+.atributos .secundarios .col-B-B {
+	width: 100%;
+}
+
+.atributos .secundarios .col-B-B input {
+	width: 60%;
+}
+
+.atributos .secundarios .col-C {
+	width: 100%;
+	text-align: center;
+}
+
+.atributos .secundarios .col-C * {
+	width: 100%;
+}
+
+.contenedor input {
+	display: none;
+}
+
+.contenedor label {
+	cursor: pointer;
+}
+
+#contenedorMana input + label {
+	display: inline-block;
+	background: url('../img/bola_vacia.png') no-repeat;
+	height: 33px;
+	width: 33px;
+	background-size: 90%;
+}
+
+#contenedorMana input:checked + label {
+	display: inline-block;
+	background: url('../img/bola_llena.png') no-repeat;
+	height: 33px;
+	width: 33px;
+	background-size: 90%;
+}
+
+#contenedorMana input:disabled + label {
+	display: inline-block;
+	background: url('../img/bola_inactiva.png') no-repeat;
+	height: 33px;
+	width: 33px;
+	background-size: 90%;
+}
+
+/* AC*/
+.ac .numeros > * {
+	float: left;
+	margin: auto 5px;
+}
+
+.ac .atom {
+	width: 14%;
+}
+
+.ac .numeros * {
+	font-size: 110%;
+	text-align: center;
+}
+
+.ac .numeros .atom:first-child {
+	font-size: 130%;
+}
+
+.ac .numeros .atom:first-child p {
+	margin-bottom: 5px;
+}
+
+.ac .numeros .atom *:last-child {
+	font-size: 150%;
+}
+
+.ac .numeros input {
+	border: 2px solid black;
+	border-radius: 5px;
+	width: 100%;
+}
+
+.ac .numeros > p {
+	margin-top: 4em;
+}
+
+#lineaArmadura {
+	width: 100%;
+	float: left;
+	margin-top: 20px;
+}
+
+#lineaArmadura label {
+	width: 25%;
+}
+
+/* Equipo */
+section.eqHabs > * {
+	float: left;
+}
+
+.eqHabs img {
+	width: 5%;
+	margin: 0 2em;
+}
+
+.eqHabs .col {
+	width: 43%;
+}
+
+.eqHabs .col * {
+	width: 100%;
+}
+
+
+/* Botones */
+aside {
+	position: fixed;
+	right: 32px;
+	top: 30px;
+	width: 50px;
+}
+
+aside button {
+	background-color: SkyBlue;
+	border: none;
+	border-radius: 5px;
+	padding: 15px;
+	text-align: center;
+	text-decoration: none;
+	margin-top: 10px;
+	cursor: pointer;
+}

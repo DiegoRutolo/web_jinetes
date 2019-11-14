@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ficha Jinetes</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="res/css/estiloPrincipal.css">
+	<meta name="viewport" content="width=device-width, inital-scale=1.0">
+	<script src="res/js/main.js"></script>
+</head>
+<body onload="main()">
+	<aside class="botones" id="asideBotones">
+		<button type="button" onclick="descargar()">
+			<a id="linkDescarga">
+				<img src="res/img/save_icon.png" width="48" height="48">
+			</a>
+		</button>
+		<button type="button" onclick="botonSubir()">
+			<img src="res/img/load_icon.png" width="48" height="48">
+			<input type="file" style="display: none" id="iCarga" accept=".json">
+		</button>
+	</aside>
+
+	<form oninput="actualizar()" method="post">
+		<!-- Encabezado -->
+		<header>
+			<h1 id="iTitulo">Los Jinetes de Kal</h1>
+			<br>
+			<div class="row">
+				<div class="col">
+					<label for="iNom" id="lNom">Nombre:</label>
+					<input type="text" name="nom" id="iNom" class="lineaTexto">
+				</div>
+				<div class="col">
+					<label for="iRaza" id="lRaza">Raza:</label>
+					<select name="raza" class="lineaTexto" id="iRaza">
+						<option value="hum">Humano</option>
+						<option value="elf">Elfo</option>
+						<option value="ena">Enano</option>
+						<option value="due">Duende</option>
+					</select>
+				</div>
+				<div class="col">
+					<label for="iClase" id="lClase">Clase:</label>
+					<input type="text" name="clase" id="iClase" class="lineaTexto" list="clases">
+					<datalist id="clases">
+						<option value="brb">Bárbaro</option>
+					</datalist>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<label for="iEdad" id="lEdad">Edad:</label>
+					<input type="number" name="edad" id="iEdad" class="lineaTexto">
+				</div>
+				<div class="col">
+					<label for="iAltura" id="lAltura">Altura:</label>
+					<input type="text" name="nom" id="iAltura" class="lineaTexto">
+				</div>
+				<div class="col">
+					<label for="iPeso" id="lPeso">Peso:</label>
+					<input type="text" name="peso" id="iPeso" class="lineaTexto">
+				</div>
+			</div>
+		</header>
+		<img src="res/img/separador_1_horizontal.png" class="separador">
+		<!-- Atributos -->
+		<!-- B = A/2 - 20 -->
+		<section class="atributos">
+			<h2>Atributos</h2>
+			<div class="primarios">
+				<div class="atom"
+>					<p name="nomAtr" onclick="setPrincipal(this)">FUE</p>
+					<input type="number" id="fue" value="30">
+					<output id="bfue"></output>
+				</div>
+				<div class="atom">
+					<p name="nomAtr" onclick="setPrincipal(this)">DES</p>
+					<input type="number" id="des" value="30">
+					<output id="bdes"></output>
+				</div>
+				<div class="atom">
+					<p name="nomAtr" onclick="setPrincipal(this)">CON</p>
+					<input type="number" id="con" value="30">
+					<output id="bcon"></output>
+				</div>
+				<div class="atom">
+					<p name="nomAtr" onclick="setPrincipal(this)">CAR</p>
+					<input type="number" id="car" value="30">
+					<output id="bcar"></output>
+				</div>
+				<div class="atom">
+					<p name="nomAtr" onclick="setPrincipal(this)">INT</p>
+					<input type="number" id="int" value="30">
+					<output id="bint"></output>
+				</div>
+				<div class="atom">
+					<p name="nomAtr" onclick="setPrincipal(this)">SAB</p>
+					<input type="number" id="sab" value="30">
+					<output id="bsab"></output>
+				</div>
+			</div>
+			<br>
+			<br>
+			<br>
+			<div class="secundarios">
+				<div class="row">
+					<div class="col-A">
+						<div class="row">
+							<div class="col-A-A">
+								Movimiento:
+							</div>
+							<div class="col-A-A">
+								<output id="mov"></output>
+							</div>
+							<div class="col-A-A">
+								metros/turno
+							</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-A-A">
+								Levantamiento:
+							</div>
+							<div class="col-A-A">
+								<output id="lev"></output>
+							</div>
+							<div class="col-A-A">
+								Kg
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-A-A">
+								Apariencia:
+							</div>
+							<div class="col-A-B">
+								<input type="number" id="apar" value="5">
+							</div>
+						</div>
+					</div>
+					<div class="col-B">
+						<table>
+							<tr>
+								<td colspan="2">
+									<h3>Vitalidad</h3>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<p>Maxima</p>
+									<output id="hpMax"></output>
+								</td>
+							</tr>
+							<tr>
+								<td rowspan="2" class="width: 80%;">
+									<p>Actual</p>
+									<input type="number" id="hpAct">
+								</td>
+								<td class="col-B-B">
+									<input type="number" id="hpDif" value="0">
+								</td>
+							</tr>
+							<tr>
+								<td class="col-B-B">
+									<button type="button" onclick="sumaHP(1)">+</button>
+									<button type="button" onclick="sumaHP(-1)">-</button>
+									<button type="button" onclick="maxHP()">Max</button>
+								</td>
+							</tr>
+						</table>
+				</div>
+				<div class="row">
+					<div class="col-C">
+						<h3>Mana/Devoción/Aguante/Ki</h3>
+						<input type="range" min="1" max="20" id="mana" style="display:none">
+						<div class="contenedor" id="contenedorMana">
+							<input type="checkbox" name="mana" id="iMana1" value="1" onclick="actualizarMana(this)">
+							<label for="iMana1"></label>
+							<input type="checkbox" name="mana" id="iMana2" value="2" onclick="actualizarMana(this)">
+							<label for="iMana2"></label>
+							<input type="checkbox" name="mana" id="iMana3" value="3" onclick="actualizarMana(this)">
+							<label for="iMana3"></label>
+							<input type="checkbox" name="mana" id="iMana4" value="4" onclick="actualizarMana(this)">
+							<label for="iMana4"></label>
+							<input type="checkbox" name="mana" id="iMana5" value="5" onclick="actualizarMana(this)">
+							<label for="iMana5"></label>
+							<input type="checkbox" name="mana" id="iMana6" value="6" onclick="actualizarMana(this)">
+							<label for="iMana6"></label>
+							<input type="checkbox" name="mana" id="iMana7" value="7" onclick="actualizarMana(this)">
+							<label for="iMana7"></label>
+							<input type="checkbox" name="mana" id="iMana8" value="8" onclick="actualizarMana(this)">
+							<label for="iMana8"></label>
+							<input type="checkbox" name="mana" id="iMana9" value="9" onclick="actualizarMana(this)">
+							<label for="iMana9"></label>
+							<input type="checkbox" name="mana" id="iMana10" value="10" onclick="actualizarMana(this)">
+							<label for="iMana10"></label>
+							<input type="checkbox" name="mana" id="iMana11" value="11" onclick="actualizarMana(this)">
+							<label for="iMana11"></label>
+							<input type="checkbox" name="mana" id="iMana12" value="12" onclick="actualizarMana(this)">
+							<label for="iMana12"></label>
+							<input type="checkbox" name="mana" id="iMana13" value="13" onclick="actualizarMana(this)">
+							<label for="iMana13"></label>
+							<input type="checkbox" name="mana" id="iMana14" value="14" onclick="actualizarMana(this)">
+							<label for="iMana14"></label>
+							<input type="checkbox" name="mana" id="iMana15" value="15" onclick="actualizarMana(this)">
+							<label for="iMana15"></label>
+							<input type="checkbox" name="mana" id="iMana16" value="16" onclick="actualizarMana(this)">
+							<label for="iMana16"></label>
+							<input type="checkbox" name="mana" id="iMana17" value="17" onclick="actualizarMana(this)">
+							<label for="iMana17"></label>
+							<input type="checkbox" name="mana" id="iMana18" value="18" onclick="actualizarMana(this)">
+							<label for="iMana18"></label>
+							<input type="checkbox" name="mana" id="iMana19" value="19" onclick="actualizarMana(this)">
+							<label for="iMana19"></label>
+							<input type="checkbox" name="mana" id="iMana20" value="20" onclick="actualizarMana(this)">
+							<label for="iMana20"></label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<img src="res/img/separador_1_horizontal.png" class="separador">
+		<!-- AC -->
+		<section class="ac">
+			<div class="numeros">
+				<div class="atom">
+					<p>AC</p>
+					<output id="acTotal"></output>
+				</div>
+				<p>= 15 +</p>
+				<div class="atom">
+					<p>Bono DES</p>
+					<output id="acBDES"></output>
+				</div>
+				<p>+</p>
+				<div class="atom">
+					<p>Armadura</p>
+					<input type="number" id="acArmadura" value="0">
+				</div>
+				<p>+</p>
+				<div class="atom">
+					<p>Mod Raza</p>
+					<input type="number" id="acModRaza" value="0">
+				</div>
+				<p>+</p>
+				<div class="atom">
+					<p>Extra</p>
+					<input type="number" id="acExtra" value="0">
+				</div>
+			</div>
+			<div id="lineaArmadura">
+				<label for="iACnomArmadura">ARMADURA:</label>
+				<input type="text" id="iACarmTexto" class="lineaTexto">
+			</div>
+		</section>
+		<img src="res/img/separador_1_horizontal.png" class="separador">
+		<!-- Equipo -->
+		<section class="eqHabs">
+			<div class="col">
+				<h3>Habilidades pasivas</h3>
+				<div class="lineas" id="lineasPasivas">
+					<input type="text" class="lineaTexto">
+					<input type="text" class="lineaTexto">
+					<input type="text" class="lineaTexto">
+					<input type="text" class="lineaTexto">
+					<input type="text" class="lineaTexto">
+					<input type="text" class="lineaTexto">
+					<input type="text" class="lineaTexto">
+					<input type="text" class="lineaTexto">
+					<input type="text" class="lineaTexto">
+					<input type="text" class="lineaTexto">
+					<input type="text" class="lineaTexto">
+					<input type="text" class="lineaTexto">
+				</div>
+			</div>
+			<img src="res/img/separador_2_vertical.png">
+			<div class="col">
+				<h3>Equipo</h3>
+				<div class="lineas" id="lineasEquipo">
+					<input type="text" class="lineaTexto">
+					<input type="text" class="lineaTexto">
+					<input type="text" class="lineaTexto">
+					<input type="text" class="lineaTexto">
+					<input type="text" class="lineaTexto">
+					<input type="text" class="lineaTexto">
+					<input type="text" class="lineaTexto">
+					<input type="text" class="lineaTexto">
+					<input type="text" class="lineaTexto">
+					<input type="text" class="lineaTexto">
+					<input type="text" class="lineaTexto">
+					<input type="text" class="lineaTexto">
+				</div>
+			</div>
+		</section>
+	</form>
+</body>
+</html>

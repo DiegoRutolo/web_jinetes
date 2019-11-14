@@ -1,0 +1,52 @@
+"listaClases": {
+	"brb": {
+		"nom": "Bárbaro",
+		"atr": "fue",
+		"rec": "st"
+	},
+	"brd": {
+		"nom": "Bardo",
+		"atr": "car",
+		"rec": "mn"
+	},
+	"caz": {
+		"nom": "Cazador",
+		"atr": "des",
+		"rec": "st"
+	},
+	"dom": {
+		"nom": "Domabestias",
+		"atr": "car",
+		"rec": "st"
+	},
+	"her": {
+		"nom": "Herrero rúnico",
+		"atr": "des",
+		"rec": "st"
+	},
+	"mag": {
+		"nom": "Mago",
+		"atr": "sab",
+		"rec": "mn"
+	},
+	"mon": {
+		"nom": "Monje",
+		"atr": "sab",
+		"rec": "ki"
+	},
+	"pal": {
+		"nom": "Paladín",
+		"atr": "sab",
+		"rec": "dv"
+	},
+	"pic": {
+		"nom": "Pícaro",
+		"atr": "des",
+		"rec": "st"
+	},
+	"sol": {
+		"nom": "Soldado",
+		"atr": "des",
+		"rec": "st"
+	}
+}
