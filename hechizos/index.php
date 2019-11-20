@@ -24,9 +24,6 @@
     ?>
   </head>
   <body>
-    <div class="jumbotron text-center" style="margin-bottom: 0;">
-      <h1>Los Jinetes de Kal</h1>
-    </div>
 
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
       <ul class="nav navbar-nav">
@@ -54,41 +51,69 @@
     </nav>
 
     <div class="container">
-      <h2>Hechizos y habilidades</h2>
-
       <?php
         $con = new mysqli($server, $usuario, $passwd, "jinetes");
         if ($con->connect_error) {
-          die("Connection failed: " . $conn->connect_error);
+          die("Connection failed" . $conn->connect_error);
         }
 
         $sql = "SELECT * FROM Habilidad";
         $res = $con->query($sql);
+     ?>
 
-       ?>
+     <br>
+     <h2 class="center">Habilidades activas</h2>
 
-       <table class="table table-bordered table-striped">
-         <tr>
-           <th>Hechizo</th>
-           <th>Tier</th>
-           <th>Tipo</th>
-         </tr>
-         <?php
-         if ($res->num_rows > 0) {
-           while ($row = $res->fetch_assoc()) {
-             echo "<tr>";
-             echo "<td>" . $row["nom"] . "</td>";
-             echo "<td>" . $row["tier"] . "</td>";
-             echo "<td>" . $row["tipo"] . "</td>";
-             echo "</tr>";
-           }
-         } else {
-           echo "<th>" . "nada" . "</th>";
-         }
-          ?>
-       </table>
+     <!-- Pestañas -->
+     <ul class="nav nav-tabs">
+       <li class="nav-item">
+         <a class="nav-link active" data-toggle="tab" href="#habilidades">Habilidades de aguante</a>
+       </li>
+       <li class="nav-item">
+         <a class="nav-link" data-toggle="tab" href="#hechizos">Hechizos</a>
+       </li>
+       <li class="nav-item">
+         <a class="nav-link" data-toggle="tab" href="#canciones">Canciones</a>
+       </li>
+       <li class="nav-item">
+         <a class="nav-link" data-toggle="tab" href="#milagros">Milagros</a>
+       </li>
+       <li class="nav-item">
+         <a class="nav-link" data-toggle="tab" href="#kihon">Kihon</a>
+       </li>
+       <li class="nav-item">
+         <a class="nav-link" data-toggle="tab" href="#runas">Runas</a>
+       </li>
+     </ul>
 
-       <?php $con.close(); ?>
+     <!-- Contenido -->
+     <div class="tab-content">
+       <div id="habilidades" class="container tab-pane active">
+         <h4>Habilidades</h4>
+       </div>
+
+       <div id="hechizos" class="container tab-pane">
+         <h4>Hechizos</h4>
+       </div>
+
+       <div id="canciones" class="container tab-pane">
+         <h4>Canciones</h4>
+       </div>
+
+       <div id="milagros" class="container tab-pane">
+         <h4>Milagros</h4>
+       </div>
+
+       <div id="kihon" class="container tab-pane">
+         <h4>Kihon</h4>
+       </div>
+
+       <div id="Runas" class="container tab-pane">
+         <h4>Runas</h4>
+       </div>
+     </div>
+
     </div>
+    <?php $con.close(); ?>
   </body>
 </html>
