@@ -2,7 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="utf-8">
-    <title>Los Jinetes de Kal</title>
+    <title>Hechizos</title>
 
     <!-- BootStrap --->
     <!-- Latest compiled and minified CSS -->
@@ -15,6 +15,13 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <?php
+      $server = "localhost";
+      $creds = file("../creds.txt");
+      $usuario = trim($creds[0]);
+      $passwd = trim($creds[1]);
+    ?>
   </head>
   <body>
     <div class="jumbotron text-center" style="margin-bottom: 0;">
@@ -47,8 +54,41 @@
     </nav>
 
     <div class="container">
-      <h2>Titulo</h2>
-      <p class="prueba">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <h2>Hechizos y habilidades</h2>
+
+      <?php
+        $con = new mysqli($server, $usuario, $passwd, "jinetes");
+        if ($con->connect_error) {
+          die("Connection failed: " . $conn->connect_error);
+        }
+
+        $sql = "SELECT * FROM Habilidad";
+        $res = $con->query($sql);
+
+       ?>
+
+       <table class="table table-bordered table-striped">
+         <tr>
+           <th>Hechizo</th>
+           <th>Tier</th>
+           <th>Tipo</th>
+         </tr>
+         <?php
+         if ($res->num_rows > 0) {
+           while ($row = $res->fetch_assoc()) {
+             echo "<tr>";
+             echo "<td>" . $row["nom"] . "</td>";
+             echo "<td>" . $row["tier"] . "</td>";
+             echo "<td>" . $row["tipo"] . "</td>";
+             echo "</tr>";
+           }
+         } else {
+           echo "<th>" . "nada" . "</th>";
+         }
+          ?>
+       </table>
+
+       <?php $con.close(); ?>
     </div>
   </body>
 </html>
