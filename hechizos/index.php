@@ -42,7 +42,6 @@
 
      <br>
      <h2 class="center">Habilidades activas</h2>
-     <img src="https://jinetes.rutolo.eu/res/img/green_tick.png" class="icono" width="20em" height="20em">
 
      <!-- Pestañas -->
      <ul class="nav nav-tabs">
@@ -137,18 +136,22 @@
 
        <div id="canciones" class="container tab-pane">
          <h4>Canciones</h4>
+         <p>Pendiente de implementación</p>
        </div>
 
        <div id="milagros" class="container tab-pane">
          <h4>Milagros</h4>
+         <p>Pendiente de implementación</p>
        </div>
 
        <div id="kihon" class="container tab-pane">
          <h4>Kihon</h4>
+         <p>Pendiente de implementación</p>
        </div>
 
        <div id="runas" class="container tab-pane">
          <h4>Runas</h4>
+         <p>Pendiente de implementación</p>
        </div>
      </div>
 
