@@ -90,7 +90,7 @@
          <h4>Kihon</h4>
        </div>
 
-       <div id="Runas" class="container tab-pane">
+       <div id="runas" class="container tab-pane">
          <h4>Runas</h4>
        </div>
      </div>
