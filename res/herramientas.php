@@ -5,6 +5,11 @@
     echo '
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
       <ul class="nav navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="https://jinetes.rutolo.eu">
+            <img src="https://jinetes.rutolo.eu/res/img/torre_blanca.png" class="icono" width="40em" height="40em">
+          </a>
+        </li>
         <li class="nav-item dropdown">
           <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">Sistema y contenido <span class="caret"></span></a>
           <div class="dropdown-menu">
@@ -20,7 +25,7 @@
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="fichaWeb/ficha.html" target="_blank">Ficha web</a>
+          <a class="nav-link" href="https://jinetes.rutolo.eu/fichaWeb/ficha.html" target="_blank">Ficha web</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Personas</a>
