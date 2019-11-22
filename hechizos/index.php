@@ -102,7 +102,7 @@
          <?php
          $sql = "SELECT *
           FROM Habilidad
-          WHERE Habilidad.tipo LIKE 'Hechizo' AND NOT Habilidad.subtipo LIKE 'Canci?n'
+          WHERE Habilidad.tipo LIKE 'Hechizo' AND NOT Habilidad.subtipo LIKE 'Canc%'
           ORDER BY Habilidad.tier";
          $res = $con->query($sql);
          ?>
@@ -136,7 +136,39 @@
 
        <div id="canciones" class="container tab-pane">
          <h4>Canciones</h4>
-         <p>Pendiente de implementación</p>
+         <?php
+         $sql = "SELECT *
+          FROM Habilidad
+          WHERE Habilidad.subtipo LIKE 'Canc%'
+          ORDER BY Habilidad.tier";
+         $res = $con->query($sql);
+         ?>
+         <table class="table table-striped table-bordered">
+           <tr>
+             <th>Canción</th>
+             <th>Tier</th>
+             <th>Continua</th>
+             <th>Gratuito</th>
+             <th>Automático</th>
+             <th>Efecto</th>
+           </tr>
+           <?php
+           if ($res->num_rows > 0) {
+             while ($row = $res->fetch_assoc()) {
+               echo "<tr>";
+
+               echo "<td>" . utf8_encode($row["nom"]) . "</td>";
+               echo "<td>" . utf8_encode($row["tier"]) . "</td>";
+               echo "<td>" . ($row["contin"] ? GetIcono('t') : GetIcono('c')) . "</td>";
+               echo "<td>" . ($row["gratis"] ? GetIcono('t') : GetIcono('c')) . "</td>";
+               echo "<td>" . ($row["auto"] ? GetIcono('t') : GetIcono('c')) . "</td>";
+               echo "<td>" . utf8_encode($row["descr"]) . "</td>";
+
+               echo "</tr>\n";
+             }
+           }
+           ?>
+         </table>
        </div>
 
        <div id="milagros" class="container tab-pane">
