@@ -3,11 +3,11 @@
   function ImprimeNavBar()
   {
     echo '
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
       <ul class="nav navbar-nav">
         <li class="nav-item">
           <a class="nav-link" href="https://jinetes.rutolo.eu">
-            <img src="https://jinetes.rutolo.eu/res/img/torre_blanca.png" class="icono" width="40em" height="40em">
+            <img src="https://jinetes.rutolo.eu/res/img/torre_blanca.png" class="icono" width="30em" height="30em">
           </a>
         </li>
         <li class="nav-item dropdown">

@@ -17,16 +17,17 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="res/css/style.css">
+    <link rel="stylesheet" type="text/css" href="res/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
-    <div class="jumbotron text-center" style="margin-bottom: 0;">
+
+    <?php ImprimeNavBar(); ?>
+
+    <div class="cabezoneria">
+      <img src="https://jinetes.rutolo.eu/res/img/Kal_4C.png" width="100%">
       <h1>Los Jinetes de Kal</h1>
     </div>
-
-    <?php
-      ImprimeNavBar();
-    ?>
 
     <div class="container">
       <h2>Titulo</h2>

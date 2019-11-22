@@ -1,0 +1,23 @@
+body {
+  padding-top: 4vw;
+}
+
+/* Banner */
+.cabezoneria img {
+  width: 100%;
+  height: auto;
+  opacity: 0.6;
+}
+
+.cabezoneria h1 {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 6vw;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+.prueba {
+  border: 5px dashed lavender;
+}
