@@ -173,7 +173,37 @@
 
        <div id="milagros" class="container tab-pane">
          <h4>Milagros</h4>
-         <p>Pendiente de implementación</p>
+         <?php
+         $sql = "SELECT *
+          FROM Habilidad
+          WHERE Habilidad.tipo LIKE 'Milagro'
+          ORDER BY Habilidad.tier";
+         $res = $con->query($sql);
+         ?>
+         <table class="table table-striped table-bordered">
+           <tr>
+             <th>Milagro</th>
+             <th>Usuario</th>
+             <th>Tier</th>
+             <th>Efecto</th>
+           </tr>
+           <?php
+           if ($res->num_rows > 0) {
+             while ($row = $res->fetch_assoc()) {
+               $caster = is_null($row["subtipo"]) ? "Ambos" : $row["subtipo"];
+
+               echo "<tr>";
+
+               echo "<td>" . utf8_encode($row["nom"]) . "</td>";
+               echo "<td>" . utf8_encode($caster) . "</td>";
+               echo "<td>" . utf8_encode($row["tier"]) . "</td>";
+               echo "<td>" . utf8_encode($row["descr"]) . "</td>";
+
+               echo "</tr>\n";
+             }
+           }
+           ?>
+         </table>
        </div>
 
        <div id="kihon" class="container tab-pane">
