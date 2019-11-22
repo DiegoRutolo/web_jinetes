@@ -83,11 +83,13 @@
            <?php
            if ($res->num_rows > 0) {
              while ($row = $res->fetch_assoc()) {
+               $caster = is_null($row["subtipo"]) ? "Todas" : $row["subtipo"];
+
                echo "<tr>";
 
                echo "<td>" . utf8_encode($row["nom"]) . "</td>";
                echo "<td>" . utf8_encode($row["tier"]) . "</td>";
-               echo "<td>" . utf8_encode($row["subtipo"]) . "</td>";
+               echo "<td>" . utf8_encode($caster) . "</td>";
                echo "<td>" . utf8_encode($row["descr"]) . "</td>";
 
                echo "</tr>\n";
@@ -208,12 +210,70 @@
 
        <div id="kihon" class="container tab-pane">
          <h4>Kihon</h4>
-         <p>Pendiente de implementación</p>
+         <?php
+         $sql = "SELECT *
+          FROM Habilidad
+          WHERE Habilidad.tipo LIKE 'Kihon'
+          ORDER BY Habilidad.tier";
+         $res = $con->query($sql);
+         ?>
+         <table class="table table-striped table-bordered">
+           <tr>
+             <th>Nombre</th>
+             <th>Tier</th>
+             <th>Usuario</th>
+             <th>Activable</th>
+             <th>Efecto</th>
+           </tr>
+           <?php
+           if ($res->num_rows > 0) {
+             while ($row = $res->fetch_assoc()) {
+               $caster = is_null($row["subtipo"]) ? "Todos" : $row["subtipo"];
+
+               echo "<tr>";
+
+               echo "<td>" . utf8_encode($row["nom"]) . "</td>";
+               echo "<td>" . utf8_encode($row["tier"]) . "</td>";
+               echo "<td>" . utf8_encode($caster) . "</td>";
+               echo "<td>" . ($row["contin"] ? GetIcono('t') : GetIcono('c')) . "</td>";
+               echo "<td>" . utf8_encode($row["descr"]) . "</td>";
+
+               echo "</tr>\n";
+             }
+           }
+           ?>
+         </table>
        </div>
 
        <div id="runas" class="container tab-pane">
          <h4>Runas</h4>
-         <p>Pendiente de implementación</p>
+         <?php
+         $sql = "SELECT *
+          FROM Habilidad
+          WHERE Habilidad.tipo LIKE 'Runa'
+          ORDER BY Habilidad.tier";
+         $res = $con->query($sql);
+         ?>
+         <table class="table table-striped table-bordered">
+           <tr>
+             <th>Nombre</th>
+             <th>Tier</th>
+             <th>Efecto</th>
+           </tr>
+           <?php
+           if ($res->num_rows > 0) {
+             while ($row = $res->fetch_assoc()) {
+               echo "<tr>";
+
+               echo "<td>" . utf8_encode($row["nom"]) . "</td>";
+               echo "<td>" . utf8_encode($row["tier"]) . "</td>";
+               echo "<td>" . utf8_encode($row["descr"]) . "</td>";
+
+               echo "</tr>\n";
+             }
+           }
+           ?>
+         </table>
        </div>
      </div>
 
