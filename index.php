@@ -19,6 +19,12 @@
 
     <link rel="stylesheet" type="text/css" href="res/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style type="text/css">
+      body {
+        padding-top: 0;
+      }
+    </style>
   </head>
   <body>
 
