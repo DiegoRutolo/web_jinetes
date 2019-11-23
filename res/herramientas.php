@@ -3,34 +3,48 @@
   function ImprimeNavBar()
   {
     echo '
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-      <ul class="nav navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="https://jinetes.rutolo.eu">
-            <img src="https://jinetes.rutolo.eu/res/img/torre_blanca.png" class="icono" width="30em" height="30em">
-          </a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">Sistema y contenido <span class="caret"></span></a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="https://jinetes.rutolo.eu/hechizos/">Hechizos y Habilidades</a>
-            <a class="dropdown-item" href="#">Pociones</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">Multimedia <span class="caret"></span></a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Mapas</a>
-            <a class="dropdown-item" href="#">Música</a>
-          </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://jinetes.rutolo.eu/fichaWeb/ficha.html" target="_blank">Ficha web</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Personas</a>
-        </li>
-      </ul>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top navbar-toggleabel-md">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir barra de navegación">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="nav navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="https://jinetes.rutolo.eu">
+              <img src="https://jinetes.rutolo.eu/res/img/torre_blanca.png" class="icono" width="30em" height="30em">
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">Sistema y contenido <span class="caret"></span></a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="https://jinetes.rutolo.eu/hechizos/">Hechizos y Habilidades</a>
+              <a class="dropdown-item" href="#">Pociones</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">Multimedia <span class="caret"></span></a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Mapas</a>
+              <a class="dropdown-item" href="#">Música</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://jinetes.rutolo.eu/fichaWeb/ficha.html" target="_blank">Ficha web</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Personas</a>
+          </li>
+        </ul>
+
+        <ul class="nav navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Administración <span class="caret"></span></a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="https://jinetes.rutolo.eu/admin/index.php">Panel</a>
+            </div>
+          </li>
+        </ul>
+      </div>
     </nav>
     ';
   }
