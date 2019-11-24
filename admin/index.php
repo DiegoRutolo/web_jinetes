@@ -19,6 +19,13 @@
 
     <link rel="stylesheet" href="https://jinetes.rutolo.eu/res/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <?php
+      $server = "localhost";
+      $creds = file("../creds.txt");
+      $usuario = trim($creds[2]);
+      $passwd = trim($creds[3]);
+    ?>
   </head>
   <body>
 
@@ -29,7 +36,21 @@
 
         <br>
         <h3>Editar habilidades y hechizos</h3>
-        <form>
+
+        <?php
+          $con = new mysqli($server, $usuario, $passwd, "jinetes");
+          if ($con->connect_error) {
+            die("Connection failed" . $conn->connect_error);
+          }
+        ?>
+
+        <form method="post">
+
+          <br>
+          <label>Contraseña: </label>
+          <input type="password" name="passwd" id="iPasswd">
+          <br>
+
           <ul class="nav nav-tabs">
             <li class="nav-item">
               <a class="nav-link active" data-toggle="tab" href="#nueva">Nueva</a>
@@ -40,8 +61,90 @@
           </ul>
 
           <div class="tab-content">
-            <div id="nueva" class="container tab-pane active">
+            <div id="nueva" class="container-fluid tab-pane active form-group">
+              <div class="row">
+                <div class="col-sm-8">
+                  <label for="iNom">Nombre:</label>
+                  <input type="text" class="form-control" id="iNom" name="nom" required>
+                </div>
+                <div class="col-sm-4">
+                  <label for="iTier">Tier:</label>
+                  <input type="number" class="form-control" id="iTier" name="tier" min="1" max="5" required>
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col-sm">
+                  <label for="iTipo">Tipo:</label>
+                  <?php
+                    $sql = "SELECT nom FROM TipoHab WHERE TipoHab.primario = TRUE";
+                    $res = $con->query($sql);
+                  ?>
+                  <select class="form-control" id="iTipo" name="tipo" required>
+                    <?php
+                    if ($res->num_rows > 0) {
+                      while ($row = $res->fetch_assoc()) {
+                        echo "<option value=\"" . utf8_encode($row["nom"]) . "\">";
+                        echo utf8_encode($row["nom"]);
+                        echo "</option>\n";
+                      }
+                    }
+                    ?>
+                  </select>
+                </div>
+                <div class="col-sm">
 
+                  <!-- TODO: Mostrar solo los adecuados según la tabla RelTipoPrim -->
+                  <label for="iSubtipo">Subtipo (opcional):</label>
+                  <input type="text" class="form-control" id="iSubtipo" name="subtipo" list="dlSubtipos">
+                  <?php
+                    $sql = "SELECT nom FROM TipoHab WHERE TipoHab.primario = FALSE";
+                    $res = $con->query($sql);
+                  ?>
+                  <datalist id="dlSubtipos">
+                    <?php
+                    if ($res->num_rows > 0) {
+                      while ($row = $res->fetch_assoc()) {
+                        echo "<option value=\"" . utf8_encode($row["nom"]) . "\">\n";
+                      }
+                    }
+                    ?>
+                  </datalist>
+                </div>
+                <div class="form-check">
+                  <div class="col-sm">
+                    <label class="form-check-label">
+                      <input type="checkbox" name="cont" id="iCont" class="form-check-input" value="1">
+                      Continua
+                    </label>
+                  </div>
+                  <div class="col-sm">
+                    <label class="form-check-label">
+                      <input type="checkbox" name="auto" id="iAuto" class="form-check-input" value="1">
+                      Automática
+                    </label>
+                  </div>
+                  <div class="col-sm">
+                    <label class="form-check-label">
+                      <input type="checkbox" name="gratis" id="iGratis" class="form-check-input" value="1">
+                      Gratuíta
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col-sm">
+                  <label for="iDescr">Efecto</label>
+                  <textarea class="form-control" id="iDescr" name="descr"></textarea>
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col-sm">
+                  <input type="submit" class="btn btn-primary">
+                </div>
+              </div>
             </div>
 
             <div id="editar" class="container tab-pane">
@@ -50,5 +153,6 @@
           </div>
         </form>
     </div>
+    <?php $con.close(); ?>
   </body>
 </html>
