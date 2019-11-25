@@ -11,7 +11,7 @@ body {
 
 .cabezoneria h1 {
   position: absolute;
-  top: 40%;
+  top: 5ex;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 6vw;
