@@ -49,16 +49,18 @@
     ';
   }
 
-  function GetIcono($val='')
+  function GetIcono($val='', $tam=20)
   {
     $url = "";
     if ($val === "t") {
       $url = "https://jinetes.rutolo.eu/res/img/green_tick.png";
     } elseif ($val === "c") {
       $url = "https://jinetes.rutolo.eu/res/img/red_cross.png";
+    } elseif ($val === "e") {
+      $url = "https://jinetes.rutolo.eu/res/img/edit.jpg";
     }
 
-    $imagen = "<img src=\"" . $url . "\" class=\"icono\" width=\"20em\" height=\"20em\">";
+    $imagen = "<img src=\"" . $url . "\" class=\"icono\" width=\"" . $tam . "em\" height=\"" . $tam . "em\">";
     return $imagen;
   }
 
