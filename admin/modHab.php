@@ -48,9 +48,9 @@
         echo "<!-- Prepared statement correcto -->\n";
       }
 
-      $strNom0 = strlen($_POST["nomHab"]) > 0 ? $_POST["nomHab"] : $cadenaRand;
+      $strNom0 = strlen($_POST["nomHab"]) > 0 ? utf8_decode($_POST["nomHab"]) : $cadenaRand;
       $strNom = "%" . $strNom0 . "%";
-      $strDesc0 = strlen($_POST["efectoText"]) > 0 ? $_POST["efectoText"] : $cadenaRand;
+      $strDesc0 = strlen($_POST["efectoText"]) > 0 ? utf8_decode($_POST["efectoText"]) : $cadenaRand;
       $strDesc = "%" . $strDesc0 . "%";
 
       if (!($ps->bind_param("ss", $strNom, $strDesc))) {
@@ -81,7 +81,7 @@
 
       echo "<!-- " . $ps->num_rows . " filas cargadas -->";
       ?>
-      <div class="alert alert-info">Encontradas <strong><?= $ps->num_rows ?></strong> filas que coinciden con los parámetros.</div>
+      <div class="alert alert-info">Encontradas <strong><?= $ps->num_rows ?> filas</strong> que coinciden con los parámetros. <a href="https://jinetes.rutolo.eu/admin/index.php" class="alert-link float-right">Volver</a></div>
       <?php
       while ($ps->fetch()) { ?>
         <div class="container-fluid">
