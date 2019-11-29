@@ -17,7 +17,7 @@
           <li class="nav-item dropdown">
             <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">Sistema y contenido <span class="caret"></span></a>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="https://jinetes.rutolo.eu/sistema/hechizos.php/">Hechizos y Habilidades</a>
+              <a class="dropdown-item" href="https://jinetes.rutolo.eu/sistema/hechizos.php">Hechizos y Habilidades</a>
               <a class="dropdown-item" href="https://jinetes.rutolo.eu/sistema/items.php">Objetos</a>
             </div>
           </li>
@@ -29,7 +29,7 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://jinetes.rutolo.eu/gente/index.php">Personas</a>
+            <a class="nav-link" href="https://jinetes.rutolo.eu/gente">Personas</a>
           </li>
         </ul>
 
