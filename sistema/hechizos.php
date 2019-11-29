@@ -4,8 +4,12 @@
 ?>
 <html lang="es">
   <head>
-    <meta charset="utf-8">
     <title>Hechizos y Habilidades - Los Jinetes de Kal</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="MobileOptimized" content="320" />
 
     <!-- BootStrap --->
     <!-- Latest compiled and minified CSS -->

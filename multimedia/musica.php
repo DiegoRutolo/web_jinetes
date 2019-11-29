@@ -4,8 +4,12 @@
 ?>
 <html lang="es">
   <head>
-    <meta charset="utf-8">
     <title>Música - Los Jinetes de Kal</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="MobileOptimized" content="320" />
 
     <!-- BootStrap --->
     <!-- Latest compiled and minified CSS -->
@@ -18,7 +22,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" type="text/css" href="https://jinetes.rutolo.eu/res/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
 
