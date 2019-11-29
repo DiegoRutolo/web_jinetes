@@ -32,3 +32,9 @@ body {
 .prueba {
   border: 5px dashed lavender;
 }
+
+.boton-subir {
+  position: fixed;
+  bottom: 2ex;
+  right: 2ex;
+}

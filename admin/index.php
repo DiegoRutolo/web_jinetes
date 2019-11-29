@@ -17,7 +17,7 @@ include "../res/herramientas.php";
   <!-- Latest compiled JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-  <link rel="stylesheet" href="https://jinetes.rutolo.eu/res/style.css">
+  <link rel="stylesheet" type="text/css" href="../res/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <?php
@@ -31,6 +31,8 @@ include "../res/herramientas.php";
 
   <?php ImprimeNavBar(); ?>
 
+  <span id="arriba"></span>
+
   <div class="container">
     <h1>Administración</h2>
 
@@ -40,7 +42,7 @@ include "../res/herramientas.php";
       <?php
       $con = new mysqli($server, $usuario, $passwd, "jinetes");
       if ($con->connect_error) {
-        die("Connection failed" . $conn->connect_error);
+        die("Connection failed" . $con->connect_error);
       }
       ?>
 
@@ -58,115 +60,115 @@ include "../res/herramientas.php";
       </ul>
 
       <!-- Contenido -->
-      <div class="tab-content">
-        <!-- Revision de hechizos -->
-        <div id="revisar" class="container tab-pane active form-group">
-          <?php
-          $sql = "SELECT * FROM Habilidad WHERE Habilidad.revisar = 1";
-          $habs_pend = $con->query($sql);
+    <div class="tab-content">
+      <!-- Revision de hechizos -->
+      <div id="revisar" class="container tab-pane active form-group">
+        <?php
+        $sql = "SELECT * FROM Habilidad WHERE Habilidad.revisar = 1";
+        $habs_pend = $con->query($sql);
 
-          if ($habs_pend->num_rows > 0) {
-            while ($hab_pend = $habs_pend->fetch_assoc()) { ?>
-              <form method="POST" action="https://jinetes.rutolo.eu/admin/modResult.php">
-                <div class="form-group">
-                  <div class="row">
-                    <div class="col-sm-8">
-                      <label >Nombre:</label>
-                      <input type="text" class="form-control" name="nom" value="<?php echo utf8_encode($hab_pend["nom"]) ?>" required>
-                    </div>
-                    <div class="col-sm-4">
-                      <label>Tier:</label>
-                      <input type="number" class="form-control" name="tier" min="1" max="5" value="<?=utf8_encode($hab_pend["tier"])?>" required>
-                    </div>
+        if ($habs_pend->num_rows > 0) {
+          while ($hab_pend = $habs_pend->fetch_assoc()) { ?>
+            <form method="POST" action="https://jinetes.rutolo.eu/admin/modResult.php">
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-sm-8">
+                    <label >Nombre:</label>
+                    <input type="text" class="form-control" name="nom" value="<?php echo utf8_encode($hab_pend["nom"]) ?>" required>
                   </div>
-                  <br>
-                  <div class="row">
-                    <div class="col-sm">
-                      <label>Tipo:</label>
-                      <?php
-                      $sql = "SELECT nom FROM TipoHab WHERE TipoHab.primario = TRUE";
-                      $res = $con->query($sql);
-                      echo "<select class=\"form-control\" name=\"tipo\" value=\"" . utf8_encode($hab_pend["tipo"]) . "\" required>";
-                      if ($res->num_rows > 0) {
-                        while ($row = $res->fetch_assoc()) {
-                          echo "<option value=\"" . utf8_encode($row["nom"]) . "\">";
-                          echo utf8_encode($row["nom"]);
-                          echo "</option>\n";
-                        }
-                      }
-                      ?>
-                    </select>
+                  <div class="col-sm-4">
+                    <label>Tier:</label>
+                    <input type="number" class="form-control" name="tier" min="1" max="5" value="<?=utf8_encode($hab_pend["tier"])?>" required>
                   </div>
+                </div>
+                <br>
+                <div class="row">
                   <div class="col-sm">
-
-                    <!-- TODO: Mostrar solo los adecuados según la tabla RelTipoPrim -->
-                    <label>Subtipo (opcional):</label>
-                    <input type="text" class="form-control" name="subtipo" list="dlSubtipos" value="<?=utf8_encode($hab_pend["subtipo"])?>">
+                    <label>Tipo:</label>
                     <?php
-                    $sql = "SELECT nom FROM TipoHab WHERE TipoHab.primario = FALSE";
+                    $sql = "SELECT nom FROM TipoHab WHERE TipoHab.primario = TRUE";
                     $res = $con->query($sql);
-                    ?>
-                    <datalist id="dlSubtipos">
-                      <?php
-                      if ($res->num_rows > 0) {
-                        while ($row = $res->fetch_assoc()) {
-                          echo "<option value=\"" . utf8_encode($row["nom"]) . "\">\n";
-                        }
+                    echo "<select class=\"form-control\" name=\"tipo\" value=\"" . utf8_encode($hab_pend["tipo"]) . "\" required>";
+                    if ($res->num_rows > 0) {
+                      while ($row = $res->fetch_assoc()) {
+                        echo "<option value=\"" . utf8_encode($row["nom"]) . "\">";
+                        echo utf8_encode($row["nom"]);
+                        echo "</option>\n";
                       }
-                      ?>
-                    </datalist>
-                  </div>
-                  <div class="form-check">
-                    <div class="col-sm">
-                      <label class="form-check-label">
-                        <input type="checkbox" name="contin" class="form-check-input" value="1"<?=($hab_pend["contin"] ? " checked" : "")?>>
-                        Continua
-                      </label>
-                    </div>
-                    <div class="col-sm">
-                      <label class="form-check-label">
-                        <input type="checkbox" name="auto" class="form-check-input" value="1"<?=($hab_pend["auto"] ? " checked" : "")?>>
-                        Automática
-                      </label>
-                    </div>
-                    <div class="col-sm">
-                      <label class="form-check-label">
-                        <input type="checkbox" name="gratis" class="form-check-input" value="1"<?=($hab_pend["auto"] ? " checked" : "")?>>
-                        Gratuíta
-                      </label>
-                    </div>
-                    <div class="col-sm">
-                      <label class="form-check-label">
-                        <input type="checkbox" name="revisar" id="iRevisar" class="form-check-input" value="1" checked>
-                        Pendiente de revisión
-                      </label>
-                    </div>
-                  </div>
+                    }
+                    ?>
+                  </select>
                 </div>
-                <br>
-                <div class="row">
-                  <div class="col-sm">
-                    <label for="iDescr">Efecto</label>
-                    <textarea class="form-control" name="descr" rows="6"><?=utf8_encode($hab_pend["descr"])?></textarea>
-                  </div>
+                <div class="col-sm">
+
+                  <!-- TODO: Mostrar solo los adecuados según la tabla RelTipoPrim -->
+                  <label>Subtipo (opcional):</label>
+                  <input type="text" class="form-control" name="subtipo" list="dlSubtipos" value="<?=utf8_encode($hab_pend["subtipo"])?>">
+                  <?php
+                  $sql = "SELECT nom FROM TipoHab WHERE TipoHab.primario = FALSE";
+                  $res = $con->query($sql);
+                  ?>
+                  <datalist id="dlSubtipos">
+                    <?php
+                    if ($res->num_rows > 0) {
+                      while ($row = $res->fetch_assoc()) {
+                        echo "<option value=\"" . utf8_encode($row["nom"]) . "\">\n";
+                      }
+                    }
+                    ?>
+                  </datalist>
                 </div>
-                <br>
-                <div class="row">
+                <div class="form-check">
                   <div class="col-sm">
-                    <input type="password" class="form-control" name="editPasswd" placeholder="Contraseña" required>
+                    <label class="form-check-label">
+                      <input type="checkbox" name="contin" class="form-check-input" value="1"<?=($hab_pend["contin"] ? " checked" : "")?>>
+                      Continua
+                    </label>
                   </div>
                   <div class="col-sm">
-                    <input type="hidden" name="idHab" value="<?php echo $hab_pend["id"]; ?>">
-                    <input type="submit" class="btn btn-primary" value="Guardar">
+                    <label class="form-check-label">
+                      <input type="checkbox" name="auto" class="form-check-input" value="1"<?=($hab_pend["auto"] ? " checked" : "")?>>
+                      Automática
+                    </label>
+                  </div>
+                  <div class="col-sm">
+                    <label class="form-check-label">
+                      <input type="checkbox" name="gratis" class="form-check-input" value="1"<?=($hab_pend["auto"] ? " checked" : "")?>>
+                      Gratuíta
+                    </label>
+                  </div>
+                  <div class="col-sm">
+                    <label class="form-check-label">
+                      <input type="checkbox" name="revisar" class="form-check-input" value="1" checked>
+                      Pendiente de revisión
+                    </label>
                   </div>
                 </div>
               </div>
-              </form>
-              <br><hr><br>
-            <?php
-            }
-          } ?>
-        </div>
+              <br>
+              <div class="row">
+                <div class="col-sm">
+                  <label for="iDescr">Efecto</label>
+                  <textarea class="form-control" name="descr" rows="6"><?=utf8_encode($hab_pend["descr"])?></textarea>
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col-sm">
+                  <input type="password" class="form-control" name="editPasswd" placeholder="Contraseña" required>
+                </div>
+                <div class="col-sm">
+                  <input type="hidden" name="idHab" value="<?php echo $hab_pend["id"]; ?>">
+                  <input type="submit" class="btn btn-primary" value="Guardar">
+                </div>
+              </div>
+            </div>
+            </form>
+            <br><hr><br>
+          <?php
+          }
+        } ?>
+      </div>
 
       <!-- Añadir hechizos -->
       <div id="nueva" class="container-fluid tab-pane form-group">
@@ -266,11 +268,36 @@ include "../res/herramientas.php";
         </form>
       </div>
 
-      <div id="editar" class="container tab-pane">
-
+      <!-- Editar hechizo -->
+      <div id="editar" class="container tab-pane p-4">
+        <form class="form-inline" method="POST" action="https://jinetes.rutolo.eu/admin/modHab.php">
+          <label for="iNombreBuscar" class="mr-2">Nombre: </label>
+          <input type="text" class="form-control mr-2" id="iNombreBuscar" list="dlNomHabs" name="nomHab">
+          <?php
+          $sql = "SELECT nom FROM Habilidad";
+          $res = $con->query($sql);
+          ?>
+          <datalist id="dlNomHabs">
+            <?php
+            if ($res->num_rows > 0) {
+              while ($row = $res->fetch_assoc()) {
+                echo "<option value=\"" . utf8_encode($row["nom"]) . "\">\n";
+              }
+            }
+            $con->close();
+            ?>
+          </datalist>
+          <label for="iEfectoTxt" class="mr-2">Efecto: </label>
+          <input type="text" class="form-control mr-2" id="iEfectoTxt" name="efectoText">
+          <button type="submit" class="btn btn-primary">Buscar</button>
+        </form>
       </div>
     </div>
   </div>
-  <?php $con->close(); ?>
+  <div class="boton-subir">
+    <a href="#arriba">
+      <?= GetIcono("fu", 45) ?>
+    </a>
+  </div>
 </body>
 </html>

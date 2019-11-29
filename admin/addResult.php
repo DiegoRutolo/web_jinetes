@@ -72,7 +72,7 @@
       <div class="alert alert-success">
         Habilidad añadida correctamente :D
       </div>
-      <button class="btn btn-primary" onclick="history.back()"></button>
+      <a href="https://jinetes.rutolo.eu/admin/index.php" class="btn btn-primary">Volver</a>
     </div>
     <?php
       $ps->close();

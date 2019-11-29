@@ -58,6 +58,8 @@
       $url = "https://jinetes.rutolo.eu/res/img/red_cross.png";
     } elseif ($val === "e") {
       $url = "https://jinetes.rutolo.eu/res/img/edit.jpg";
+    } elseif ($val == "fu") {
+      $url = "https://jinetes.rutolo.eu/res/img/flechaArriba.png";
     }
 
     $imagen = "<img src=\"" . $url . "\" class=\"icono\" width=\"" . $tam . "em\" height=\"" . $tam . "em\">";

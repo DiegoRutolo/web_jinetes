@@ -38,7 +38,7 @@
       <?php
       $con = new mysqli($server, $usuario, $passwd, "jinetes");
       if ($con->connect_error) {
-        die("Error de conexión" . $conn->connect_error);
+        die("Error de conexión" . $con->connect_error);
       }
 
       if ($editPasswd !== $_POST["editPasswd"]) {
@@ -73,7 +73,7 @@
       <div class="alert alert-success">
         Habilidad actualizada correctamente :D
       </div>
-      <button class="btn btn-primary" onclick="history.back()">Volver</button>
+      <a href="https://jinetes.rutolo.eu/admin/index.php" class="btn btn-primary">Volver</a>
     </div>
     <?php
       $ps->close();
