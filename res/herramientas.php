@@ -17,26 +17,26 @@
           <li class="nav-item dropdown">
             <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">Sistema y contenido <span class="caret"></span></a>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="https://jinetes.rutolo.eu/hechizos/">Hechizos y Habilidades</a>
-              <a class="dropdown-item" href="#">Pociones</a>
+              <a class="dropdown-item" href="https://jinetes.rutolo.eu/sistema/hechizos.php/">Hechizos y Habilidades</a>
+              <a class="dropdown-item" href="https://jinetes.rutolo.eu/sistema/items.php">Objetos</a>
             </div>
           </li>
           <li class="nav-item dropdown">
             <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">Multimedia <span class="caret"></span></a>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Mapas</a>
-              <a class="dropdown-item" href="#">Música</a>
+              <a class="dropdown-item" href="https://jinetes.rutolo.eu/multimedia/dibujos.php">Dibujos</a>
+              <a class="dropdown-item" href="https://jinetes.rutolo.eu/multimedia/musica.php">Música</a>
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://jinetes.rutolo.eu/fichaWeb/ficha.html" target="_blank">Ficha web</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Personas</a>
+            <a class="nav-link" href="https://jinetes.rutolo.eu/gente/index.php">Personas</a>
           </li>
         </ul>
 
         <ul class="nav navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="https://jinetes.rutolo.eu/fichaWeb/ficha.html" target="_blank">Ficha web</a>
+        </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Administración <span class="caret"></span></a>
             <div class="dropdown-menu">
@@ -64,6 +64,15 @@
 
     $imagen = "<img src=\"" . $url . "\" class=\"icono\" width=\"" . $tam . "em\" height=\"" . $tam . "em\">";
     return $imagen;
+  }
+
+  function PdI() {
+    $str = "
+      <div class=\"alert alert-info\">
+        Página pendiende de implementación.
+      </div>
+    ";
+    return $str;
   }
 
  ?>

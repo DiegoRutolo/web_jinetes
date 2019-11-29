@@ -5,7 +5,7 @@ include "../res/herramientas.php";
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <title>Los Jinetes de Kal</title>
+  <title>Panel de administración - Los Jinetes de Kal</title>
 
   <!-- BootStrap --->
   <!-- Latest compiled and minified CSS -->

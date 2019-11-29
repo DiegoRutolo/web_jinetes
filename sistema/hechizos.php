@@ -5,7 +5,7 @@
 <html lang="es">
   <head>
     <meta charset="utf-8">
-    <title>Hechizos</title>
+    <title>Hechizos y Habilidades - Los Jinetes de Kal</title>
 
     <!-- BootStrap --->
     <!-- Latest compiled and minified CSS -->
