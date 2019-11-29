@@ -10,6 +10,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="HandheldFriendly" content="true" />
     <meta name="MobileOptimized" content="320" />
+    <meta name="description" content="Los Jinetes de Kal. Sistema de rol sencillo y completo.">
+    <meta name="author" content="DiegoRutolo">
+    <meta name="keywords" content="jinetes de kal, jinetes, kal, rol, rpg, role-playing game, heske">
+    <meta name="language" content="spanish">
+    <meta name="rating" content="safe for kids">
 
     <!-- BootStrap --->
     <!-- Latest compiled and minified CSS -->
