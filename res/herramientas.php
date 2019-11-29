@@ -68,7 +68,7 @@
 
   function PdI() {
     $str = "
-      <div class=\"alert alert-info\">
+      <div class=\"alert alert-warning\">
         Página pendiende de implementación.
       </div>
     ";
