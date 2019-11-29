@@ -55,12 +55,11 @@
       $auto = $_POST["auto"] === NULL ? 0 : $_POST["auto"];
       $gratis = $_POST["gratis"] === NULL ? 0 : $_POST["gratis"];
 
-
-      if (!($ps = $con->prepare("UPDATE Habilidad SET revisar=?, nom=?, tipo=?, subtipo=?, tier=?, descr=?, contin=?, auto=?, gratis=? WHERE id = ?"))) {
+      if (!($ps = $con->prepare("INSERT INTO Habilidad (revisar, nom, tipo, subtipo, tier, descr, contin, auto, gratis) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)"))) {
         die("<div class=\"alert alert-danger\"><strong>Impreparable:</strong> " . $con->error . "</div>\n");
       }
 
-      if (!($ps->bind_param("isssisiiii", $revisar, $nom, $tipo, $subtipo, $_POST["tier"], $descr, $contin, $auto, $gratis, $_POST["idHab"]))) {
+      if (!($ps->bind_param("isssisiii", $revisar, $nom, $tipo, $subtipo, $_POST["tier"], $descr, $contin, $auto, $gratis))) {
         die("<div class=\"alert alert-danger\"><strong>Imbindable:</strong> " . $ps->error . "</div>\n");
         // die("Inbindable:" . $ps->error);
       }
@@ -71,9 +70,9 @@
       ?>
 
       <div class="alert alert-success">
-        Habilidad actualizada correctamente :D
+        Habilidad añadida correctamente :D
       </div>
-      <button class="btn btn-primary" onclick="history.back()">Volver</button>
+      <button class="btn btn-primary" onclick="history.back()"></button>
     </div>
     <?php
       $ps->close();

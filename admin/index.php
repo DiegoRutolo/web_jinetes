@@ -170,7 +170,7 @@ include "../res/herramientas.php";
 
       <!-- Añadir hechizos -->
       <div id="nueva" class="container-fluid tab-pane form-group">
-        <form method="POST" action="https://jinetes.rutolo.eu/admin/nuevaResult.php">
+        <form method="POST" action="https://jinetes.rutolo.eu/admin/addResult.php">
           <div class="row">
             <div class="col-sm-8">
               <label for="iNom">Nombre:</label>
