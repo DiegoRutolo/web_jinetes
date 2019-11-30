@@ -94,7 +94,7 @@ include "../res/herramientas.php";
                     echo "<select class=\"form-control\" name=\"tipo\" value=\"" . utf8_encode($hab_pend["tipo"]) . "\" required>";
                     if ($res->num_rows > 0) {
                       while ($row = $res->fetch_assoc()) {
-                        echo "<option value=\"" . utf8_encode($row["nom"]) . "\">";
+                        echo "<option value=\"" . utf8_encode($row["nom"]) . "\"" . (utf8_encode($hab_pend["tipo"]) === utf8_encode($row["nom"]) ? " selected" : "") . ">";
                         echo utf8_encode($row["nom"]);
                         echo "</option>\n";
                       }
