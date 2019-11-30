@@ -283,5 +283,10 @@
 
     </div>
     <?php $con.close(); ?>
+    <div class="boton-subir">
+      <a href="#arriba">
+        <?= GetIcono("fu", 45) ?>
+      </a>
+    </div>
   </body>
 </html>
