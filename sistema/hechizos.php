@@ -31,7 +31,7 @@
     ?>
   </head>
   <body>
-
+    <span id="arriba"</span>
     <?php
       ImprimeNavBar();
     ?>
