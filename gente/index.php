@@ -59,10 +59,12 @@
           <br>
 
           <!-- Iago -->
-          <div class="card bg-secondary text-white" id="iagolobla">
-            <div class="card-body">
+          <div class="card text-white" id="iagolobla">
+            <img class="card-img-top" src="https://jinetes.rutolo.eu/gente/img/iagolobla.png" style="filter:brightness(55%)">
+            <div class="card-img-overlay">
               <h4 class="card-title">Iagolobla</h4>
-              <p class="card-text">Programador, equilibrio del sistema, jugador de <a href="#volgarr">Volgarr</a> y <a href="#zacatrus">Zacatrús</a>.</p>
+              <p class="card-text">Programador, equilibrio del sistema, jugador de Volgarr y Zacatrús.</p>
+              <a class="stretched-link" href="https://twitter.com/iagolobla" target="_blank"><img src="https://abs.twimg.com/favicons/twitter.ico" alt="Twitter icon"><a>
             </div>
           </div>
           <br>
@@ -110,7 +112,7 @@
           <!-- Angel -->
           <div class="card bg-secondary text-white" id="jangel">
             <div class="card-body">
-              <h4 class="card-title">Ángel</h4>
+              <h4 class="card-title">Peperepipe</h4>
               <p class="card-text">Jugador de <a href="#jesus">Jesús</a> (as himself).</p>
             </div>
           </div>
