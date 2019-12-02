@@ -228,7 +228,7 @@
           <div class="card" id="jesus">
             <div class="card-body">
               <h4 class="card-title">Jesús</h4>
-              <p class="card-text">Humano de nuestro mundo, apareció en Kal de repende y sin saber por qué junto con <a href="#xandre_pj">Xandre</a>. Se apuntaron a una beca para gremios y aprendió magia.</p>
+              <p class="card-text">Humano de nuestro mundo, apareció en Kal de repente y sin saber por qué junto con <a href="#xandre_pj">Xandre</a>. Se apuntaron a una beca para gremios y aprendió magia.</p>
             </div>
           </div>
           <br>
@@ -237,7 +237,7 @@
           <div class="card" id="xandre_pj">
             <div class="card-body">
               <h4 class="card-title">Xandre</h4>
-              <p class="card-text">Humano de nuestro mundo, apareció en Kal de repende y sin saber por qué junto con <a href="#jesus">Jesús</a>. Se apuntaron a una beca para gremios y se hizo cazador.</p>
+              <p class="card-text">Humano de nuestro mundo, apareció en Kal de repente y sin saber por qué junto con <a href="#jesus">Jesús</a>. Se apuntaron a una beca para gremios y se hizo cazador.</p>
             </div>
           </div>
           <br>
@@ -278,7 +278,7 @@
           <!-- Aeria -->
           <div class="card" id="aeria">
             <div class="card-body">
-              <h4 class="card-title">Aeria Cornell, señora de Aldintor</h4>
+              <h4 class="card-title">Aeria Cornell</h4>
               <p class="card-text">Humana domabestias. Propietaria del rancho Aldintor, en el que entrena todo tipo de bestias. Madre de <a href="#allegra">Allegra</a>.</p>
             </div>
           </div>
