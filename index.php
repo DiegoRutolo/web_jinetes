@@ -40,12 +40,13 @@
 
     <div class="cabezoneria">
       <img src="https://jinetes.rutolo.eu/res/img/Kal_4C.png" width="100%">
-      <h1>Los Jinetes de Kal</h1>
+      <h1 class="jinetes">Los Jinetes de Kal</h1>
     </div>
 
     <div class="container">
-      <h2>Titulo</h2>
-      <p class="prueba">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <h2>Presentación</h2>
+      <p><span class="jinetes">Los Jienetes de Kal</span> es un sistema de rol diseñado para ser sencillo de jugar y de personalizar. Perfecto para empezar en el mundo del rol o ajustar el sistema a gusto de jugadores más avanzados.</p>
+      <p>En esta web (aún en construcción) se pueden encontrar diversos recursos y herramientas para poder jugar, además del manual completo.</p>
     </div>
   </body>
 </html>
