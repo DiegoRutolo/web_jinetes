@@ -29,7 +29,7 @@
 
     <div class="container">
       <section>
-        <p>Personas</p>
+        <h1>Personas</h1>
         <p>Todas las personas que participaron en la creación de éste sistema y mundo, en mayor o menor medida</p>
 
         <p>
@@ -175,7 +175,7 @@
       <br><hr /><br />
 
       <section>
-        <h3>Personajes</h3>
+        <h1>Personajes</h1>
         <p>Los personajes de nuestras partidas</p>
 
         <div class="card-columns">
