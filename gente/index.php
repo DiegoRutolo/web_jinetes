@@ -106,15 +106,6 @@
           </div>
           <br>
 
-          <!-- Gnomo -->
-          <div class="card bg-secondary text-white" id="gnomo">
-            <div class="card-body">
-              <h4 class="card-title">Mortalgnomo</h4>
-              <p class="card-text">Jugador de <a href="#elara">Elara</a>.</p>
-            </div>
-          </div>
-          <br>
-
           <!-- Angel -->
           <div class="card bg-secondary text-white" id="jangel">
             <div class="card-body">
@@ -203,6 +194,15 @@
             <div class="card-body">
               <h4 class="card-title">Treilla</h4>
               <p class="card-text">Niña semielfa y hermana pequeña de <a href="#elara">Elara</a> . La druida más joven de la historia de <span class="jinetes">Las Torres de Magia</span>.</p>
+            </div>
+          </div>
+          <br>
+
+          <!-- Cotton -->
+          <div class="card" id="cotton">
+            <div class="card-body">
+              <h4 class="card-title">Cotton</h4>
+              <p class="card-text">Oso albino y leal compañero de <a href="#treilla">Treilla</a>.</p>
             </div>
           </div>
           <br>
