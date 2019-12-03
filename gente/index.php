@@ -162,14 +162,6 @@
           </div>
           <br>
 
-          <!-- Laurita -->
-          <div class="card bg-secondary text-white" id="erane">
-            <div class="card-body">
-              <h4 class="card-title">Laura</h4>
-              <p class="card-text">Jugadora de <a href="#fingul">Fingul Pok</a>.</p>
-            </div>
-          </div>
-
         </div>
       </section>
 
