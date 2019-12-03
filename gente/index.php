@@ -64,7 +64,7 @@
           <div class="card bg-warning" id="diegorutolo">
             <div class="card-body">
               <h4 class="card-title">DiegoRutolo</h4>
-              <p class="card-text">Desarrollador de la web, coautor del manual, DM, jugador de <a href="#heske">Heske</a> y <a href="#galdor">Galdor</a>.</p>
+              <p class="card-text">Desarrollador de la web, coautor del manual, DM, jugador de Heske y Galdor.</p>
               <a class="btn btn-light" href="https://rutolo.eu" target="_blank">
                 <?=GetIcono("www", 32);?>
               </a>
@@ -91,11 +91,11 @@
           <div class="card text-white" id="nere">
             <div class="card-body">
               <h4 class="card-title">Nere</h4>
-              <p class="card-text">Jugadora de <a href="#treilla">Treilla</a> y <a href="#keran">Keran</a> y experta en fauna.</p>
+              <p class="card-text">Jugadora de Treilla y Keran y experta en fauna.</p>
               <!-- <a class="card-link" href="https://twitter.com/neremortal3" target="_blank">
                 <img src="https://abs.twimg.com/favicons/twitter.ico" alt="Twitter">
               </a> -->
-              <a class="card-link" href="https://www.instagram.com/neremontero3/" target="_blank">
+              <a class="stretched-link" href="https://www.instagram.com/neremontero3/" target="_blank">
                 <img src="https://www.instagram.com/static/images/ico/favicon-192.png/68d99ba29cc8.png" alt="Instagram" width="32">
               </a>
             </div>
@@ -123,8 +123,8 @@
             <img class="card-img-top" src="https://jinetes.rutolo.eu/gente/img/datan.jpg" />
             <div class="card-body">
               <h4 class="card-title">Atán</h4>
-              <p class="card-text">Jugador de <a href="#heske">Heske</a> y <a href="#allegra">Allegra</a>.</p>
-              <a class="card-link" href="https://twitter.com/datanromar" target="_blank">
+              <p class="card-text">Jugador de Heske y Allegra.</p>
+              <a class="stretched-link" href="https://twitter.com/datanromar" target="_blank">
                 <img src="https://abs.twimg.com/favicons/twitter.ico" alt="Twitter">
               </a>
             </div>
@@ -135,7 +135,7 @@
           <div class="card bg-secondary text-white" id="jangel">
             <div class="card-body">
               <h4 class="card-title">Peperepipe</h4>
-              <p class="card-text">Jugador de <a href="#jesus">Jesús</a> (as himself).</p>
+              <p class="card-text">Jugador de Jesús (as himself).</p>
             </div>
           </div>
           <br>
@@ -144,7 +144,7 @@
           <div class="card bg-secondary text-white" id="xandre">
             <div class="card-body">
               <h4 class="card-title">Xandre</h4>
-              <p class="card-text">Jugador de <a href="#xandre_pj">Xandre</a> (as himself).</p>
+              <p class="card-text">Jugador de Xandre (as himself).</p>
             </div>
           </div>
           <br>
@@ -153,7 +153,7 @@
           <div class="card bg-secondary text-white" id="sara">
             <div class="card-body">
               <h4 class="card-title">Sara</h4>
-              <p class="card-text">Jugadora de <a href="#jesus">Zado</a>.</p>
+              <p class="card-text">Jugadora de Zado.</p>
             </div>
           </div>
           <br>
@@ -162,7 +162,7 @@
           <div class="card" id="clau">
             <div class="card-body">
               <h4 class="card-title">Chocolate</h4>
-              <p class="card-text">Jugadora de <a href="#treilla">Treilla</a>.</p>
+              <p class="card-text">Jugadora de Treilla.</p>
               <a class="card-link btn btn-light" href="http://paperwordssc.blogspot.com/" target="_blank">
                 <img src="http://paperwordssc.blogspot.com/favicon.ico" alt="Blog" width="32">
               </a>
@@ -177,7 +177,7 @@
           <div class="card bg-secondary text-white" id="erane">
             <div class="card-body">
               <h4 class="card-title">Erane</h4>
-              <p class="card-text">Jugadora de <a href="#elara">Elara</a>.</p>
+              <p class="card-text">Jugadora de Elara.</p>
             </div>
           </div>
           <br>
@@ -186,7 +186,7 @@
           <div class="card bg-secondary text-white" id="erane">
             <div class="card-body">
               <h4 class="card-title">Elia</h4>
-              <p class="card-text">Jugadora de <a href="#aeria">Aeria Cornell</a>.</p>
+              <p class="card-text">Jugadora de Aeria Cornell.</p>
             </div>
           </div>
           <br>
@@ -214,7 +214,7 @@
           <div class="card" id="treilla">
             <div class="card-body">
               <h4 class="card-title">Treilla</h4>
-              <p class="card-text">Niña semielfa y hermana pequeña de <a href="#elara">Elara</a> . La druida más joven de la historia de <span class="jinetes">Las Torres de Magia</span>.</p>
+              <p class="card-text">Niña semielfa y hermana pequeña de Elara. La druida más joven de la historia de <span class="jinetes">Las Torres de Magia</span>.</p>
             </div>
           </div>
           <br>
@@ -223,7 +223,7 @@
           <div class="card" id="cotton">
             <div class="card-body">
               <h4 class="card-title">Cotton</h4>
-              <p class="card-text">Oso albino y leal compañero de <a href="#treilla">Treilla</a>.</p>
+              <p class="card-text">Oso albino y leal compañero de Treilla.</p>
             </div>
           </div>
           <br>
@@ -232,7 +232,7 @@
           <div class="card" id="elara">
             <div class="card-body">
               <h4 class="card-title">Elara</h4>
-              <p class="card-text">Cazadora semielfa, hermana mayor de <a href="#treilla">Treilla</a>.</p>
+              <p class="card-text">Cazadora semielfa, hermana mayor de Treilla.</p>
             </div>
           </div>
           <br>
@@ -250,7 +250,7 @@
           <div class="card" id="allegra">
             <div class="card-body">
               <h4 class="card-title">Allegra Aldintor</h4>
-              <p class="card-text">Humana paladín de <span class="jinetes">Baalum</span>. Hija de <a href="#aeria">Aeria Aldintor</a>.</p>
+              <p class="card-text">Humana paladín de <span class="jinetes">Baalum</span>. Hija de Aeria Aldintor.</p>
             </div>
           </div>
           <br>
@@ -259,7 +259,7 @@
           <div class="card" id="jesus">
             <div class="card-body">
               <h4 class="card-title">Jesús</h4>
-              <p class="card-text">Humano de nuestro mundo, apareció en Kal de repente y sin saber por qué junto con <a href="#xandre_pj">Xandre</a>. Se apuntaron a una beca para gremios y aprendió magia.</p>
+              <p class="card-text">Humano de nuestro mundo, apareció en Kal de repente y sin saber por qué junto con Xandre. Se apuntaron a una beca para gremios y aprendió magia.</p>
             </div>
           </div>
           <br>
@@ -268,7 +268,7 @@
           <div class="card" id="xandre_pj">
             <div class="card-body">
               <h4 class="card-title">Xandre</h4>
-              <p class="card-text">Humano de nuestro mundo, apareció en Kal de repente y sin saber por qué junto con <a href="#jesus">Jesús</a>. Se apuntaron a una beca para gremios y se hizo cazador.</p>
+              <p class="card-text">Humano de nuestro mundo, apareció en Kal de repente y sin saber por qué junto con Jesús. Se apuntaron a una beca para gremios y se hizo cazador.</p>
             </div>
           </div>
           <br>
@@ -310,7 +310,7 @@
           <div class="card" id="aeria">
             <div class="card-body">
               <h4 class="card-title">Aeria Cornell</h4>
-              <p class="card-text">Humana domabestias. Propietaria del rancho Aldintor, en el que entrena todo tipo de bestias. Madre de <a href="#allegra">Allegra</a>.</p>
+              <p class="card-text">Humana domabestias. Propietaria del rancho Aldintor, en el que entrena todo tipo de bestias. Madre de Allegra.</p>
             </div>
           </div>
 
