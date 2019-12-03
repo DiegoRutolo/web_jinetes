@@ -26,6 +26,10 @@
       #clau {
         background-color: SandyBrown;
       }
+
+      #datan {
+        background-color: #85C1E9;
+      }
     </style>
   </head>
   <body>
@@ -90,18 +94,25 @@
             <div class="card-body">
               <h4 class="card-title">Kraken</h4>
               <p class="card-text">Autora de los dibujos chibis de varios personajes</p>
-              <a class="card-link" href="https://twitter.com/lilsaku" target="_blank"><img src="https://abs.twimg.com/favicons/twitter.ico" alt="Twitter"></a>
-              <a class="card-link" href="https://www.twitch.tv/krakenreeeeflex" target="_blank"><img src="https://static.twitchcdn.net/assets/favicon-32-d6025c14e900565d6177.png" alt="Twitch"></a>
+              <a class="card-link" href="https://twitter.com/lilsaku" target="_blank">
+                <img src="https://abs.twimg.com/favicons/twitter.ico" alt="Twitter">
+              </a>
+              <a class="card-link" href="https://www.twitch.tv/krakenreeeeflex" target="_blank">
+                <img src="https://static.twitchcdn.net/assets/favicon-32-d6025c14e900565d6177.png" alt="Twitch">
+              </a>
             </div>
           </div>
           <br>
 
           <!-- Atan -->
-          <div class="card bg-secondary text-white" id="datanromar">
+          <div class="card" id="datan">
+            <img class="card-img-top" src="https://jinetes.rutolo.eu/gente/img/datan.jpg" />
             <div class="card-body">
-              <h4 class="card-title">Daniel Atán</h4>
+              <h4 class="card-title">Atán</h4>
               <p class="card-text">Jugador de <a href="#heske">Heske</a> y <a href="#allegra">Allegra</a>.</p>
-              <a class="card-link" href="https://twitter.com/datanromar" target="_blank"><img src="https://abs.twimg.com/favicons/twitter.ico" alt="Twitter"></a>
+              <a class="card-link" href="https://twitter.com/datanromar" target="_blank">
+                <img src="https://abs.twimg.com/favicons/twitter.ico" alt="Twitter">
+              </a>
             </div>
           </div>
           <br>
@@ -139,7 +150,9 @@
               <h4 class="card-title">Chocolate</h4>
               <p class="card-text">Jugadora de <a href="#treilla">Treilla</a>.</p>
               <a class="card-link btn btn-light" href="http://paperwordssc.blogspot.com/" target="_blank">Blog</a>
-              <a class="card-link btn btn-light" href="https://archiveofourown.org/users/ChocolateVanCandy/pseuds/ChocolateVanCandy" target="_blank">ArchiveOfOurOwn</a>
+              <a class="card-link btn btn-light" href="https://archiveofourown.org/users/ChocolateVanCandy/pseuds/ChocolateVanCandy" target="_blank">
+                <img src="https://jinetes.rutolo.eu/gente/img/AooO.webp" width="32" />
+              </a>
             </div>
           </div>
           <br>
