@@ -30,6 +30,10 @@
       #datan {
         background-color: #85C1E9;
       }
+
+      #nere {
+        background-color: DarkBlue;
+      }
     </style>
   </head>
   <body>
@@ -39,7 +43,7 @@
     <div class="container">
       <section>
         <h1>Personas</h1>
-        <p>Todas las personas que participaron en la creación de éste sistema y mundo, en mayor o menor medida</p>
+        <p>Todas las personas que participaron en la creación de éste sistema y mundo, en mayor o menor medida.</p>
 
         <p>
         <div class="card-columns">
@@ -50,8 +54,8 @@
             <div class="card-body">
               <h4 class="card-title">Myster Myr</h4>
               <p class="card-text">Creador del mundo y sistema, coautor del manual, compositor de la música y DM principal.</p>
-              <a class="card-link" href="https://twitter.com/MisterMyr" target="_blank"><img src="https://abs.twimg.com/favicons/twitter.ico" alt="Twitter"></a>
-              <a class="card-link" href="https://open.spotify.com/artist/09JnLcMChAXzamRnQxF5lK" target="_blank"><img src="https://www.scdn.co/i/_global/favicon.png" alt="Spotify" width="32"></a>
+              <a class="card-link btn btn-light" href="https://twitter.com/MisterMyr" target="_blank"><img src="https://abs.twimg.com/favicons/twitter.ico" alt="Twitter"></a>
+              <a class="card-link btn btn-success" href="https://open.spotify.com/artist/09JnLcMChAXzamRnQxF5lK" target="_blank"><img src="https://www.scdn.co/i/_global/favicon.png" alt="Spotify" width="32"></a>
             </div>
           </div>
           <br>
@@ -60,9 +64,13 @@
           <div class="card bg-warning" id="diegorutolo">
             <div class="card-body">
               <h4 class="card-title">DiegoRutolo</h4>
-              <p class="card-text">Coautor del manual, desarrollador de la web, DM, jugador de <a href="#heske">Heske</a> y <a href="#galdor">Galdor</a>.</p>
-              <a class="btn btn-secondary" href="https://rutolo.eu" target="_blank">WWW</a>
-              <a class="btn btn-secondary" href="https://github.com/DiegoRutolo" target="_blank">GitHub</i></a>
+              <p class="card-text">Desarrollador de la web, coautor del manual, DM, jugador de <a href="#heske">Heske</a> y <a href="#galdor">Galdor</a>.</p>
+              <a class="btn btn-light" href="https://rutolo.eu" target="_blank">
+                <?=GetIcono("www", 32);?>
+              </a>
+              <a class="btn btn-light" href="https://github.com/DiegoRutolo" target="_blank">
+                <img src="https://github.githubassets.com/favicon.ico" alt="GitHub" width="32">
+              </a>
             </div>
             <img class="card-img-bottom" src="https://jinetes.rutolo.eu/gente/img/Caradox.jpg">
           </div>
@@ -80,12 +88,18 @@
           <br>
 
           <!-- Nere -->
-          <div class="card bg-secondary text-white" id="neremortal">
+          <div class="card text-white" id="nere">
             <div class="card-body">
               <h4 class="card-title">Nere</h4>
               <p class="card-text">Jugadora de <a href="#treilla">Treilla</a> y <a href="#keran">Keran</a> y experta en fauna.</p>
-              <a class="card-link" href="https://twitter.com/neremortal3" target="_blank"><img src="https://abs.twimg.com/favicons/twitter.ico" alt="Twitter"></a>
+              <!-- <a class="card-link" href="https://twitter.com/neremortal3" target="_blank">
+                <img src="https://abs.twimg.com/favicons/twitter.ico" alt="Twitter">
+              </a> -->
+              <a class="card-link" href="https://www.instagram.com/neremontero3/" target="_blank">
+                <img src="https://www.instagram.com/static/images/ico/favicon-192.png/68d99ba29cc8.png" alt="Instagram" width="32">
+              </a>
             </div>
+            <img class="card-img-bottom" src="https://jinetes.rutolo.eu/gente/img/nere.jpg">
           </div>
           <br>
 
@@ -93,7 +107,7 @@
           <div class="card bg-secondary text-white" id="kraken">
             <div class="card-body">
               <h4 class="card-title">Kraken</h4>
-              <p class="card-text">Autora de los dibujos chibis de varios personajes</p>
+              <p class="card-text">Autora de los dibujos chibis de varios personajes.</p>
               <a class="card-link" href="https://twitter.com/lilsaku" target="_blank">
                 <img src="https://abs.twimg.com/favicons/twitter.ico" alt="Twitter">
               </a>
@@ -149,7 +163,9 @@
             <div class="card-body">
               <h4 class="card-title">Chocolate</h4>
               <p class="card-text">Jugadora de <a href="#treilla">Treilla</a>.</p>
-              <a class="card-link btn btn-light" href="http://paperwordssc.blogspot.com/" target="_blank">Blog</a>
+              <a class="card-link btn btn-light" href="http://paperwordssc.blogspot.com/" target="_blank">
+                <img src="http://paperwordssc.blogspot.com/favicon.ico" alt="Blog" width="32">
+              </a>
               <a class="card-link btn btn-light" href="https://archiveofourown.org/users/ChocolateVanCandy/pseuds/ChocolateVanCandy" target="_blank">
                 <img src="https://jinetes.rutolo.eu/gente/img/AooO.webp" width="32" />
               </a>
@@ -270,7 +286,7 @@
           <div class="card" id="zado">
             <div class="card-body">
               <h4 class="card-title">Zado</h4>
-              <p class="card-text">Joven enano nativo de las montañas. Salió a ver mundo y llegó a Carfe buscando un gremio al que unirse</p>
+              <p class="card-text">Joven enano nativo de las montañas. Salió a ver mundo y llegó a Carfe buscando un gremio al que unirse.</p>
             </div>
           </div>
 
@@ -278,7 +294,7 @@
           <div class="card" id="galdor">
             <div class="card-body">
               <h4 class="card-title">Galdor</h4>
-              <p class="card-text">Humano monje espadachín. Jefe del gremio <i>Las tortugas voladoras</i></p>
+              <p class="card-text">Humano monje espadachín. Jefe del gremio <i>Las tortugas voladoras.</i></p>
             </div>
           </div>
 
