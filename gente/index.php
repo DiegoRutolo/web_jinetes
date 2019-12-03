@@ -41,7 +41,8 @@
             <div class="card-body">
               <h4 class="card-title">Myster Myr</h4>
               <p class="card-text">Creador del mundo y sistema, coautor del manual, compositor de la música y DM principal.</p>
-              <a class="stretched-link" href="https://twitter.com/MisterMyr" target="_blank"><img src="https://abs.twimg.com/favicons/twitter.ico" alt="Twitter icon"><a>
+              <a class="card-link" href="https://twitter.com/MisterMyr" target="_blank"><img src="https://abs.twimg.com/favicons/twitter.ico" alt="Twitter"><a>
+              <a class="card-link" href="https://open.spotify.com/artist/09JnLcMChAXzamRnQxF5lK" target="_blank"><img src="https://www.scdn.co/i/_global/favicon.png" alt="Spotify"><a>
             </div>
           </div>
           <br>
