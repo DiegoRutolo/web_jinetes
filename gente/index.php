@@ -22,6 +22,15 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" type="text/css" href="https://jinetes.rutolo.eu/res/style.css">
+    <style type="text/css">
+      #clau {
+        background-color: SandyBrown;
+      }
+
+      #datan {
+        background-color: #85C1E9;
+      }
+    </style>
   </head>
   <body>
 
@@ -41,7 +50,8 @@
             <div class="card-body">
               <h4 class="card-title">Myster Myr</h4>
               <p class="card-text">Creador del mundo y sistema, coautor del manual, compositor de la música y DM principal.</p>
-              <a class="stretched-link" href="https://twitter.com/MisterMyr" target="_blank"><img src="https://abs.twimg.com/favicons/twitter.ico" alt="Twitter icon"><a>
+              <a class="card-link" href="https://twitter.com/MisterMyr" target="_blank"><img src="https://abs.twimg.com/favicons/twitter.ico" alt="Twitter"></a>
+              <a class="card-link" href="https://open.spotify.com/artist/09JnLcMChAXzamRnQxF5lK" target="_blank"><img src="https://www.scdn.co/i/_global/favicon.png" alt="Spotify" width="32"></a>
             </div>
           </div>
           <br>
@@ -64,7 +74,7 @@
             <div class="card-img-overlay">
               <h4 class="card-title">Iagolobla</h4>
               <p class="card-text">Programador, equilibrio del sistema, jugador de Volgarr y Zacatrús.</p>
-              <a class="stretched-link" href="https://twitter.com/iagolobla" target="_blank"><img src="https://abs.twimg.com/favicons/twitter.ico" alt="Twitter icon"><a>
+              <a class="stretched-link" href="https://twitter.com/iagolobla" target="_blank"><img src="https://abs.twimg.com/favicons/twitter.ico" alt="Twitter"></a>
             </div>
           </div>
           <br>
@@ -74,7 +84,7 @@
             <div class="card-body">
               <h4 class="card-title">Nere</h4>
               <p class="card-text">Jugadora de <a href="#treilla">Treilla</a> y <a href="#keran">Keran</a> y experta en fauna.</p>
-              <a class="card-link" href="https://twitter.com/neremortal3" target="_blank"><img src="https://abs.twimg.com/favicons/twitter.ico" alt="Twitter icon"><a>
+              <a class="card-link" href="https://twitter.com/neremortal3" target="_blank"><img src="https://abs.twimg.com/favicons/twitter.ico" alt="Twitter"></a>
             </div>
           </div>
           <br>
@@ -84,27 +94,25 @@
             <div class="card-body">
               <h4 class="card-title">Kraken</h4>
               <p class="card-text">Autora de los dibujos chibis de varios personajes</p>
-              <a class="card-link" href="https://twitter.com/lilsaku" target="_blank"><img src="https://abs.twimg.com/favicons/twitter.ico" alt="Twitter icon"><a>
-              <a class="card-link" href="https://www.twitch.tv/krakenreeeeflex" target="_blank"><img src="https://static.twitchcdn.net/assets/favicon-32-d6025c14e900565d6177.png" alt="Twitter icon"><a>
+              <a class="card-link" href="https://twitter.com/lilsaku" target="_blank">
+                <img src="https://abs.twimg.com/favicons/twitter.ico" alt="Twitter">
+              </a>
+              <a class="card-link" href="https://www.twitch.tv/krakenreeeeflex" target="_blank">
+                <img src="https://static.twitchcdn.net/assets/favicon-32-d6025c14e900565d6177.png" alt="Twitch">
+              </a>
             </div>
           </div>
           <br>
 
           <!-- Atan -->
-          <div class="card bg-secondary text-white" id="datanromar">
+          <div class="card" id="datan">
+            <img class="card-img-top" src="https://jinetes.rutolo.eu/gente/img/datan.jpg" />
             <div class="card-body">
-              <h4 class="card-title">Daniel Atán</h4>
+              <h4 class="card-title">Atán</h4>
               <p class="card-text">Jugador de <a href="#heske">Heske</a> y <a href="#allegra">Allegra</a>.</p>
-              <a class="card-link" href="https://twitter.com/datanromar" target="_blank"><img src="https://abs.twimg.com/favicons/twitter.ico" alt="Twitter icon"><a>
-            </div>
-          </div>
-          <br>
-
-          <!-- Gnomo -->
-          <div class="card bg-secondary text-white" id="gnomo">
-            <div class="card-body">
-              <h4 class="card-title">Mortalgnomo</h4>
-              <p class="card-text">Jugador de <a href="#elara">Elara</a>.</p>
+              <a class="card-link" href="https://twitter.com/datanromar" target="_blank">
+                <img src="https://abs.twimg.com/favicons/twitter.ico" alt="Twitter">
+              </a>
             </div>
           </div>
           <br>
@@ -137,10 +145,14 @@
           <br>
 
           <!-- Clau -->
-          <div class="card bg-secondary text-white" id="clau">
+          <div class="card" id="clau">
             <div class="card-body">
-              <h4 class="card-title">Clau</h4>
+              <h4 class="card-title">Chocolate</h4>
               <p class="card-text">Jugadora de <a href="#treilla">Treilla</a>.</p>
+              <a class="card-link btn btn-light" href="http://paperwordssc.blogspot.com/" target="_blank">Blog</a>
+              <a class="card-link btn btn-light" href="https://archiveofourown.org/users/ChocolateVanCandy/pseuds/ChocolateVanCandy" target="_blank">
+                <img src="https://jinetes.rutolo.eu/gente/img/AooO.webp" width="32" />
+              </a>
             </div>
           </div>
           <br>
@@ -162,14 +174,6 @@
             </div>
           </div>
           <br>
-
-          <!-- Laurita -->
-          <div class="card bg-secondary text-white" id="erane">
-            <div class="card-body">
-              <h4 class="card-title">Laura</h4>
-              <p class="card-text">Jugadora de <a href="#fingul">Fingul Pok</a>.</p>
-            </div>
-          </div>
 
         </div>
       </section>
@@ -195,6 +199,15 @@
             <div class="card-body">
               <h4 class="card-title">Treilla</h4>
               <p class="card-text">Niña semielfa y hermana pequeña de <a href="#elara">Elara</a> . La druida más joven de la historia de <span class="jinetes">Las Torres de Magia</span>.</p>
+            </div>
+          </div>
+          <br>
+
+          <!-- Cotton -->
+          <div class="card" id="cotton">
+            <div class="card-body">
+              <h4 class="card-title">Cotton</h4>
+              <p class="card-text">Oso albino y leal compañero de <a href="#treilla">Treilla</a>.</p>
             </div>
           </div>
           <br>
