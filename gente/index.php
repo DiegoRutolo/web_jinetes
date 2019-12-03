@@ -46,8 +46,8 @@
             <div class="card-body">
               <h4 class="card-title">Myster Myr</h4>
               <p class="card-text">Creador del mundo y sistema, coautor del manual, compositor de la música y DM principal.</p>
-              <a class="card-link" href="https://twitter.com/MisterMyr" target="_blank"><img src="https://abs.twimg.com/favicons/twitter.ico" alt="Twitter"><a>
-              <a class="card-link" href="https://open.spotify.com/artist/09JnLcMChAXzamRnQxF5lK" target="_blank"><img src="https://www.scdn.co/i/_global/favicon.png" alt="Spotify" width="32"><a>
+              <a class="card-link" href="https://twitter.com/MisterMyr" target="_blank"><img src="https://abs.twimg.com/favicons/twitter.ico" alt="Twitter"></a>
+              <a class="card-link" href="https://open.spotify.com/artist/09JnLcMChAXzamRnQxF5lK" target="_blank"><img src="https://www.scdn.co/i/_global/favicon.png" alt="Spotify" width="32"></a>
             </div>
           </div>
           <br>
@@ -70,7 +70,7 @@
             <div class="card-img-overlay">
               <h4 class="card-title">Iagolobla</h4>
               <p class="card-text">Programador, equilibrio del sistema, jugador de Volgarr y Zacatrús.</p>
-              <a class="stretched-link" href="https://twitter.com/iagolobla" target="_blank"><img src="https://abs.twimg.com/favicons/twitter.ico" alt="Twitter"><a>
+              <a class="stretched-link" href="https://twitter.com/iagolobla" target="_blank"><img src="https://abs.twimg.com/favicons/twitter.ico" alt="Twitter"></a>
             </div>
           </div>
           <br>
@@ -80,7 +80,7 @@
             <div class="card-body">
               <h4 class="card-title">Nere</h4>
               <p class="card-text">Jugadora de <a href="#treilla">Treilla</a> y <a href="#keran">Keran</a> y experta en fauna.</p>
-              <a class="card-link" href="https://twitter.com/neremortal3" target="_blank"><img src="https://abs.twimg.com/favicons/twitter.ico" alt="Twitter"><a>
+              <a class="card-link" href="https://twitter.com/neremortal3" target="_blank"><img src="https://abs.twimg.com/favicons/twitter.ico" alt="Twitter"></a>
             </div>
           </div>
           <br>
@@ -90,8 +90,8 @@
             <div class="card-body">
               <h4 class="card-title">Kraken</h4>
               <p class="card-text">Autora de los dibujos chibis de varios personajes</p>
-              <a class="card-link" href="https://twitter.com/lilsaku" target="_blank"><img src="https://abs.twimg.com/favicons/twitter.ico" alt="Twitter"><a>
-              <a class="card-link" href="https://www.twitch.tv/krakenreeeeflex" target="_blank"><img src="https://static.twitchcdn.net/assets/favicon-32-d6025c14e900565d6177.png" alt="Twitch"><a>
+              <a class="card-link" href="https://twitter.com/lilsaku" target="_blank"><img src="https://abs.twimg.com/favicons/twitter.ico" alt="Twitter"></a>
+              <a class="card-link" href="https://www.twitch.tv/krakenreeeeflex" target="_blank"><img src="https://static.twitchcdn.net/assets/favicon-32-d6025c14e900565d6177.png" alt="Twitch"></a>
             </div>
           </div>
           <br>
@@ -101,7 +101,7 @@
             <div class="card-body">
               <h4 class="card-title">Daniel Atán</h4>
               <p class="card-text">Jugador de <a href="#heske">Heske</a> y <a href="#allegra">Allegra</a>.</p>
-              <a class="card-link" href="https://twitter.com/datanromar" target="_blank"><img src="https://abs.twimg.com/favicons/twitter.ico" alt="Twitter"><a>
+              <a class="card-link" href="https://twitter.com/datanromar" target="_blank"><img src="https://abs.twimg.com/favicons/twitter.ico" alt="Twitter"></a>
             </div>
           </div>
           <br>
@@ -138,8 +138,8 @@
             <div class="card-body">
               <h4 class="card-title">Chocolate</h4>
               <p class="card-text">Jugadora de <a href="#treilla">Treilla</a>.</p>
-              <a class="card-link btn btn-light" href="http://paperwordssc.blogspot.com/" target="_blank">Blog<a>
-              <a class="card-link btn btn-light" href="https://archiveofourown.org/users/ChocolateVanCandy/pseuds/ChocolateVanCandy" target="_blank">ArchiveOfOurOwn<a>
+              <a class="card-link btn btn-light" href="http://paperwordssc.blogspot.com/" target="_blank">Blog</a>
+              <a class="card-link btn btn-light" href="https://archiveofourown.org/users/ChocolateVanCandy/pseuds/ChocolateVanCandy" target="_blank">ArchiveOfOurOwn</a>
             </div>
           </div>
           <br>
