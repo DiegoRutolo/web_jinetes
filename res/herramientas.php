@@ -17,9 +17,15 @@
           <li class="nav-item dropdown">
             <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">Sistema y contenido <span class="caret"></span></a>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="https://jinetes.rutolo.eu/sistema/LosJinetesDeKal_manual.pdf" target="_blank">Manual</a>
+              <a class="dropdown-item" href="https://jinetes.rutolo.eu/sistema/LosJinetesDeKal_manual.pdf" target="_blank">Manual (pdf)</a>
               <a class="dropdown-item" href="https://jinetes.rutolo.eu/sistema/hechizos.php">Hechizos y Habilidades</a>
               <a class="dropdown-item" href="https://jinetes.rutolo.eu/sistema/items.php">Objetos</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">Herramientas <span class="caret"></span></a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="https://jinetes.rutolo.eu/herramientas/genHojasHabs">Generador de hojas</a>
             </div>
           </li>
           <li class="nav-item dropdown">
@@ -78,4 +84,4 @@
     return $str;
   }
 
- ?>
+?>
