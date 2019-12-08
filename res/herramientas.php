@@ -48,6 +48,7 @@
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Administración <span class="caret"></span></a>
             <div class="dropdown-menu">
               <a class="dropdown-item" href="https://jinetes.rutolo.eu/admin/index.php">Panel</a>
+              <a class="dropdown-item" href="https://trello.com/b/UEebTZMS/jinetes" target="_blank">Trello</a>
             </div>
           </li>
         </ul>
