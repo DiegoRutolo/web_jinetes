@@ -54,8 +54,8 @@
             <div class="card-body">
               <h4 class="card-title">Myster Myr</h4>
               <p class="card-text">Creador del mundo y sistema, coautor del manual, compositor de la música y DM principal.</p>
-              <a class="card-link btn btn-light" href="https://twitter.com/MisterMyr" target="_blank"><img src="https://abs.twimg.com/favicons/twitter.ico" alt="Twitter"></a>
-              <a class="card-link btn btn-success" href="https://open.spotify.com/artist/09JnLcMChAXzamRnQxF5lK" target="_blank"><img src="https://www.scdn.co/i/_global/favicon.png" alt="Spotify" width="32"></a>
+              <a class="card-link btn btn-light" href="https://twitter.com/MisterMyr" target="_blank" rel="noreferrer"><img src="https://abs.twimg.com/favicons/twitter.ico" alt="Twitter"></a>
+              <a class="card-link btn btn-success" href="https://open.spotify.com/artist/09JnLcMChAXzamRnQxF5lK" target="_blank" rel="noreferrer"><img src="https://www.scdn.co/i/_global/favicon.png" alt="Spotify" width="32"></a>
             </div>
           </div>
           <br>
@@ -65,10 +65,10 @@
             <div class="card-body">
               <h4 class="card-title">DiegoRutolo</h4>
               <p class="card-text">Desarrollador de la web, coautor del manual, DM, jugador de Heske y Galdor.</p>
-              <a class="btn btn-light" href="https://rutolo.eu" target="_blank">
+              <a class="btn btn-light" href="https://rutolo.eu" target="_blank" rel="noreferrer">
                 <?=GetIcono("www", 32);?>
               </a>
-              <a class="btn btn-light" href="https://github.com/DiegoRutolo" target="_blank">
+              <a class="btn btn-light" href="https://github.com/DiegoRutolo" target="_blank" rel="noreferrer">
                 <img src="https://github.githubassets.com/favicon.ico" alt="GitHub" width="32">
               </a>
             </div>
@@ -82,7 +82,7 @@
             <div class="card-img-overlay">
               <h4 class="card-title">Iagolobla</h4>
               <p class="card-text">Programador, equilibrio del sistema, jugador de Volgarr y Zacatrús.</p>
-              <a class="stretched-link" href="https://twitter.com/iagolobla" target="_blank"><img src="https://abs.twimg.com/favicons/twitter.ico" alt="Twitter"></a>
+              <a class="stretched-link" href="https://twitter.com/iagolobla" target="_blank" rel="noreferrer"><img src="https://abs.twimg.com/favicons/twitter.ico" alt="Twitter"></a>
             </div>
           </div>
           <br>
@@ -92,10 +92,10 @@
             <div class="card-body">
               <h4 class="card-title">Nere</h4>
               <p class="card-text">Jugadora de Treilla y Keran y experta en fauna.</p>
-              <!-- <a class="card-link" href="https://twitter.com/neremortal3" target="_blank">
+              <!-- <a class="card-link" href="https://twitter.com/neremortal3" target="_blank" rel="noreferrer">
                 <img src="https://abs.twimg.com/favicons/twitter.ico" alt="Twitter">
               </a> -->
-              <a class="stretched-link" href="https://www.instagram.com/neremontero3/" target="_blank">
+              <a class="stretched-link" href="https://www.instagram.com/neremontero3/" target="_blank" rel="noreferrer">
                 <img src="https://www.instagram.com/static/images/ico/favicon-192.png/68d99ba29cc8.png" alt="Instagram" width="32">
               </a>
             </div>
@@ -108,10 +108,10 @@
             <div class="card-body">
               <h4 class="card-title">Kraken</h4>
               <p class="card-text">Autora de los dibujos chibis de varios personajes.</p>
-              <a class="card-link" href="https://twitter.com/lilsaku" target="_blank">
+              <a class="card-link" href="https://twitter.com/lilsaku" target="_blank" rel="noreferrer">
                 <img src="https://abs.twimg.com/favicons/twitter.ico" alt="Twitter">
               </a>
-              <a class="card-link" href="https://www.twitch.tv/krakenreeeeflex" target="_blank">
+              <a class="card-link" href="https://www.twitch.tv/krakenreeeeflex" target="_blank" rel="noreferrer">
                 <img src="https://static.twitchcdn.net/assets/favicon-32-d6025c14e900565d6177.png" alt="Twitch">
               </a>
             </div>
@@ -124,7 +124,7 @@
             <div class="card-body">
               <h4 class="card-title">Atán</h4>
               <p class="card-text">Jugador de Heske y Allegra.</p>
-              <a class="stretched-link" href="https://twitter.com/datanromar" target="_blank">
+              <a class="stretched-link" href="https://twitter.com/datanromar" target="_blank" rel="noreferrer">
                 <img src="https://abs.twimg.com/favicons/twitter.ico" alt="Twitter">
               </a>
             </div>
@@ -163,10 +163,10 @@
             <div class="card-body">
               <h4 class="card-title">Chocolate</h4>
               <p class="card-text">Jugadora de Treilla.</p>
-              <a class="card-link btn btn-light" href="http://paperwordssc.blogspot.com/" target="_blank">
+              <a class="card-link btn btn-light" href="http://paperwordssc.blogspot.com/" target="_blank" rel="noreferrer">
                 <img src="http://paperwordssc.blogspot.com/favicon.ico" alt="Blog" width="32">
               </a>
-              <a class="card-link btn btn-light" href="https://archiveofourown.org/users/ChocolateVanCandy/pseuds/ChocolateVanCandy" target="_blank">
+              <a class="card-link btn btn-light" href="https://archiveofourown.org/users/ChocolateVanCandy/pseuds/ChocolateVanCandy" target="_blank" rel="noreferrer">
                 <img src="https://jinetes.rutolo.eu/gente/img/AooO.webp" width="32" />
               </a>
             </div>
