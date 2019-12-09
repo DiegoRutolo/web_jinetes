@@ -12,3 +12,5 @@
   Order allow,deny
   Deny from all
 </Files>
+
+Redirect permanent http://jinetes.rutolo.eu https://jinetes.rutolo.eu/
