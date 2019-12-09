@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /res/
+
+Sitemap: https://jinetes.rutolo.eu/sitemap.xml
+Sitemap: http://jinetes.rutolo.eu/sitemap.xml
