@@ -13,4 +13,9 @@
   Deny from all
 </Files>
 
-Redirect permanent http://jinetes.rutolo.eu https://jinetes.rutolo.eu/
+# Redireccionar a https
+#Redirect permanent http://jinetes.rutolo.eu https://jinetes.rutolo.eu/
+
+RewriteEngine On
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://jinetes.rutolo.eu/$1 [R,L]
