@@ -302,5 +302,7 @@ include "../res/herramientas.php";
       <?= GetIcono("fu", 45) ?>
     </a>
   </div>
+
+  <?=Footer();?>
 </body>
 </html>

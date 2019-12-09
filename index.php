@@ -50,5 +50,7 @@
       <h4>Ficha web</h4>
       <p>Esta herramienta debería permitir jugar a través de internet. Se puede acceder desde esta misma web o descargarla en formato zip desde <a href="https://github.com/DiegoRutolo/Jinetes_FichaWeb" target="_blank">GitHub</a>. Puede funcionar offline, así que también se puede utilizar en partidas presenciales en una tablet.</p>
     </div>
+
+    <?=Footer();?>
   </body>
 </html>

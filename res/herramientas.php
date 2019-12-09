@@ -85,4 +85,21 @@
     return $str;
   }
 
+  function Footer() {
+    $str = "
+    <footer class=\"bg-dark text-light\">
+      <div class=\"row\">
+        <div class=\"col text-center\">
+          Repo de la web: <a href=\"https://github.com/DiegoRutolo/web_jinetes\" target=\"_blank\" rel=\"noreferrer\">DiegoRutolo</a>
+        </div>
+
+        <div class=\"col text-center\">
+          Esta web no utiliza cookies.
+        </div>
+      </div>
+    </footer>
+    ";
+    return $str;
+  }
+
 ?>

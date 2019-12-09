@@ -82,5 +82,7 @@
       $ps->close();
       $con->close();
     ?>
+
+    <?=Footer();?>
   </body>
 </html>

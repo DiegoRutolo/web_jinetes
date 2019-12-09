@@ -47,6 +47,12 @@ body {
   font-family: "Black Chancery", "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 
+/* Footer */
+footer {
+  width: 100%;
+  padding: 1em;
+}
+
 
 /* Test de card-column */
 @media (min-width: 34em) {

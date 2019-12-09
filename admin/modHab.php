@@ -199,5 +199,7 @@
         <?= GetIcono("fu", 45) ?>
       </a>
     </div>
+
+    <?=Footer();?>
   </body>
 </html>

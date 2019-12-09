@@ -30,5 +30,7 @@
     <div class="container">
       <?=PdI()?>
     </div>
+
+    <?=Footer();?>
   </body>
 </html>

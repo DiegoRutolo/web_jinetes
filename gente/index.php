@@ -325,5 +325,7 @@
         </div>
       </section>
     </div>
+
+    <?=Footer();?>
   </body>
 </html>

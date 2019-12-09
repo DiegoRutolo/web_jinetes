@@ -22,7 +22,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" type="text/css" href="https://jinetes.rutolo.eu/res/style.css">
-    
+
     <?php
     $server = "localhost";
     $creds = file("../creds.txt");
@@ -81,5 +81,7 @@
       $ps->close();
       $con->close();
     ?>
+
+    <?=Footer();?>
   </body>
 </html>
