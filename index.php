@@ -39,7 +39,7 @@
     <?php ImprimeNavBar(); ?>
 
     <div class="cabezoneria">
-      <img src="https://jinetes.rutolo.eu/res/img/Kal_4C.png" width="100%">
+      <img src="/res/img/Kal_4C.png" width="100%">
       <h1 class="jinetes">Los Jinetes de Kal</h1>
     </div>
 

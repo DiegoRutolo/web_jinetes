@@ -21,7 +21,7 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="https://jinetes.rutolo.eu/res/style.css">
+    <link rel="stylesheet" type="text/css" href="/res/style.css">
     <style type="text/css">
       #clau {
         background-color: SandyBrown;
@@ -50,7 +50,7 @@
 
           <!-- Myr -->
           <div class="card bg-primary text-white" id="mistermyr">
-            <img class="card-img-top" src="https://jinetes.rutolo.eu/gente/img/MysterMyr.jpg">
+            <img class="card-img-top" src="/gente/img/MysterMyr.jpg">
             <div class="card-body">
               <h4 class="card-title">Myster Myr</h4>
               <p class="card-text">Creador del mundo y sistema, coautor del manual, compositor de la música y DM principal.</p>
@@ -72,13 +72,13 @@
                 <img src="https://github.githubassets.com/favicon.ico" alt="GitHub" width="32">
               </a>
             </div>
-            <img class="card-img-bottom" src="https://jinetes.rutolo.eu/gente/img/Caradox.jpg">
+            <img class="card-img-bottom" src="/gente/img/Caradox.jpg">
           </div>
           <br>
 
           <!-- Iago -->
           <div class="card text-white" id="iagolobla">
-            <img class="card-img-top" src="https://jinetes.rutolo.eu/gente/img/iagolobla.png" style="filter:brightness(55%)">
+            <img class="card-img-top" src="/gente/img/iagolobla.png" style="filter:brightness(55%)">
             <div class="card-img-overlay">
               <h4 class="card-title">Iagolobla</h4>
               <p class="card-text">Programador, equilibrio del sistema, jugador de Volgarr y Zacatrús.</p>
@@ -99,7 +99,7 @@
                 <img src="https://www.instagram.com/static/images/ico/favicon-192.png/68d99ba29cc8.png" alt="Instagram" width="32">
               </a>
             </div>
-            <img class="card-img-bottom" src="https://jinetes.rutolo.eu/gente/img/nere.jpg">
+            <img class="card-img-bottom" src="/gente/img/nere.jpg">
           </div>
           <br>
 
@@ -120,7 +120,7 @@
 
           <!-- Atan -->
           <div class="card" id="datan">
-            <img class="card-img-top" src="https://jinetes.rutolo.eu/gente/img/datan.jpg" />
+            <img class="card-img-top" src="/gente/img/datan.jpg" />
             <div class="card-body">
               <h4 class="card-title">Atán</h4>
               <p class="card-text">Jugador de Heske y Allegra.</p>
@@ -167,7 +167,7 @@
                 <img src="http://paperwordssc.blogspot.com/favicon.ico" alt="Blog" width="32">
               </a>
               <a class="card-link btn btn-light" href="https://archiveofourown.org/users/ChocolateVanCandy/pseuds/ChocolateVanCandy" target="_blank" rel="noreferrer">
-                <img src="https://jinetes.rutolo.eu/gente/img/AooO.webp" width="32" />
+                <img src="/gente/img/AooO.webp" width="32" />
               </a>
             </div>
           </div>

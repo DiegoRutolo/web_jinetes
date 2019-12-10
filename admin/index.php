@@ -72,7 +72,7 @@ include "../res/herramientas.php";
 
         if ($habs_pend->num_rows > 0) {
           while ($hab_pend = $habs_pend->fetch_assoc()) { ?>
-            <form method="POST" action="https://jinetes.rutolo.eu/admin/modResult.php">
+            <form method="POST" action="/admin/modResult.php">
               <div class="form-group">
                 <div class="row">
                   <div class="col-sm-8">
@@ -175,7 +175,7 @@ include "../res/herramientas.php";
 
       <!-- Añadir hechizos -->
       <div id="nueva" class="container-fluid tab-pane form-group">
-        <form method="POST" action="https://jinetes.rutolo.eu/admin/addResult.php">
+        <form method="POST" action="/admin/addResult.php">
           <div class="row">
             <div class="col-sm-8">
               <label for="iNom">Nombre:</label>
@@ -273,7 +273,7 @@ include "../res/herramientas.php";
 
       <!-- Editar hechizo -->
       <div id="editar" class="container tab-pane p-4">
-        <form class="form-inline" method="POST" action="https://jinetes.rutolo.eu/admin/modHab.php">
+        <form class="form-inline" method="POST" action="/admin/modHab.php">
           <label for="iNombreBuscar" class="mr-2">Nombre: </label>
           <input type="text" class="form-control mr-2" id="iNombreBuscar" list="dlNomHabs" name="nomHab">
           <?php

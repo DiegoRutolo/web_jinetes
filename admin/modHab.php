@@ -21,7 +21,7 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="https://jinetes.rutolo.eu/res/style.css">
+    <link rel="stylesheet" type="text/css" href="/res/style.css">
 
     <?php
     $server = "localhost";
@@ -84,11 +84,11 @@
 
       echo "<!-- " . $ps->num_rows . " filas cargadas -->";
       ?>
-      <div class="alert alert-info">Encontradas <strong><?= $ps->num_rows ?> filas</strong> que coinciden con los parámetros. <a href="https://jinetes.rutolo.eu/admin/index.php" class="alert-link float-right">Volver</a></div>
+      <div class="alert alert-info">Encontradas <strong><?= $ps->num_rows ?> filas</strong> que coinciden con los parámetros. <a href="/admin/index.php" class="alert-link float-right">Volver</a></div>
       <?php
       while ($ps->fetch()) { ?>
         <div class="container-fluid">
-          <form method="POST" action="https://jinetes.rutolo.eu/admin/modResult.php">
+          <form method="POST" action="/admin/modResult.php">
             <div class="form-group">
               <div class="row">
                 <div class="col-sm-8">
@@ -181,7 +181,7 @@
                 <input type="submit" class="btn btn-primary" value="Guardar">
               </div>
               <div class="col-sm">
-                <a href="https://jinetes.rutolo.eu/admin/index.php" class="btn btn-primary">Volver</a>
+                <a href="/admin/index.php" class="btn btn-primary">Volver</a>
               </div>
             </div>
           </div>

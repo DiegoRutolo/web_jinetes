@@ -21,7 +21,7 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="https://jinetes.rutolo.eu/res/style.css">
+    <link rel="stylesheet" type="text/css" href="/res/style.css">
 
     <?php
     $server = "localhost";
@@ -75,7 +75,7 @@
       <div class="alert alert-success">
         Habilidad añadida correctamente :D
       </div>
-      <a href="https://jinetes.rutolo.eu/admin/index.php" class="btn btn-primary">Volver</a>
+      <a href="/admin/index.php" class="btn btn-primary">Volver</a>
     </div>
     <?php
       $ps->close();
