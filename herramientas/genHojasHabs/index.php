@@ -39,7 +39,10 @@
       var habilidades=[];
       var habilidad_seleccionada=0;
       var habilidades_seleccionadas=[];
+
       <?php
+        echo "var red_cross='".GetIcono('c')."';";
+
         $con = new mysqli($server, $usuario, $passwd, "jinetes");
         if ($con->connect_error) {
           die("Connection failed" . $con->connect_error);
@@ -71,49 +74,52 @@
     </script>
     <?php ImprimeNavBar(); ?>
 
-    <div class="container">
-      <aside class="float-right border">
-        <h2>Habilidades seleccionadas</h2>
-        <ul id="lista_habilidades_seleccionadas" class="list-group">
-        </ul>
-      </aside>
-
-      <h1>Habilidades</h1>
-      <p>Elige aqui las habilidades que deseas que tenga tu personaje.</p>
-
-      <section>
-        <h2>Selecciona una Habilidad:</h2>
-        <select class="selectpicker" id="habilidades" data-live-search="true">
-        </select>
-      </section>
-      <section>
-        <h2>Información de la habilidad:</h2>
-        <table class="table table-striped table-bordered">
-          <tr>
-            <td style='width:7em'><b>Nombre</b></td>
-            <td id="nombre_habilidad"></td>
-          </tr>
-          <tr>
-            <td><b>Descripción</b></td>
-            <td id="descripcion_habilidad"></td>
-          </tr>
-          <tr>
-            <td><b>Tipo</b></td>
-            <td id="tipo_habilidad"></td>
-          </tr>
-          <tr>
-            <td><b>Subtipo</b></td>
-            <td id="subtipo_habilidad"></td>
-          </tr>
-          <tr>
-            <td><b>Tier</b></td>
-            <td id="tier_habilidad"></td>
-          </tr>
-        </table>
-        <div id="boton_add_habilidad" class="btn btn-primary">Añadir!</div>
-      </section>
-
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col">
+          <section>
+            <h2>Selecciona una Habilidad:</h2>
+            <select class="selectpicker" id="habilidades" data-live-search="true">
+            </select>
+          </section>
+          <section>
+            <h2>Información de la habilidad:</h2>
+            <table class="table table-striped table-bordered">
+              <tr>
+                <td style='width:7em'><b>Nombre</b></td>
+                <td id="nombre_habilidad"></td>
+              </tr>
+              <tr>
+                <td><b>Descripción</b></td>
+                <td id="descripcion_habilidad"></td>
+              </tr>
+              <tr>
+                <td><b>Tipo</b></td>
+                <td id="tipo_habilidad"></td>
+              </tr>
+              <tr>
+                <td><b>Subtipo</b></td>
+                <td id="subtipo_habilidad"></td>
+              </tr>
+              <tr>
+                <td><b>Tier</b></td>
+                <td id="tier_habilidad"></td>
+              </tr>
+            </table>
+            <div id="boton_add_habilidad" class="btn btn-primary my-4">Añadir!</div>
+          </section>
+        </div>
+        <div class="col-lg-3 border block">
+          <section>
+                <h2 class="mt-2 text-center">Habilidades seleccionadas</h2>
+                <ul id="lista_habilidades_seleccionadas" class="list-group list-group-flush">
+                </ul>
+                <footer class="btn btn-primary my-4">Generar!</footer>
+          </section>
+        </div>
+      </div>
     </div>
+
   </body>
   <script type="text/javascript">
     function rellenarTabla(){
@@ -142,7 +148,7 @@
     boton_add_habilidad.on('click',function(){
       if(!habilidades_seleccionadas.includes(habilidad_seleccionada)){
         habilidades_seleccionadas.push(habilidad_seleccionada);
-        lista_habilidades_seleccionadas.append("<li id='habilidad_"+habilidad_seleccionada+"' class='list-group-item d-flex justify-content-between align-items-center'>"+habilidades[habilidad_seleccionada].nombre+"<span onclick='eliminar_hab_seleccionada("+habilidad_seleccionada+")' value='"+habilidad_seleccionada+"' class='btn btn-primary'>Eliminar</span></li>");
+        lista_habilidades_seleccionadas.append("<li id='habilidad_"+habilidad_seleccionada+"' class='list-group-item d-flex justify-content-between align-items-center'><span style='font-size:1.25em'>"+habilidades[habilidad_seleccionada].nombre+"</span><span onclick='eliminar_hab_seleccionada("+habilidad_seleccionada+")' class='btn btn-outline-danger'>"+red_cross+"</span></li>");
       }
     });
 
