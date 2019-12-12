@@ -166,9 +166,9 @@
 
     $("#formulario_generar").on('submit',function(){
       let json=[];
-      for(h in habilidades_seleccionadas){
-        json.push(habilidades[h]);
-      }
+      habilidades_seleccionadas.forEach(function(item,index){
+        json.push(habilidades[item]);
+      });
       $("#formulario_generar input[name='habilidades']").val(JSON.stringify(json));
     });
 
