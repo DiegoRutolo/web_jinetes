@@ -26,7 +26,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/i18n/defaults-*.min.js"></script>
 
     <link rel="stylesheet" type="text/css" href="/res/style.css">
-    <link rel="stylesheet" type="text/css"" href="./hojaHabilidades.css">
+    <link rel="stylesheet" type="text/css" href="./hojaHabilidades.css">
   </head>
   <body>
     <div class='columnas'>
