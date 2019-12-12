@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="HandheldFriendly" content="true" />
     <meta name="MobileOptimized" content="320" />
-    <link rel="stylesheet" href="./hojaHabilidades.css">
+
     <!-- BootStrap --->
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -25,7 +25,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/i18n/defaults-*.min.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="https://jinetes.rutolo.eu/res/style.css">
+    <link rel="stylesheet" type="text/css" href="/res/style.css">
+    <link rel="stylesheet" type="text/css"" href="./hojaHabilidades.css">
   </head>
   <body>
     <div class='columnas'>
