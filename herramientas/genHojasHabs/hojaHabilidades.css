@@ -1,36 +1,19 @@
-body{
-	margin: auto;
-    height:297mm;
-    width:210mm;
-}
-
-li{
-	list-style-type: none;
-}
-
-.habilidad{
-	display: block;
-	break-inside: avoid-column;
-	-webkit-column-break-inside: avoid;
-}
-
-.columnas{
+.contenedor{
+	width: 210mm;
 	column-count: 2;
-	-webkit-column-count: 2; /* Old Chrome, Safari and Opera */
-	-moz-column-count: 2; /* Old Firefox */
+	margin:auto;
+}
+
+.lista{
+	list-style: none;
+	padding-left: 1em;
 }
 
 .horizontal{
-	display:inline;
-    padding-left:3px;
-    padding-right:3px;
+	display: inline-block;
+	padding-right: 1em;
 }
 
-h2, h3{
-	margin-top: 5px;
-	margin-bottom: 5px;
-}
-
-ul{
-	margin-top: 5px;
+.habilidad{
+	break-inside: avoid-column;
 }

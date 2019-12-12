@@ -29,7 +29,7 @@
     <link rel="stylesheet" type="text/css" href="./hojaHabilidades.css">
   </head>
   <body>
-    <div class='columnas'>
+    <div class='contenedor'>
       <?php
         if(isset($_POST['habilidades'])){
 
@@ -52,24 +52,24 @@
           }
           usort($habilidades, 'fn_ordena');
 
+          $lvl_chngd=false;
           $nivel=0;
           foreach($habilidades as $hab){
             if($hab['tier']>$nivel){
-              if($nivel!=0){
-                echo "</div>";
-              }
               $nivel=$hab['tier'];
-              echo "<div class='tier'><h2>Tier ".$nivel."</h2>";
+              $lvl_chngd=true;
+            }else{
+              $lvl_chngd=false;
             }
 
-            echo "<div class='habilidad'><h3>".$hab['nombre']."</h3><ul>";
+            echo "<div class='habilidad'>".($lvl_chngd?"<h2>Tier ".$nivel."</h2>":"")."<h3>".$hab['nombre']."</h3><ul class='lista'>";
             echo "<li class='horizontal'><b>Activación:</b>".($hab['continua']==0?"Instantánea":"Continua")."</li>";
             echo "<li class='horizontal'><b>Dificultad:</b>".($hab['auto']==0?$hab['tier_dif']:"Automática")."</li>";
             echo "<li class='horizontal'><b>Coste:</b>".($hab['gratis']==0?$hab['tier_coste']:"Gratis")."</li>";
             echo "<li><b>Efecto:</b>".$hab['descripcion']."</li>";
             echo "</ul></div>";
           }
-          echo "</div></div></body></html>";
+          echo "</div></body></html>";
 
         }
 
