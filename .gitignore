@@ -1,4 +1,7 @@
-*creds.txt
+#atom
 atom-sftp-sync.json
 deployment-config.json
+package-lock.json
+
+*creds.txt
 notas/*

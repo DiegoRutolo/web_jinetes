@@ -91,10 +91,10 @@
 
                echo "<tr>";
 
-               echo "<td>" . utf8_encode($row["nom"]) . "</td>";
+               echo "<td>" . htmlspecialchars(utf8_encode($row["nom"])) . "</td>";
                echo "<td>" . utf8_encode($row["tier"]) . "</td>";
                echo "<td>" . utf8_encode($caster) . "</td>";
-               echo "<td>" . utf8_encode($row["descr"]) . "</td>";
+               echo "<td>" . htmlspecialchars(utf8_encode($row["descr"])) . "</td>";
 
                echo "</tr>\n";
              }
@@ -155,12 +155,12 @@
                  while ($row = $res->fetch_assoc()) {
                    echo "<tr>";
 
-                   echo "<td>" . utf8_encode($row["nom"]) . "</td>";
+                   echo "<td>" . htmlspecialchars(utf8_encode($row["nom"])) . "</td>";
                    echo "<td>" . utf8_encode($row["subtipo"]) . "</td>";
                    echo "<td>" . utf8_encode($row["tier"]) . "</td>";
                    echo "<td>" . ($row["gratis"] ? GetIcono('t') : GetIcono('c')) . "</td>";
                    echo "<td>" . ($row["auto"] ? GetIcono('t') : GetIcono('c')) . "</td>";
-                   echo "<td>" . utf8_encode($row["descr"]) . "</td>";
+                   echo "<td>" . htmlspecialchars(utf8_encode($row["descr"])) . "</td>";
 
                    echo "</tr>\n";
                  }
@@ -191,12 +191,12 @@
                  while ($row = $res->fetch_assoc()) {
                    echo "<tr>";
 
-                   echo "<td>" . utf8_encode($row["nom"]) . "</td>";
+                   echo "<td>" . htmlspecialchars(utf8_encode($row["nom"])) . "</td>";
                    echo "<td>" . utf8_encode($row["subtipo"]) . "</td>";
                    echo "<td>" . utf8_encode($row["tier"]) . "</td>";
                    echo "<td>" . ($row["gratis"] ? GetIcono('t') : GetIcono('c')) . "</td>";
                    echo "<td>" . ($row["auto"] ? GetIcono('t') : GetIcono('c')) . "</td>";
-                   echo "<td>" . utf8_encode($row["descr"]) . "</td>";
+                   echo "<td>" . htmlspecialchars(utf8_encode($row["descr"])) . "</td>";
 
                    echo "</tr>\n";
                  }
@@ -226,11 +226,11 @@
                  while ($row = $res->fetch_assoc()) {
                    echo "<tr>";
 
-                   echo "<td>" . utf8_encode($row["nom"]) . "</td>";
+                   echo "<td>" . htmlspecialchars(utf8_encode($row["nom"])) . "</td>";
                    echo "<td>" . utf8_encode($row["tier"]) . "</td>";
                    echo "<td>" . ($row["gratis"] ? GetIcono('t') : GetIcono('c')) . "</td>";
                    echo "<td>" . ($row["auto"] ? GetIcono('t') : GetIcono('c')) . "</td>";
-                   echo "<td>" . utf8_encode($row["descr"]) . "</td>";
+                   echo "<td>" . htmlspecialchars(utf8_encode($row["descr"])) . "</td>";
 
                    echo "</tr>\n";
                  }
@@ -261,12 +261,12 @@
                  while ($row = $res->fetch_assoc()) {
                    echo "<tr>";
 
-                   echo "<td>" . utf8_encode($row["nom"]) . "</td>";
+                   echo "<td>" . htmlspecialchars(utf8_encode($row["nom"])) . "</td>";
                    echo "<td>" . utf8_encode($row["subtipo"]) . "</td>";
                    echo "<td>" . utf8_encode($row["tier"]) . "</td>";
                    echo "<td>" . ($row["gratis"] ? GetIcono('t') : GetIcono('c')) . "</td>";
                    echo "<td>" . ($row["auto"] ? GetIcono('t') : GetIcono('c')) . "</td>";
-                   echo "<td>" . utf8_encode($row["descr"]) . "</td>";
+                   echo "<td>" . htmlspecialchars(utf8_encode($row["descr"])) . "</td>";
 
                    echo "</tr>\n";
                  }
@@ -296,11 +296,11 @@
                  while ($row = $res->fetch_assoc()) {
                    echo "<tr>";
 
-                   echo "<td>" . utf8_encode($row["nom"]) . "</td>";
+                   echo "<td>" . htmlspecialchars(utf8_encode($row["nom"])) . "</td>";
                    echo "<td>" . utf8_encode($row["tier"]) . "</td>";
                    echo "<td>" . ($row["gratis"] ? GetIcono('t') : GetIcono('c')) . "</td>";
                    echo "<td>" . ($row["auto"] ? GetIcono('t') : GetIcono('c')) . "</td>";
-                   echo "<td>" . utf8_encode($row["descr"]) . "</td>";
+                   echo "<td>" . htmlspecialchars(utf8_encode($row["descr"])) . "</td>";
 
                    echo "</tr>\n";
                  }
@@ -330,11 +330,11 @@
                  while ($row = $res->fetch_assoc()) {
                    echo "<tr>";
 
-                   echo "<td>" . utf8_encode($row["nom"]) . "</td>";
+                   echo "<td>" . htmlspecialchars(utf8_encode($row["nom"])) . "</td>";
                    echo "<td>" . utf8_encode($row["tier"]) . "</td>";
                    echo "<td>" . ($row["gratis"] ? GetIcono('t') : GetIcono('c')) . "</td>";
                    echo "<td>" . ($row["auto"] ? GetIcono('t') : GetIcono('c')) . "</td>";
-                   echo "<td>" . utf8_encode($row["descr"]) . "</td>";
+                   echo "<td>" . htmlspecialchars(utf8_encode($row["descr"])) . "</td>";
 
                    echo "</tr>\n";
                  }
@@ -364,11 +364,11 @@
                  while ($row = $res->fetch_assoc()) {
                    echo "<tr>";
 
-                   echo "<td>" . utf8_encode($row["nom"]) . "</td>";
+                   echo "<td>" . htmlspecialchars(utf8_encode($row["nom"])) . "</td>";
                    echo "<td>" . utf8_encode($row["tier"]) . "</td>";
                    echo "<td>" . ($row["gratis"] ? GetIcono('t') : GetIcono('c')) . "</td>";
                    echo "<td>" . ($row["auto"] ? GetIcono('t') : GetIcono('c')) . "</td>";
-                   echo "<td>" . utf8_encode($row["descr"]) . "</td>";
+                   echo "<td>" . htmlspecialchars(utf8_encode($row["descr"])) . "</td>";
 
                    echo "</tr>\n";
                  }
@@ -398,11 +398,11 @@
                  while ($row = $res->fetch_assoc()) {
                    echo "<tr>";
 
-                   echo "<td>" . utf8_encode($row["nom"]) . "</td>";
+                   echo "<td>" . htmlspecialchars(utf8_encode($row["nom"])) . "</td>";
                    echo "<td>" . utf8_encode($row["tier"]) . "</td>";
                    echo "<td>" . ($row["gratis"] ? GetIcono('t') : GetIcono('c')) . "</td>";
                    echo "<td>" . ($row["auto"] ? GetIcono('t') : GetIcono('c')) . "</td>";
-                   echo "<td>" . utf8_encode($row["descr"]) . "</td>";
+                   echo "<td>" . htmlspecialchars(utf8_encode($row["descr"])) . "</td>";
 
                    echo "</tr>\n";
                  }
@@ -437,12 +437,12 @@
              while ($row = $res->fetch_assoc()) {
                echo "<tr>";
 
-               echo "<td>" . utf8_encode($row["nom"]) . "</td>";
+               echo "<td>" . htmlspecialchars(utf8_encode($row["nom"])) . "</td>";
                echo "<td>" . utf8_encode($row["tier"]) . "</td>";
                echo "<td>" . ($row["contin"] ? GetIcono('t') : GetIcono('c')) . "</td>";
                echo "<td>" . ($row["gratis"] ? GetIcono('t') : GetIcono('c')) . "</td>";
                echo "<td>" . ($row["auto"] ? GetIcono('t') : GetIcono('c')) . "</td>";
-               echo "<td>" . utf8_encode($row["descr"]) . "</td>";
+               echo "<td>" . htmlspecialchars(utf8_encode($row["descr"])) . "</td>";
 
                echo "</tr>\n";
              }
@@ -474,10 +474,10 @@
 
                echo "<tr>";
 
-               echo "<td>" . utf8_encode($row["nom"]) . "</td>";
+               echo "<td>" . htmlspecialchars(utf8_encode($row["nom"])) . "</td>";
                echo "<td>" . utf8_encode($caster) . "</td>";
                echo "<td>" . utf8_encode($row["tier"]) . "</td>";
-               echo "<td>" . utf8_encode($row["descr"]) . "</td>";
+               echo "<td>" . htmlspecialchars(utf8_encode($row["descr"])) . "</td>";
 
                echo "</tr>\n";
              }
@@ -510,11 +510,11 @@
 
                echo "<tr>";
 
-               echo "<td>" . utf8_encode($row["nom"]) . "</td>";
+               echo "<td>" . htmlspecialchars(utf8_encode($row["nom"])) . "</td>";
                echo "<td>" . utf8_encode($row["tier"]) . "</td>";
                echo "<td>" . utf8_encode($caster) . "</td>";
                echo "<td>" . ($row["contin"] ? GetIcono('t') : GetIcono('c')) . "</td>";
-               echo "<td>" . utf8_encode($row["descr"]) . "</td>";
+               echo "<td>" . htmlspecialchars(utf8_encode($row["descr"])) . "</td>";
 
                echo "</tr>\n";
              }
@@ -543,9 +543,9 @@
              while ($row = $res->fetch_assoc()) {
                echo "<tr>";
 
-               echo "<td>" . utf8_encode($row["nom"]) . "</td>";
+               echo "<td>" . htmlspecialchars(utf8_encode($row["nom"])) . "</td>";
                echo "<td>" . utf8_encode($row["tier"]) . "</td>";
-               echo "<td>" . utf8_encode($row["descr"]) . "</td>";
+               echo "<td>" . htmlspecialchars(utf8_encode($row["descr"])) . "</td>";
 
                echo "</tr>\n";
              }
