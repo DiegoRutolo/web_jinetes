@@ -20,6 +20,9 @@ include "../res/herramientas.php";
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <!-- Latest compiled JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!-- selectpicker -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
 
   <link rel="stylesheet" type="text/css" href="../res/style.css">
 
@@ -107,19 +110,18 @@ include "../res/herramientas.php";
                   <!-- TODO: Mostrar solo los adecuados según la tabla RelTipoPrim -->
                   <label>Subtipo (opcional):</label>
                   <input type="text" class="form-control" name="subtipo" list="dlSubtipos" value="<?=utf8_encode($hab_pend["subtipo"])?>">
-                  <?php
-                  $sql = "SELECT nom FROM TipoHab WHERE TipoHab.primario = FALSE";
-                  $res = $con->query($sql);
-                  ?>
-                  <datalist id="dlSubtipos">
+                  <select class="form-control selectpicker" name="subtipo" value="<?=utf8_encode($hab_pend["subtipo"])?>">
+                    <option></option>
                     <?php
+                    $sql = "SELECT nom FROM TipoHab WHERE TipoHab.primario = FALSE";
+                    $res = $con->query($sql);
                     if ($res->num_rows > 0) {
                       while ($row = $res->fetch_assoc()) {
-                        echo "<option value=\"" . utf8_encode($row["nom"]) . "\">\n";
+                        echo "<option>" . utf8_encode($row["nom"]) . "</option>\n";
                       }
                     }
                     ?>
-                  </datalist>
+                  </select>
                 </div>
                 <div class="form-check">
                   <div class="col-sm">
@@ -210,20 +212,18 @@ include "../res/herramientas.php";
 
               <!-- TODO: Mostrar solo los adecuados según la tabla RelTipoPrim -->
               <label for="iSubtipo">Subtipo (opcional):</label>
-              <input type="text" class="form-control" id="iSubtipo" name="subtipo" list="dlSubtipos">
-              <?php
-              $sql = "SELECT nom FROM TipoHab WHERE TipoHab.primario = FALSE";
-              $res = $con->query($sql);
-              ?>
-              <datalist id="dlSubtipos">
+              <select class="form-control selectpicker" name="subtipo" value="<?=utf8_encode($hab_pend["subtipo"])?>">
+                <option></option>
                 <?php
+                $sql = "SELECT nom FROM TipoHab WHERE TipoHab.primario = FALSE";
+                $res = $con->query($sql);
                 if ($res->num_rows > 0) {
                   while ($row = $res->fetch_assoc()) {
-                    echo "<option value=\"" . utf8_encode($row["nom"]) . "\">\n";
+                    echo "<option>" . utf8_encode($row["nom"]) . "</option>\n";
                   }
                 }
                 ?>
-              </datalist>
+              </select>
             </div>
             <div class="form-check">
               <div class="col-sm">

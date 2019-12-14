@@ -52,7 +52,7 @@
       $revisar = $_POST["revisar"] === NULL ? 0 : $_POST["revisar"];
       $nom = utf8_decode($_POST["nom"]);
       $tipo = utf8_decode($_POST["tipo"]);
-      $subtipo = utf8_decode($_POST["subtipo"]);
+      $subtipo = !empty($_POST["subtipo"]) ? utf8_decode($_POST["subtipo"]) : NULL;
       $descr = utf8_decode($_POST["descr"]);
       $contin = $_POST["contin"] === NULL ? 0 : $_POST["contin"];
       $auto = $_POST["auto"] === NULL ? 0 : $_POST["auto"];
