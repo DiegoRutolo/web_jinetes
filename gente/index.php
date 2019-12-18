@@ -183,13 +183,24 @@
           <br>
 
           <!-- Elia -->
-          <div class="card bg-secondary text-white" id="erane">
+          <div class="card bg-secondary text-white" id="elia">
             <div class="card-body">
               <h4 class="card-title">Elia</h4>
               <p class="card-text">Jugadora de Aeria Cornell.</p>
             </div>
           </div>
           <br>
+
+          <!-- Kako -->
+          <div class="card bg-secondary text-white" id="kako">
+            <div class="card-body">
+              <h4 class="card-title">Kako</h4>
+              <p class="card-text">Jugador de Volgarr, DM en Discord (Kako#6979), shitposting y D&D en Twitter.</p>
+              <a class="stretched-link" href="https://twitter.com/Kako_DM" target="_blank" rel="noreferrer">
+                <img src="https://abs.twimg.com/favicons/twitter.ico" alt="Twitter">
+              </a>
+            </div>
+          </div>
 
         </div>
       </section>
