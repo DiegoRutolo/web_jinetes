@@ -1,0 +1,66 @@
+:root {
+  /* --colLinea: Teal;
+  --colFondo: #804000;
+  --colFondoAno: #000080; */
+
+  --colLinea: OrangeRed;
+  --colFondo: Gainsboro;
+  --colFondoAno: PeachPuff;
+  --colFondoPartida: Azure;
+
+  --dimCaja: 35em;
+  --dimBorRad: 18px;
+  --dimMarca: 18px;
+}
+
+.timeline {
+  margin: 1em;
+  background-color: var(--colFondo);
+  border-radius: var(--dimBorRad);
+  max-width: var(--dimCaja);
+}
+
+.timeline .ano {
+  text-align: center;
+  border: 5px solid var(--colLinea);
+  border-radius: var(--dimBorRad);
+  background-color: var(--colFondoAno);
+  width: 5em;
+  margin: 0;
+  padding: 10px;
+
+}
+
+.timeline .tli {
+  border-left: 5px dashed var(--colLinea);
+  padding: 1em;
+  padding-left: 2em;
+  margin-left: 4.3em;
+  /* border-bottom: 2px dotted var(--colLinea) */
+}
+
+.timeline .tli:last-child {
+  border-bottom: none;
+}
+
+.timeline .tli .titulo {
+  font-family: "Black Chancery";
+  list-style-type: circle;
+}
+
+/* .timeline .tli .titulo:before {
+  content: "";
+  background: var(colLinea);
+  width: var(--dimMarca);
+  height: var(--dimMarca);
+  float: left;
+
+  border-right: 50px solid var(--colLinea)
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+} */
+
+.partida {
+  border: 2px dotted grey;
+  background-color: var(--colFondoPartida);
+}

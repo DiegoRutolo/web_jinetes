@@ -15,11 +15,17 @@
             </a>
           </li>
           <li class="nav-item dropdown">
-            <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">Sistema y contenido <span class="caret"></span></a>
+            <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">Sistema<span class="caret"></span></a>
             <div class="dropdown-menu">
               <a class="dropdown-item" href="/sistema/LosJinetesDeKal_manual.pdf" target="_blank">Manual (pdf)</a>
               <a class="dropdown-item" href="/sistema/hechizos.php">Hechizos y Habilidades</a>
               <a class="dropdown-item" href="/sistema/items.php">Objetos</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">Historia<span class="caret"></span></a>
+            <div class="dropdown-menu">
+              <a class=" dropdown-item" href="/lore/timeline">Linea temporal</a>
             </div>
           </li>
           <li class="nav-item dropdown">
