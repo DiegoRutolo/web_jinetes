@@ -114,7 +114,7 @@
                 <h2 class="mt-2 text-center">Habilidades seleccionadas</h2>
                 <ul id="lista_habilidades_seleccionadas" class="list-group list-group-flush">
                 </ul>
-                <form id="formulario_generar" method="post" action="hojaHabilidades.php" target="_blank">
+                <form id="formulario_generar" method="get" action="hojaHabilidades.php" target="_blank">
                   <input type="hidden" name="habilidades" value="NO_SET" />
                   <button id="boton_generar" type="submit" class="col-12 btn btn-primary my-4">Generar!</button>
                 </form>
@@ -167,7 +167,7 @@
     $("#formulario_generar").on('submit',function(){
       let json=[];
       habilidades_seleccionadas.forEach(function(item,index){
-        json.push(habilidades[item]);
+        json.push(habilidades[item].id);
       });
       $("#formulario_generar input[name='habilidades']").val(JSON.stringify(json));
     });
