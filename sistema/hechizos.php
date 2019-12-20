@@ -21,6 +21,10 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+
     <link rel="stylesheet" type="text/css" href="../res/style.css">
 
     <?php
@@ -77,29 +81,33 @@
          $sql = "SELECT * FROM Habilidad WHERE Habilidad.tipo = 'Habilidad' ORDER BY Habilidad.tier";
          $res = $con->query($sql);
          ?>
-         <table class="table table-striped table-bordered">
-           <tr>
-             <th>Habilidad</th>
-             <th>Tier</th>
-             <th>Clase</th>
-             <th>Efecto</th>
-           </tr>
-           <?php
-           if ($res->num_rows > 0) {
-             while ($row = $res->fetch_assoc()) {
-               $caster = is_null($row["subtipo"]) ? "Todas" : $row["subtipo"];
+         <table id="miTabla" class="table table-striped table-bordered">
+           <thead>
+             <tr>
+               <th>Habilidad</th>
+               <th>Tier</th>
+               <th>Clase</th>
+               <th>Efecto</th>
+             </tr>
+           </thead>
+           <tbody>
+             <?php
+             if ($res->num_rows > 0) {
+               while ($row = $res->fetch_assoc()) {
+                 $caster = is_null($row["subtipo"]) ? "Todas" : $row["subtipo"];
 
-               echo "<tr>";
+                 echo "<tr>";
 
-               echo "<td>" . htmlspecialchars(utf8_encode($row["nom"])) . "</td>";
-               echo "<td>" . utf8_encode($row["tier"]) . "</td>";
-               echo "<td>" . utf8_encode($caster) . "</td>";
-               echo "<td>" . htmlspecialchars(utf8_encode($row["descr"])) . "</td>";
+                 echo "<td>" . htmlspecialchars(utf8_encode($row["nom"])) . "</td>";
+                 echo "<td>" . utf8_encode($row["tier"]) . "</td>";
+                 echo "<td>" . utf8_encode($caster) . "</td>";
+                 echo "<td>" . htmlspecialchars(utf8_encode($row["descr"])) . "</td>";
 
-               echo "</tr>\n";
+                 echo "</tr>\n";
+               }
              }
-           }
-           ?>
+             ?>
+           </tbody>
          </table>
        </div>
 
@@ -142,30 +150,34 @@
              $res = $con->query($sql);
              ?>
              <table class="table table-striped table-bordered">
-               <tr>
-                 <th>Hechizo</th>
-                 <th>Disciplina</th>
-                 <th>Tier</th>
-                 <th>Gratuito</th>
-                 <th>Automático</th>
-                 <th>Efecto</th>
-               </tr>
-               <?php
-               if ($res->num_rows > 0) {
-                 while ($row = $res->fetch_assoc()) {
-                   echo "<tr>";
+               <thead>
+                 <tr>
+                   <th>Hechizo</th>
+                   <th>Disciplina</th>
+                   <th>Tier</th>
+                   <th>Gratuito</th>
+                   <th>Automático</th>
+                   <th>Efecto</th>
+                 </tr>
+               </thead>
+               <tbody>
+                 <?php
+                 if ($res->num_rows > 0) {
+                   while ($row = $res->fetch_assoc()) {
+                     echo "<tr>";
 
-                   echo "<td>" . htmlspecialchars(utf8_encode($row["nom"])) . "</td>";
-                   echo "<td>" . utf8_encode($row["subtipo"]) . "</td>";
-                   echo "<td>" . utf8_encode($row["tier"]) . "</td>";
-                   echo "<td>" . ($row["gratis"] ? GetIcono('t') : GetIcono('c')) . "</td>";
-                   echo "<td>" . ($row["auto"] ? GetIcono('t') : GetIcono('c')) . "</td>";
-                   echo "<td>" . htmlspecialchars(utf8_encode($row["descr"])) . "</td>";
+                     echo "<td>" . htmlspecialchars(utf8_encode($row["nom"])) . "</td>";
+                     echo "<td>" . utf8_encode($row["subtipo"]) . "</td>";
+                     echo "<td>" . utf8_encode($row["tier"]) . "</td>";
+                     echo "<td>" . ($row["gratis"] ? GetIcono('t') : GetIcono('c')) . "</td>";
+                     echo "<td>" . ($row["auto"] ? GetIcono('t') : GetIcono('c')) . "</td>";
+                     echo "<td>" . htmlspecialchars(utf8_encode($row["descr"])) . "</td>";
 
-                   echo "</tr>\n";
+                     echo "</tr>\n";
+                   }
                  }
-               }
-               ?>
+                 ?>
+               </tbody>
              </table>
            </div>
 
@@ -178,30 +190,34 @@
              $res = $con->query($sql);
              ?>
              <table class="table table-striped table-bordered">
-               <tr>
-                 <th>Hechizo</th>
-                 <th>Disciplina</th>
-                 <th>Tier</th>
-                 <th>Gratuito</th>
-                 <th>Automático</th>
-                 <th>Efecto</th>
-               </tr>
-               <?php
-               if ($res->num_rows > 0) {
-                 while ($row = $res->fetch_assoc()) {
-                   echo "<tr>";
+               <thead>
+                 <tr>
+                   <th>Hechizo</th>
+                   <th>Disciplina</th>
+                   <th>Tier</th>
+                   <th>Gratuito</th>
+                   <th>Automático</th>
+                   <th>Efecto</th>
+                 </tr>
+               </thead>
+               <tbody>
+                 <?php
+                 if ($res->num_rows > 0) {
+                   while ($row = $res->fetch_assoc()) {
+                     echo "<tr>";
 
-                   echo "<td>" . htmlspecialchars(utf8_encode($row["nom"])) . "</td>";
-                   echo "<td>" . utf8_encode($row["subtipo"]) . "</td>";
-                   echo "<td>" . utf8_encode($row["tier"]) . "</td>";
-                   echo "<td>" . ($row["gratis"] ? GetIcono('t') : GetIcono('c')) . "</td>";
-                   echo "<td>" . ($row["auto"] ? GetIcono('t') : GetIcono('c')) . "</td>";
-                   echo "<td>" . htmlspecialchars(utf8_encode($row["descr"])) . "</td>";
+                     echo "<td>" . htmlspecialchars(utf8_encode($row["nom"])) . "</td>";
+                     echo "<td>" . utf8_encode($row["subtipo"]) . "</td>";
+                     echo "<td>" . utf8_encode($row["tier"]) . "</td>";
+                     echo "<td>" . ($row["gratis"] ? GetIcono('t') : GetIcono('c')) . "</td>";
+                     echo "<td>" . ($row["auto"] ? GetIcono('t') : GetIcono('c')) . "</td>";
+                     echo "<td>" . htmlspecialchars(utf8_encode($row["descr"])) . "</td>";
 
-                   echo "</tr>\n";
+                     echo "</tr>\n";
+                   }
                  }
-               }
-               ?>
+                 ?>
+               </tbody>
              </table>
            </div>
 
@@ -214,28 +230,32 @@
              $res = $con->query($sql);
              ?>
              <table class="table table-striped table-bordered">
-               <tr>
-                 <th>Hechizo</th>
-                 <th>Tier</th>
-                 <th>Gratuito</th>
-                 <th>Automático</th>
-                 <th>Efecto</th>
-               </tr>
-               <?php
-               if ($res->num_rows > 0) {
-                 while ($row = $res->fetch_assoc()) {
-                   echo "<tr>";
+               <thead>
+                 <tr>
+                   <th>Hechizo</th>
+                   <th>Tier</th>
+                   <th>Gratuito</th>
+                   <th>Automático</th>
+                   <th>Efecto</th>
+                 </tr>
+               </thead>
+               <tbody>
+                 <?php
+                 if ($res->num_rows > 0) {
+                   while ($row = $res->fetch_assoc()) {
+                     echo "<tr>";
 
-                   echo "<td>" . htmlspecialchars(utf8_encode($row["nom"])) . "</td>";
-                   echo "<td>" . utf8_encode($row["tier"]) . "</td>";
-                   echo "<td>" . ($row["gratis"] ? GetIcono('t') : GetIcono('c')) . "</td>";
-                   echo "<td>" . ($row["auto"] ? GetIcono('t') : GetIcono('c')) . "</td>";
-                   echo "<td>" . htmlspecialchars(utf8_encode($row["descr"])) . "</td>";
+                     echo "<td>" . htmlspecialchars(utf8_encode($row["nom"])) . "</td>";
+                     echo "<td>" . utf8_encode($row["tier"]) . "</td>";
+                     echo "<td>" . ($row["gratis"] ? GetIcono('t') : GetIcono('c')) . "</td>";
+                     echo "<td>" . ($row["auto"] ? GetIcono('t') : GetIcono('c')) . "</td>";
+                     echo "<td>" . htmlspecialchars(utf8_encode($row["descr"])) . "</td>";
 
-                   echo "</tr>\n";
+                     echo "</tr>\n";
+                   }
                  }
-               }
-               ?>
+                 ?>
+               </tbody>
              </table>
            </div>
 
@@ -248,30 +268,34 @@
              $res = $con->query($sql);
              ?>
              <table class="table table-striped table-bordered">
-               <tr>
-                 <th>Hechizo</th>
-                 <th>Disciplina</th>
-                 <th>Tier</th>
-                 <th>Gratuito</th>
-                 <th>Automático</th>
-                 <th>Efecto</th>
-               </tr>
-               <?php
-               if ($res->num_rows > 0) {
-                 while ($row = $res->fetch_assoc()) {
-                   echo "<tr>";
+               <thead>
+                 <tr>
+                   <th>Hechizo</th>
+                   <th>Disciplina</th>
+                   <th>Tier</th>
+                   <th>Gratuito</th>
+                   <th>Automático</th>
+                   <th>Efecto</th>
+                 </tr>
+               </thead>
+               <tbody>
+                 <?php
+                 if ($res->num_rows > 0) {
+                   while ($row = $res->fetch_assoc()) {
+                     echo "<tr>";
 
-                   echo "<td>" . htmlspecialchars(utf8_encode($row["nom"])) . "</td>";
-                   echo "<td>" . utf8_encode($row["subtipo"]) . "</td>";
-                   echo "<td>" . utf8_encode($row["tier"]) . "</td>";
-                   echo "<td>" . ($row["gratis"] ? GetIcono('t') : GetIcono('c')) . "</td>";
-                   echo "<td>" . ($row["auto"] ? GetIcono('t') : GetIcono('c')) . "</td>";
-                   echo "<td>" . htmlspecialchars(utf8_encode($row["descr"])) . "</td>";
+                     echo "<td>" . htmlspecialchars(utf8_encode($row["nom"])) . "</td>";
+                     echo "<td>" . utf8_encode($row["subtipo"]) . "</td>";
+                     echo "<td>" . utf8_encode($row["tier"]) . "</td>";
+                     echo "<td>" . ($row["gratis"] ? GetIcono('t') : GetIcono('c')) . "</td>";
+                     echo "<td>" . ($row["auto"] ? GetIcono('t') : GetIcono('c')) . "</td>";
+                     echo "<td>" . htmlspecialchars(utf8_encode($row["descr"])) . "</td>";
 
-                   echo "</tr>\n";
+                     echo "</tr>\n";
+                   }
                  }
-               }
-               ?>
+                 ?>
+               </tbody>
              </table>
            </div>
 
@@ -284,28 +308,32 @@
              $res = $con->query($sql);
              ?>
              <table class="table table-striped table-bordered">
-               <tr>
-                 <th>Hechizo</th>
-                 <th>Tier</th>
-                 <th>Gratuito</th>
-                 <th>Automático</th>
-                 <th>Efecto</th>
-               </tr>
-               <?php
-               if ($res->num_rows > 0) {
-                 while ($row = $res->fetch_assoc()) {
-                   echo "<tr>";
+               <thead>
+                 <tr>
+                   <th>Hechizo</th>
+                   <th>Tier</th>
+                   <th>Gratuito</th>
+                   <th>Automático</th>
+                   <th>Efecto</th>
+                 </tr>
+               </thead>
+               <tbody>
+                 <?php
+                 if ($res->num_rows > 0) {
+                   while ($row = $res->fetch_assoc()) {
+                     echo "<tr>";
 
-                   echo "<td>" . htmlspecialchars(utf8_encode($row["nom"])) . "</td>";
-                   echo "<td>" . utf8_encode($row["tier"]) . "</td>";
-                   echo "<td>" . ($row["gratis"] ? GetIcono('t') : GetIcono('c')) . "</td>";
-                   echo "<td>" . ($row["auto"] ? GetIcono('t') : GetIcono('c')) . "</td>";
-                   echo "<td>" . htmlspecialchars(utf8_encode($row["descr"])) . "</td>";
+                     echo "<td>" . htmlspecialchars(utf8_encode($row["nom"])) . "</td>";
+                     echo "<td>" . utf8_encode($row["tier"]) . "</td>";
+                     echo "<td>" . ($row["gratis"] ? GetIcono('t') : GetIcono('c')) . "</td>";
+                     echo "<td>" . ($row["auto"] ? GetIcono('t') : GetIcono('c')) . "</td>";
+                     echo "<td>" . htmlspecialchars(utf8_encode($row["descr"])) . "</td>";
 
-                   echo "</tr>\n";
+                     echo "</tr>\n";
+                   }
                  }
-               }
-               ?>
+                 ?>
+               </tbody>
              </table>
            </div>
 
@@ -318,28 +346,32 @@
              $res = $con->query($sql);
              ?>
              <table class="table table-striped table-bordered">
-               <tr>
-                 <th>Hechizo</th>
-                 <th>Tier</th>
-                 <th>Gratuito</th>
-                 <th>Automático</th>
-                 <th>Efecto</th>
-               </tr>
-               <?php
-               if ($res->num_rows > 0) {
-                 while ($row = $res->fetch_assoc()) {
-                   echo "<tr>";
+               <thead>
+                 <tr>
+                   <th>Hechizo</th>
+                   <th>Tier</th>
+                   <th>Gratuito</th>
+                   <th>Automático</th>
+                   <th>Efecto</th>
+                 </tr>
+               </thead>
+               <tbody>
+                 <?php
+                 if ($res->num_rows > 0) {
+                   while ($row = $res->fetch_assoc()) {
+                     echo "<tr>";
 
-                   echo "<td>" . htmlspecialchars(utf8_encode($row["nom"])) . "</td>";
-                   echo "<td>" . utf8_encode($row["tier"]) . "</td>";
-                   echo "<td>" . ($row["gratis"] ? GetIcono('t') : GetIcono('c')) . "</td>";
-                   echo "<td>" . ($row["auto"] ? GetIcono('t') : GetIcono('c')) . "</td>";
-                   echo "<td>" . htmlspecialchars(utf8_encode($row["descr"])) . "</td>";
+                     echo "<td>" . htmlspecialchars(utf8_encode($row["nom"])) . "</td>";
+                     echo "<td>" . utf8_encode($row["tier"]) . "</td>";
+                     echo "<td>" . ($row["gratis"] ? GetIcono('t') : GetIcono('c')) . "</td>";
+                     echo "<td>" . ($row["auto"] ? GetIcono('t') : GetIcono('c')) . "</td>";
+                     echo "<td>" . htmlspecialchars(utf8_encode($row["descr"])) . "</td>";
 
-                   echo "</tr>\n";
+                     echo "</tr>\n";
+                   }
                  }
-               }
-               ?>
+                 ?>
+               </tbody>
              </table>
            </div>
 
@@ -352,28 +384,32 @@
              $res = $con->query($sql);
              ?>
              <table class="table table-striped table-bordered">
-               <tr>
-                 <th>Hechizo</th>
-                 <th>Tier</th>
-                 <th>Gratuito</th>
-                 <th>Automático</th>
-                 <th>Efecto</th>
-               </tr>
-               <?php
-               if ($res->num_rows > 0) {
-                 while ($row = $res->fetch_assoc()) {
-                   echo "<tr>";
+               <thead>
+                 <tr>
+                   <th>Hechizo</th>
+                   <th>Tier</th>
+                   <th>Gratuito</th>
+                   <th>Automático</th>
+                   <th>Efecto</th>
+                 </tr>
+               </thead>
+               <tbody>
+                 <?php
+                 if ($res->num_rows > 0) {
+                   while ($row = $res->fetch_assoc()) {
+                     echo "<tr>";
 
-                   echo "<td>" . htmlspecialchars(utf8_encode($row["nom"])) . "</td>";
-                   echo "<td>" . utf8_encode($row["tier"]) . "</td>";
-                   echo "<td>" . ($row["gratis"] ? GetIcono('t') : GetIcono('c')) . "</td>";
-                   echo "<td>" . ($row["auto"] ? GetIcono('t') : GetIcono('c')) . "</td>";
-                   echo "<td>" . htmlspecialchars(utf8_encode($row["descr"])) . "</td>";
+                     echo "<td>" . htmlspecialchars(utf8_encode($row["nom"])) . "</td>";
+                     echo "<td>" . utf8_encode($row["tier"]) . "</td>";
+                     echo "<td>" . ($row["gratis"] ? GetIcono('t') : GetIcono('c')) . "</td>";
+                     echo "<td>" . ($row["auto"] ? GetIcono('t') : GetIcono('c')) . "</td>";
+                     echo "<td>" . htmlspecialchars(utf8_encode($row["descr"])) . "</td>";
 
-                   echo "</tr>\n";
+                     echo "</tr>\n";
+                   }
                  }
-               }
-               ?>
+                 ?>
+               </tbody>
              </table>
            </div>
 
@@ -386,28 +422,32 @@
              $res = $con->query($sql);
              ?>
              <table class="table table-striped table-bordered">
-               <tr>
-                 <th>Hechizo</th>
-                 <th>Tier</th>
-                 <th>Gratuito</th>
-                 <th>Automático</th>
-                 <th>Efecto</th>
-               </tr>
-               <?php
-               if ($res->num_rows > 0) {
-                 while ($row = $res->fetch_assoc()) {
-                   echo "<tr>";
+               <thead>
+                 <tr>
+                   <th>Hechizo</th>
+                   <th>Tier</th>
+                   <th>Gratuito</th>
+                   <th>Automático</th>
+                   <th>Efecto</th>
+                 </tr>
+               </thead>
+               <tbody>
+                 <?php
+                 if ($res->num_rows > 0) {
+                   while ($row = $res->fetch_assoc()) {
+                     echo "<tr>";
 
-                   echo "<td>" . htmlspecialchars(utf8_encode($row["nom"])) . "</td>";
-                   echo "<td>" . utf8_encode($row["tier"]) . "</td>";
-                   echo "<td>" . ($row["gratis"] ? GetIcono('t') : GetIcono('c')) . "</td>";
-                   echo "<td>" . ($row["auto"] ? GetIcono('t') : GetIcono('c')) . "</td>";
-                   echo "<td>" . htmlspecialchars(utf8_encode($row["descr"])) . "</td>";
+                     echo "<td>" . htmlspecialchars(utf8_encode($row["nom"])) . "</td>";
+                     echo "<td>" . utf8_encode($row["tier"]) . "</td>";
+                     echo "<td>" . ($row["gratis"] ? GetIcono('t') : GetIcono('c')) . "</td>";
+                     echo "<td>" . ($row["auto"] ? GetIcono('t') : GetIcono('c')) . "</td>";
+                     echo "<td>" . htmlspecialchars(utf8_encode($row["descr"])) . "</td>";
 
-                   echo "</tr>\n";
+                     echo "</tr>\n";
+                   }
                  }
-               }
-               ?>
+                 ?>
+               </tbody>
              </table>
            </div>
          </div>
@@ -424,30 +464,34 @@
          $res = $con->query($sql);
          ?>
          <table class="table table-striped table-bordered">
-           <tr>
-             <th>Canción</th>
-             <th>Tier</th>
-             <th>Continua</th>
-             <th>Gratuito</th>
-             <th>Automático</th>
-             <th>Efecto</th>
-           </tr>
-           <?php
-           if ($res->num_rows > 0) {
-             while ($row = $res->fetch_assoc()) {
-               echo "<tr>";
+           <thead>
+             <tr>
+               <th>Canción</th>
+               <th>Tier</th>
+               <th>Continua</th>
+               <th>Gratuito</th>
+               <th>Automático</th>
+               <th>Efecto</th>
+             </tr>
+           </thead>
+           <tbody>
+             <?php
+             if ($res->num_rows > 0) {
+               while ($row = $res->fetch_assoc()) {
+                 echo "<tr>";
 
-               echo "<td>" . htmlspecialchars(utf8_encode($row["nom"])) . "</td>";
-               echo "<td>" . utf8_encode($row["tier"]) . "</td>";
-               echo "<td>" . ($row["contin"] ? GetIcono('t') : GetIcono('c')) . "</td>";
-               echo "<td>" . ($row["gratis"] ? GetIcono('t') : GetIcono('c')) . "</td>";
-               echo "<td>" . ($row["auto"] ? GetIcono('t') : GetIcono('c')) . "</td>";
-               echo "<td>" . htmlspecialchars(utf8_encode($row["descr"])) . "</td>";
+                 echo "<td>" . htmlspecialchars(utf8_encode($row["nom"])) . "</td>";
+                 echo "<td>" . utf8_encode($row["tier"]) . "</td>";
+                 echo "<td>" . ($row["contin"] ? GetIcono('t') : GetIcono('c')) . "</td>";
+                 echo "<td>" . ($row["gratis"] ? GetIcono('t') : GetIcono('c')) . "</td>";
+                 echo "<td>" . ($row["auto"] ? GetIcono('t') : GetIcono('c')) . "</td>";
+                 echo "<td>" . htmlspecialchars(utf8_encode($row["descr"])) . "</td>";
 
-               echo "</tr>\n";
+                 echo "</tr>\n";
+               }
              }
-           }
-           ?>
+             ?>
+           </tbody>
          </table>
        </div>
 
@@ -461,28 +505,32 @@
          $res = $con->query($sql);
          ?>
          <table class="table table-striped table-bordered">
-           <tr>
-             <th>Milagro</th>
-             <th>Usuario</th>
-             <th>Tier</th>
-             <th>Efecto</th>
-           </tr>
-           <?php
-           if ($res->num_rows > 0) {
-             while ($row = $res->fetch_assoc()) {
-               $caster = is_null($row["subtipo"]) ? "Ambos" : $row["subtipo"];
+           <thead>
+             <tr>
+               <th>Milagro</th>
+               <th>Usuario</th>
+               <th>Tier</th>
+               <th>Efecto</th>
+             </tr>
+           </thead>
+           <tbody>
+             <?php
+             if ($res->num_rows > 0) {
+               while ($row = $res->fetch_assoc()) {
+                 $caster = is_null($row["subtipo"]) ? "Ambos" : $row["subtipo"];
 
-               echo "<tr>";
+                 echo "<tr>";
 
-               echo "<td>" . htmlspecialchars(utf8_encode($row["nom"])) . "</td>";
-               echo "<td>" . utf8_encode($caster) . "</td>";
-               echo "<td>" . utf8_encode($row["tier"]) . "</td>";
-               echo "<td>" . htmlspecialchars(utf8_encode($row["descr"])) . "</td>";
+                 echo "<td>" . htmlspecialchars(utf8_encode($row["nom"])) . "</td>";
+                 echo "<td>" . utf8_encode($caster) . "</td>";
+                 echo "<td>" . utf8_encode($row["tier"]) . "</td>";
+                 echo "<td>" . htmlspecialchars(utf8_encode($row["descr"])) . "</td>";
 
-               echo "</tr>\n";
+                 echo "</tr>\n";
+               }
              }
-           }
-           ?>
+             ?>
+           </tbody>
          </table>
        </div>
 
@@ -496,30 +544,34 @@
          $res = $con->query($sql);
          ?>
          <table class="table table-striped table-bordered">
-           <tr>
-             <th>Nombre</th>
-             <th>Tier</th>
-             <th>Usuario</th>
-             <th>Activable</th>
-             <th>Efecto</th>
-           </tr>
-           <?php
-           if ($res->num_rows > 0) {
-             while ($row = $res->fetch_assoc()) {
-               $caster = is_null($row["subtipo"]) ? "Todos" : $row["subtipo"];
+           <thead>
+             <tr>
+               <th>Nombre</th>
+               <th>Tier</th>
+               <th>Usuario</th>
+               <th>Activable</th>
+               <th>Efecto</th>
+             </tr>
+           </thead>
+           <tbody>
+             <?php
+             if ($res->num_rows > 0) {
+               while ($row = $res->fetch_assoc()) {
+                 $caster = is_null($row["subtipo"]) ? "Todos" : $row["subtipo"];
 
-               echo "<tr>";
+                 echo "<tr>";
 
-               echo "<td>" . htmlspecialchars(utf8_encode($row["nom"])) . "</td>";
-               echo "<td>" . utf8_encode($row["tier"]) . "</td>";
-               echo "<td>" . utf8_encode($caster) . "</td>";
-               echo "<td>" . ($row["contin"] ? GetIcono('t') : GetIcono('c')) . "</td>";
-               echo "<td>" . htmlspecialchars(utf8_encode($row["descr"])) . "</td>";
+                 echo "<td>" . htmlspecialchars(utf8_encode($row["nom"])) . "</td>";
+                 echo "<td>" . utf8_encode($row["tier"]) . "</td>";
+                 echo "<td>" . utf8_encode($caster) . "</td>";
+                 echo "<td>" . ($row["contin"] ? GetIcono('t') : GetIcono('c')) . "</td>";
+                 echo "<td>" . htmlspecialchars(utf8_encode($row["descr"])) . "</td>";
 
-               echo "</tr>\n";
+                 echo "</tr>\n";
+               }
              }
-           }
-           ?>
+             ?>
+           </tbody>
          </table>
        </div>
 
@@ -533,24 +585,28 @@
          $res = $con->query($sql);
          ?>
          <table class="table table-striped table-bordered">
-           <tr>
-             <th>Nombre</th>
-             <th>Tier</th>
-             <th>Efecto</th>
-           </tr>
-           <?php
-           if ($res->num_rows > 0) {
-             while ($row = $res->fetch_assoc()) {
-               echo "<tr>";
+           <thead>
+             <tr>
+               <th>Nombre</th>
+               <th>Tier</th>
+               <th>Efecto</th>
+             </tr>
+           </thead>
+           <tbody>
+             <?php
+             if ($res->num_rows > 0) {
+               while ($row = $res->fetch_assoc()) {
+                 echo "<tr>";
 
-               echo "<td>" . htmlspecialchars(utf8_encode($row["nom"])) . "</td>";
-               echo "<td>" . utf8_encode($row["tier"]) . "</td>";
-               echo "<td>" . htmlspecialchars(utf8_encode($row["descr"])) . "</td>";
+                 echo "<td>" . htmlspecialchars(utf8_encode($row["nom"])) . "</td>";
+                 echo "<td>" . utf8_encode($row["tier"]) . "</td>";
+                 echo "<td>" . htmlspecialchars(utf8_encode($row["descr"])) . "</td>";
 
-               echo "</tr>\n";
+                 echo "</tr>\n";
+               }
              }
-           }
-           ?>
+             ?>
+           </tbody>
          </table>
        </div>
      </div>
@@ -561,6 +617,16 @@
         <?= GetIcono("fu", 45) ?>
       </a>
     </div>
+
+    <script>
+      $(document).ready( function () {
+        $('.table').DataTable({
+          paging: false,
+          searching: false,
+          order:[[ 1, "asc" ],[0, "asc"]]
+        });
+      });
+    </script>
 
     <?=Footer();?>
   </body>
