@@ -32,6 +32,7 @@
             <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">Herramientas <span class="caret"></span></a>
             <div class="dropdown-menu">
               <a class="dropdown-item" href="/herramientas/genHojasHabs">Generador de hojas</a>
+              <a class="dropdown-item" href="/herramientas/genPjPersonalidad">Generador de personalidades</a>
             </div>
           </li>
           <li class="nav-item dropdown">
