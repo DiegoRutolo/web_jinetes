@@ -17,7 +17,7 @@
           <li class="nav-item dropdown">
             <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">Sistema<span class="caret"></span></a>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="/sistema/LosJinetesDeKal_manual.pdf" target="_blank">Manual (pdf)</a>
+              <a class="dropdown-item" href="/sistema/manual">Manual</a>
               <a class="dropdown-item" href="/sistema/hechizos.php">Hechizos y Habilidades</a>
               <a class="dropdown-item" href="/sistema/items.php">Objetos</a>
             </div>
