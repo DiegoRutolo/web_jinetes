@@ -37,38 +37,31 @@
     </style>
 
     <script>
-      var adjs = [];
+      var adjs = [[],[],[]];
+
+      <?php
+        foreach (file('es_positivas.txt',FILE_IGNORE_NEW_LINES) as $line) {
+          //Leer linea
+          echo "adjs[0].push('".$line."');";
+        }
+
+        foreach (file('es_neutrales.txt',FILE_IGNORE_NEW_LINES) as $line) {
+          //Leer linea
+          echo "adjs[1].push('".$line."');";
+        }
+
+        foreach (file('es_negativas.txt',FILE_IGNORE_NEW_LINES) as $line) {
+          //Leer linea
+          echo "adjs[2].push('".$line."');";
+        }
+      ?>
 
       function inicializa() {
-        cargarListas();
+
 
         for (const i of document.getElementsByTagName("input")) {
           i.value = 5;
           escritor(i);
-        }
-      }
-
-      function cargarListas() {
-        var listaFiles = ["es_positivas.txt", "es_neutrales.txt", "es_negativas.txt"];
-
-        for (const file of listaFiles) {
-          // Leer archivo
-          var xhr = new XMLHttpRequest();
-          xhr.open("GET", file, false);
-          xhr.onreadystatechange = function() {
-            if (xhr.readyState === XMLHttpRequest.DONE) {
-              if (xhr.status === 200) {
-                // console.log("Respuesta: " + xhr.responseText);
-                adjs.push(xhr.responseText);
-
-              } else {
-                console.log("Status:" + xhr.statusText);
-              }
-            } else {
-              console.log("Ready state: " + xhr.reareadyState);
-            }
-          }
-          xhr.send();
         }
       }
 
@@ -82,7 +75,6 @@
           listaAdj = adjs[2];
         }
 
-        listaAdj = listaAdj.split(/\n/);
         var randIndex = Math.floor(Math.random() * listaAdj.length);
 
         return listaAdj[randIndex];
