@@ -64,6 +64,13 @@
           <td>87 KiB</td>
           <td>1773bac13c3ed106538a33d7860e337d</td>
         </tr>
+        <tr onclick="window.open('magiaBasica.pdf', '_blank')">
+          <td>Magia básica</td>
+          <td>Hoja básica para todos los magos (elementales, druidad y bardos).</td>
+          <td>PDF</td>
+          <td>66 KiB</td>
+          <td>8c121c6bb8575d361262e508088c251d</td>
+        </tr>
         <tr onclick="window.open('ResumenMaster.pdf', '_blank')">
           <td>Resumen Master</td>
           <td>Una hoja con un resumen condensado para DMs</td>
@@ -93,6 +100,8 @@
           <td>ef1e700e0d259e6aca5d79d67495a45c</td>
         </tr>
       </table>
+
+      <!-- TODO: Añadir lista de hojas de clases con links al editor -->
 
       <!-- fin Contenido -->
     </div>
