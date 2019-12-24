@@ -25,6 +25,7 @@
           <li class="nav-item dropdown">
             <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">Historia<span class="caret"></span></a>
             <div class="dropdown-menu">
+              <a class=" dropdown-item" href="/lore/mapa">Mapa</a>
               <a class=" dropdown-item" href="/lore/timeline">Cronología</a>
             </div>
           </li>
