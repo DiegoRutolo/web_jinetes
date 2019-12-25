@@ -72,7 +72,7 @@
         minZoom: 2,
         maxZoom: 5,
         center: L.latLng(8, 8),
-        maxxBounds: L.latLngBounds(L.latLng(0, 0), L.latLng(5, 5))
+        maxBounds: L.latLngBounds(L.latLng(0, 0), L.latLng(5, 5))
       }).addTo(mapaDeKal);
     </script>
   </body>
