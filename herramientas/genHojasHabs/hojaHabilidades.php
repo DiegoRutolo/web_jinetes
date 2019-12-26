@@ -29,6 +29,13 @@
     <link rel="stylesheet" type="text/css" href="./hojaHabilidades.css">
   </head>
   <body>
+    <?php
+      if(isset($_GET['titulo'])){
+        echo "<center><h1>".$_GET['titulo']."</h1></center>";
+      }else{
+        echo "SHIT";
+      }
+    ?>
     <div class='contenedor'>
       <?php
         if(isset($_GET['habilidades'])){
