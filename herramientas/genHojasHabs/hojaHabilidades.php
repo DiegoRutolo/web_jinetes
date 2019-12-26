@@ -67,17 +67,17 @@
               }
             }
           }
-/*
+
           //Ordenamos el array
           function fn_ordena($a, $b){
-              if ($a['tier'] < $b['tier']) {
+              if ($a->tier < $b->tier) {
                   return -1;
-              } else if ($a['tier'] > $b['tier']) {
+              } else if ($a->tier > $b->tier) {
                   return 1;
               } else {
-                if($a['nombre'] < $b['nombre']){
+                if($a->nombre < $b->nombre){
                   return -1;
-                }else if($a['nombre'] > $b['nombre']){
+                }else if($a->nombre > $b->nombre){
                   return 1;
                 }else{
                   return 0;
@@ -85,7 +85,8 @@
               }
           }
           usort($habilidades, 'fn_ordena');
-*/
+
+
           $lvl_chngd=false;
           $nivel=0;
           foreach($habilidades as $hab){
