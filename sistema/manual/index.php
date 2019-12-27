@@ -22,6 +22,27 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" type="text/css" href="/res/style.css">
+
+    <style>
+      .hoja {
+        border: 3px solid brown;
+        border-radius: 15px;
+        background-color: OldLace;
+        text-align: center;
+        padding: 5px;
+        margin: 5px;
+      }
+
+      .hoja:hover {
+        background-color: BurlyWood;
+      }
+
+      .hoja a {
+        display: block;
+        text-decoration: none;
+        color: inherit;
+      }
+    </style>
   </head>
   <body>
     <span id="arriba"></span>
@@ -102,6 +123,24 @@
       </table>
 
       <!-- TODO: Añadir lista de hojas de clases con links al editor -->
+      <p>Aquí hay una lista de hojas de habilidades de las distintas clases.</p>
+
+      <div class="container">
+        <div class="row">
+          <div class="col hoja">
+            <a href="/herramientas/genHojasHabs/hojaHabilidades.php?titulo=Orden+del+f%C3%A9nix&habilidades=%5B%2237%22%2C%22273%22%2C%22272%22%2C%22150%22%2C%22162%22%2C%2256%22%2C%22143%22%2C%22203%22%2C%22249%22%2C%221%22%2C%22104%22%2C%22247%22%2C%22112%22%2C%22141%22%2C%22107%22%5D" target="_blank">Mago de Fuego</a>
+          </div>
+          <div class="col hoja">
+            <a href="/herramientas/genHojasHabs/hojaHabilidades.php?titulo=Orden+del+Kraken&habilidades=%5B%22110%22%2C%22125%22%2C%224%22%2C%22160%22%2C%22202%22%2C%2299%22%2C%22136%22%2C%22144%22%2C%225%22%2C%2247%22%2C%2264%22%2C%22245%22%2C%2268%22%2C%22126%22%2C%2220%22%5D" target="_blank">Mago de Agua</a>
+          </div>
+          <div class="col hoja">
+            <a href="/herramientas/genHojasHabs/hojaHabilidades.php?titulo=Orden+del+Golem&habilidades=%5B%222%22%2C%223%22%2C%22177%22%2C%2214%22%2C%2222%22%2C%22159%22%2C%22163%22%2C%226%22%2C%22182%22%2C%22194%22%2C%228%22%2C%22180%22%2C%22181%22%2C%22244%22%2C%22154%22%5D" target="_blank">Mago de Tierra</a>
+          </div>
+          <div class="col hoja">
+            <a href="/herramientas/genHojasHabs/hojaHabilidades.php?titulo=Orden+del+Grifo&habilidades=%5B%22274%22%2C%2242%22%2C%2282%22%2C%22271%22%2C%22191%22%2C%2229%22%2C%22145%22%2C%22164%22%2C%22264%22%2C%2245%22%2C%2269%22%2C%22254%22%2C%2246%22%2C%22206%22%2C%22248%22%5D" target="_blank">Mago de Viento</a>
+          </div>
+        </div>
+      </div>
 
       <!-- fin Contenido -->
     </div>
