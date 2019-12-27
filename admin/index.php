@@ -109,7 +109,6 @@ include "../res/herramientas.php";
 
                   <!-- TODO: Mostrar solo los adecuados según la tabla RelTipoPrim -->
                   <label>Subtipo (opcional):</label>
-                  <input type="text" class="form-control" name="subtipo" list="dlSubtipos" value="<?=utf8_encode($hab_pend["subtipo"])?>">
                   <select class="form-control selectpicker" name="subtipo" value="<?=utf8_encode($hab_pend["subtipo"])?>">
                     <option></option>
                     <?php
