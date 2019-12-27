@@ -48,6 +48,12 @@
        <li class="nav-item">
          <a class="nav-link active" data-toggle="tab" href="#pociones">Pociones</a>
        </li>
+       <li class="nav-item">
+         <a class="nav-link active" data-toggle="tab" href="#ingredientes">Ingredientes</a>
+       </li>
+       <li class="nav-item">
+         <a class="nav-link active" data-toggle="tab" href="#armas">Armas</a>
+       </li>
      </ul>
 
      <!-- Contenido -->
@@ -126,10 +132,9 @@
              </dl>
            <?php
            }
-           echo "</div>";
           }
           ?>
-
+        </div>
 
          <br><hr><br>
 
@@ -157,6 +162,9 @@
               </div>
             <?php }
           } ?>
+       </div>
+       <div id="pociones" class="container tab-pane active">
+         
        </div>
      </div>
     </div>
