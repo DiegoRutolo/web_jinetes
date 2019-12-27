@@ -110,18 +110,19 @@ include "../res/herramientas.php";
                   <!-- TODO: Mostrar solo los adecuados según la tabla RelTipoPrim -->
                   <label>Subtipo (opcional):</label>
                   <input type="text" class="form-control" name="subtipo" list="dlSubtipos" value="<?=utf8_encode($hab_pend["subtipo"])?>">
-                  <select class="form-control selectpicker" name="subtipo" value="<?=utf8_encode($hab_pend["subtipo"])?>">
-                    <option></option>
+                  <?php
+                  $sql = "SELECT nom FROM TipoHab WHERE TipoHab.primario = FALSE";
+                  $res = $con->query($sql);
+                  ?>
+                  <datalist id="dlSubtipos">
                     <?php
-                    $sql = "SELECT nom FROM TipoHab WHERE TipoHab.primario = FALSE";
-                    $res = $con->query($sql);
                     if ($res->num_rows > 0) {
                       while ($row = $res->fetch_assoc()) {
-                        echo "<option>" . utf8_encode($row["nom"]) . "</option>\n";
+                        echo "<option value=\"" . utf8_encode($row["nom"]) . "\">\n";
                       }
                     }
                     ?>
-                  </select>
+                  </datalist>
                 </div>
                 <div class="form-check">
                   <div class="col-sm">
@@ -216,7 +217,7 @@ include "../res/herramientas.php";
 
               <!-- TODO: Mostrar solo los adecuados según la tabla RelTipoPrim -->
               <label for="iSubtipo">Subtipo (opcional):</label>
-              <select class="form-control selectpicker" name="subtipo" value="<?=utf8_encode($hab_pend["subtipo"])?>">
+              <select class="form-control selectpicker border" name="subtipo">
                 <option></option>
                 <?php
                 $sql = "SELECT nom FROM TipoHab WHERE TipoHab.primario = FALSE";
