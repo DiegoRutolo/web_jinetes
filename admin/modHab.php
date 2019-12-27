@@ -170,6 +170,10 @@
                 <label for="iDescr">Efecto</label>
                 <textarea class="form-control" name="descr" rows="6"><?=utf8_encode($descr)?></textarea>
               </div>
+              <div class="col-sm">
+                <label for="iComent">Comentarios</label>
+                <textarea class="form-control" name="coment" rows="6"><?=utf8_encode($hab_pend["coment"])?></textarea>
+              </div>
             </div>
             <br>
             <div class="row">
