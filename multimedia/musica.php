@@ -56,7 +56,7 @@
 
     <?php ImprimeNavBar(); ?>
 
-    <h1 class="jinetes">Música</h1>
+    <h1 class="jinetes" id="arriba">Música</h1>
     <p class="intro">La música está compuesta por <a href="/gente#mistermyr">MisterMyr</a>.</p>
 
     <div class="container-fluid">
@@ -109,5 +109,11 @@
     </div>
 
     <?=Footer();?>
+
+    <div class="boton-subir">
+      <a href="#arriba">
+        <?= GetIcono("fu", 45) ?>
+      </a>
+    </div>
   </body>
 </html>
