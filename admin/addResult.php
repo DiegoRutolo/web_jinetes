@@ -59,7 +59,7 @@
       $auto = $_POST["auto"] === NULL ? 0 : $_POST["auto"];
       $gratis = $_POST["gratis"] === NULL ? 0 : $_POST["gratis"];
 
-      if (!($ps = $con->prepare("INSERT INTO Habilidad (revisar, nom, tipo, subtipo, tier, descr, contin, auto, gratis) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"))) {
+      if (!($ps = $con->prepare("INSERT INTO Habilidad (revisar, nom, tipo, subtipo, tier, descr, coment, contin, auto, gratis) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"))) {
         die("<div class=\"alert alert-danger\"><strong>Impreparable:</strong> " . $con->error . "</div>\n");
       }
 
