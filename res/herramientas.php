@@ -3,16 +3,23 @@
   function ImprimeNavBar()
   {
     echo '
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top navbar-toggleabel-md">
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+
+      <!-- Botón de inicio -->
+      <a class="navbar-brand" href="/">
+        <img src="/res/img/torre_blanca.png" class="icono" width="30em" height="30em" alt="Inicio">
+      </a>
+
+      <!-- Boton para expandir links -->
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir barra de navegación">
         <span class="navbar-toggler-icon"></span>
       </button>
+
+      <!-- Links -->
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="nav navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="/">
-              <img src="/res/img/torre_blanca.png" class="icono" width="30em" height="30em" alt="Inicio">
-            </a>
+
           </li>
           <li class="nav-item dropdown">
             <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">Sistema<span class="caret"></span></a>
