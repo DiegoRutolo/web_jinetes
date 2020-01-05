@@ -47,10 +47,25 @@
       <h2>Presentación</h2>
       <p><span class="jinetes">Los Jinetes de Kal</span> es un sistema de rol diseñado para ser sencillo de jugar y de personalizar. Perfecto para empezar en el mundo del rol o ajustar el sistema a gusto de jugadores más avanzados.</p>
       <p>En esta web (aún en construcción) se pueden encontrar diversos recursos y herramientas para poder jugar, además del manual completo.</p>
+
       <h4>Ficha web</h4>
       <p>Esta herramienta debería permitir jugar a través de internet. Se puede acceder desde esta misma web o descargarla en formato zip desde <a href="https://github.com/DiegoRutolo/Jinetes_FichaWeb" target="_blank">GitHub</a>. Puede funcionar offline, así que también se puede utilizar en partidas presenciales en una tablet.</p>
     </div>
 
     <?=Footer();?>
+
+    <div class="twitter-link" data-toggle="tooltip" title="Síguenos en Twitter">
+      <a href="https://twitter.com/JinetesDeKal?ref_src=twsrc%5Etfw" target="_blank" rel="noreferrer" class="twitter-follow-button" data-show-count="false">
+        <img src="/res/img/twitter.ico.png" alt="Twitter">
+        <span></span>
+      </a>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+
+    <script>
+      $(document).ready(function() {
+        $('[data-toggle="tooltip"]').tooltip();
+      });
+    </script>
   </body>
 </html>

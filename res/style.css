@@ -79,12 +79,28 @@ footer {
     }
 }
 
-/*
-@media (min-width: 75em) {
-    .card-columns {
-        -webkit-column-count: 5;
-        -moz-column-count: 5;
-        column-count: 5;
-    }
+.twitter-link {
+  border: 2px solid DarkBlue;
+  border-radius: 15px;
+  background-color: Azure;
+  box-sizing: border-box;
+  position: fixed;
+  left: 2vh;
+  bottom: 2vh;
+  text-align: center;
+  padding: 2em;
 }
-*/
+
+.twitter-link:hover {
+  background-color: LightCyan;
+}
+
+.twitter-link span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  z-index: 1;
+}
