@@ -107,7 +107,11 @@
         <div class=\"col text-center\">
           Repo de la web: <a href=\"https://github.com/DiegoRutolo/web_jinetes\" target=\"_blank\" rel=\"noreferrer\">DiegoRutolo</a>
         </div>
-
+        <div class=\"col text-center\">
+          <a href=\"https://twitter.com/JinetesDeKal?ref_src=twsrc%5Etfw\" target=\"_blank\" rel=\"noreferrer\">
+            @JinetesDeKal
+          </a>
+        </div>
         <div class=\"col text-center\">
           Esta web no utiliza cookies.
         </div>
