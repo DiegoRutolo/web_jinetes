@@ -54,15 +54,16 @@
       $tipo = utf8_decode($_POST["tipo"]);
       $subtipo = utf8_decode($_POST["subtipo"]);
       $descr = utf8_decode($_POST["descr"]);
+      $coment = utf8_decode($_POST["coment"]);
       $contin = $_POST["contin"] === NULL ? 0 : $_POST["contin"];
       $auto = $_POST["auto"] === NULL ? 0 : $_POST["auto"];
       $gratis = $_POST["gratis"] === NULL ? 0 : $_POST["gratis"];
 
-      if (!($ps = $con->prepare("INSERT INTO Habilidad (revisar, nom, tipo, subtipo, tier, descr, contin, auto, gratis) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)"))) {
+      if (!($ps = $con->prepare("INSERT INTO Habilidad (revisar, nom, tipo, subtipo, tier, descr, coment, contin, auto, gratis) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"))) {
         die("<div class=\"alert alert-danger\"><strong>Impreparable:</strong> " . $con->error . "</div>\n");
       }
 
-      if (!($ps->bind_param("isssisiii", $revisar, $nom, $tipo, $subtipo, $_POST["tier"], $descr, $contin, $auto, $gratis))) {
+      if (!($ps->bind_param("isssissiii", $revisar, $nom, $tipo, $subtipo, $_POST["tier"], $descr, $coment, $contin, $auto, $gratis))) {
         die("<div class=\"alert alert-danger\"><strong>Imbindable:</strong> " . $ps->error . "</div>\n");
         // die("Inbindable:" . $ps->error);
       }

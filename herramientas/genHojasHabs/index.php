@@ -77,11 +77,28 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col">
-          <section>
-            <h2>Selecciona una Habilidad:</h2>
-            <select class="selectpicker" id="habilidades" data-live-search="true">
-            </select>
-          </section>
+          <div>
+            <h1>Generador de hojas de habilidad</h1>
+          </div>
+
+          <div class="row my-2">
+            <div class="col-auto">
+              <h2>Selecciona un Título:</h2>
+            </div>
+            <div class="col">
+              <input form="formulario_generar" id="nombre_hoja" class="form-control" type="text" name="titulo" value="">
+            </div>
+          </div>
+
+          <div class="row my-2">
+            <div class="col-auto">
+              <h2>Selecciona una Habilidad:</h2>
+            </div>
+            <div class="col">
+              <select class="selectpicker" id="habilidades" data-live-search="true">
+              </select>
+            </div>
+          </div>
           <section>
             <h2>Información de la habilidad:</h2>
             <table class="table table-striped table-bordered">
@@ -116,7 +133,7 @@
                 </ul>
                 <form id="formulario_generar" method="get" action="hojaHabilidades.php" target="_blank">
                   <input type="hidden" name="habilidades" value="NO_SET" />
-                  <button id="boton_generar" type="submit" class="col-12 btn btn-primary my-4">Generar!</button>
+                  <button form="formulario_generar" id="boton_generar" type="submit" class="col-12 btn btn-primary my-4">Generar!</button>
                 </form>
           </section>
         </div>

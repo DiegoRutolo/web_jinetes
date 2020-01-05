@@ -42,7 +42,7 @@
 
     <div class="container">
       <section>
-        <h1>Personas</h1>
+        <h1 id="arriba">Personas</h1>
         <p>Todas las personas que participaron en la creación de éste sistema y mundo, en mayor o menor medida.</p>
 
         <p>
@@ -338,5 +338,11 @@
     </div>
 
     <?=Footer();?>
+
+    <div class="boton-subir">
+      <a href="#arriba">
+        <?= GetIcono("fu", 45) ?>
+      </a>
+    </div>
   </body>
 </html>

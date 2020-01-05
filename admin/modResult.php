@@ -54,16 +54,17 @@
       $tipo = utf8_decode($_POST["tipo"]);
       $subtipo = !empty($_POST["subtipo"]) ? utf8_decode($_POST["subtipo"]) : NULL;
       $descr = utf8_decode($_POST["descr"]);
+      $coment = utf8_decode($_POST["coment"]);
       $contin = $_POST["contin"] === NULL ? 0 : $_POST["contin"];
       $auto = $_POST["auto"] === NULL ? 0 : $_POST["auto"];
       $gratis = $_POST["gratis"] === NULL ? 0 : $_POST["gratis"];
 
 
-      if (!($ps = $con->prepare("UPDATE Habilidad SET revisar=?, nom=?, tipo=?, subtipo=?, tier=?, descr=?, contin=?, auto=?, gratis=? WHERE id = ?"))) {
+      if (!($ps = $con->prepare("UPDATE Habilidad SET revisar=?, nom=?, tipo=?, subtipo=?, tier=?, descr=?, coment=?, contin=?, auto=?, gratis=? WHERE id = ?"))) {
         die("<div class=\"alert alert-danger\"><strong>Impreparable:</strong> " . $con->error . "</div>\n");
       }
 
-      if (!($ps->bind_param("isssisiiii", $revisar, $nom, $tipo, $subtipo, $_POST["tier"], $descr, $contin, $auto, $gratis, $_POST["idHab"]))) {
+      if (!($ps->bind_param("isssissiiii", $revisar, $nom, $tipo, $subtipo, $_POST["tier"], $descr, $coment, $contin, $auto, $gratis, $_POST["idHab"]))) {
         die("<div class=\"alert alert-danger\"><strong>Imbindable:</strong> " . $ps->error . "</div>\n");
         // die("Inbindable:" . $ps->error);
       }
