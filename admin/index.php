@@ -26,6 +26,20 @@ include "../res/herramientas.php";
 
   <link rel="stylesheet" type="text/css" href="../res/style.css">
 
+  <style>
+    .titulo-desplegable {
+      margin: 0.75em 0;
+      border: 2px solid Silver;
+      border-radius: 15px;
+      padding: 0.5em;
+      font-size: 175%;
+    }
+
+    .titulo-desplegable:hover {
+      background-color: Gainsboro;
+    }
+  </style>
+
   <?php
   $server = "localhost";
   $creds = file("../creds.txt");
@@ -42,8 +56,8 @@ include "../res/herramientas.php";
   <div class="container">
     <h1>Administración</h2>
 
-      <br>
-      <h3>Editar habilidades y hechizos</h3>
+      <!-- <br>
+      <h3>Editar habilidades y hechizos</h3> -->
 
       <?php
       $con = new mysqli($server, $usuario, $passwd, "jinetes");
@@ -62,6 +76,9 @@ include "../res/herramientas.php";
         </li>
         <li class="nav-item">
           <a class="nav-link" data-toggle="tab" href="#editar">Modificar</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#armas">Armas</a>
         </li>
       </ul>
 
@@ -303,6 +320,80 @@ include "../res/herramientas.php";
           <input type="text" class="form-control mr-2" id="iEfectoTxt" name="efectoText">
           <button type="submit" class="btn btn-primary">Buscar</button>
         </form>
+      </div>
+
+      <!-- Armas -->
+      <div id="armas" class="container tab-pane">
+        <h3 class="mx-auto">Editar armas</h3>
+
+        <?php
+        $tipos_arma = array(
+          "Pequeña",
+          "Corta",
+          "Una mano",
+          "Mano y media",
+          "Dos manos",
+          "Grande",
+          "De asta"
+        );
+        $num = 0;
+
+        foreach ($tipos_arma as $tipo) { ?>
+          <div class="titulo-desplegable d-flex justify-content-between" data-toggle="collapse" data-target="#tipo-<?=$num?>">
+            <div>
+              <?= $tipo ?>
+            </div>
+            <div>
+              <?=GetIcono("fd");?>
+            </div>
+          </div>
+
+          <div id="tipo-<?=$num?>" class="collapse">
+
+            <?php
+            $sql = "SELECT * FROM Arma WHERE tipo = $tipo";
+            $armas = $con->query($sql);
+
+            if ($armas->num_rows > 0) {
+              while ($arma = $armas->fetch_assoc()) { ?>
+
+                <div class="tarjeta-arma">
+                  <h4><?=utf8_encode($arma["nom"])?></h4>
+                  <p><?=utf8_encode($arma["descr"])?></p>
+                  <table class="table">
+                    <tr>
+                      <td></td>
+                      <td>Impacto</td>
+                      <td>Crítico</td>
+                      <td>Daño</td>
+                    </tr>
+                    <tr>
+                      <td>Cortante</td>
+                      <td><?=if_null($arma["im_corte"]) ? "-" : utf8_encode($arma["im_corte"])?></td>
+                      <td><?=if_null($arma["crit_corte"]) ? "-" : utf8_encode($arma["crit_corte"])?></td>
+                      <td><?=if_null($arma["dan_corte"]) ? "-" : utf8_encode($arma["dan_corte"])?></td>
+                    </tr>
+                    <tr>
+                      <td>Penetrante</td>
+                      <td><?=if_null($arma["im_pen"]) ? "-" : utf8_encode($arma["im_pen"])?></td>
+                      <td><?=if_null($arma["crit_pen"]) ? "-" : utf8_encode($arma["crit_pen"])?></td>
+                      <td><?=if_null($arma["dan_pen"]) ? "-" : utf8_encode($arma["dan_pen"])?></td>
+                    </tr>
+                    <tr>
+                      <td>Aplastante</td>
+                      <td><?=if_null($arma["im_apla"]) ? "-" : utf8_encode($arma["im_apla"])?></td>
+                      <td><?=if_null($arma["crit_apla"]) ? "-" : utf8_encode($arma["crit_apla"])?></td>
+                      <td><?=if_null($arma["dan_apla"]) ? "-" : utf8_encode($arma["dan_apla"])?></td>
+                    </tr>
+                  </table>
+                </div>
+
+              <?php }
+            } ?>
+          </div>
+        <?php
+          $num++;
+        } ?>
       </div>
     </div>
   </div>

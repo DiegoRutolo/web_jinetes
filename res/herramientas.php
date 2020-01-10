@@ -81,9 +81,11 @@
       $url = "/res/img/red_cross.png";
     } elseif ($val === "e") {
       $url = "/res/img/edit.jpg";
-    } elseif ($val == "fu") {
+    } elseif ($val === "fu") {
       $url = "/res/img/flechaArriba.png";
-    } elseif ($val == "www") {
+    } elseif ($val === "fd") {
+      $url = "/res/img/flechaAbajo.png";
+    } elseif ($val === "www") {
       $url = "/res/img/www.png";
     }
 
