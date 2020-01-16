@@ -54,17 +54,18 @@ include "../res/herramientas.php";
   <span id="arriba"></span>
 
   <div class="container">
+
+    <?php
+    $con = new mysqli($server, $usuario, $passwd, "jinetes");
+    if ($con->connect_error) {
+      die("Connection failed" . $con->connect_error);
+    }
+    ?>
+
     <h1>Administración</h2>
 
       <!-- <br>
       <h3>Editar habilidades y hechizos</h3> -->
-
-      <?php
-      $con = new mysqli($server, $usuario, $passwd, "jinetes");
-      if ($con->connect_error) {
-        die("Connection failed" . $con->connect_error);
-      }
-      ?>
 
       <br>
       <ul class="nav nav-tabs">
@@ -324,27 +325,72 @@ include "../res/herramientas.php";
 
       <!-- Armas -->
       <div id="armas" class="container tab-pane">
+        <?php
+        $sql = "SELECT id, nom FROM TipoArma;";
+        $tipos_arma = $con->query($sql);
+        echo $tipos_arma;
+        ?>
+
+        <h3>Arma nueva</h3>
+
+        <form method="post" action="addArma.php">
+          <div class="tarjeta-arma form-group">
+            <input type="text" class="form-control m-2" name="nom" placeholder="Nombre">
+            <input type="text" class="form-control m-2" name="descr" placeholder="Descripción">
+            <select class="form-control m-2" name="tipo">
+              <?php
+              if ($tipos_arma->num_rows > 0) {
+                while ($tipo = $tipos_arma->fetch_assoc()) {
+                  echo "<option value=\"" . $tipo["id"] . "\">" . $tipo["nom"] . "</option>";
+                }
+              }
+              ?>
+            </select>
+            <table class="table table-bordered m-2">
+              <tr>
+                <td></td>
+                <td>Impacto</td>
+                <td>Crítico</td>
+                <td>Daño</td>
+              </tr>
+              <tr>
+                <th>Cortante</th>
+                <td><input type="text" class="form-control m-2" name="im-corte"></td>
+                <td><input type="text" class="form-control m-2" name="crit-corte"></td>
+                <td><input type="text" class="form-control m-2" name="dan-corte"></td>
+              </tr>
+              <tr>
+                <th>Penetrante</th>
+                <td><input type="text" class="form-control m-2" name="im-pen"></td>
+                <td><input type="text" class="form-control m-2" name="crit-pen"></td>
+                <td><input type="text" class="form-control m-2" name="dan-pen"></td>
+              </tr>
+              <tr>
+                <th>Aplastante</th>
+                <td><input type="text" class="form-control m-2" name="im-apla"></td>
+                <td><input type="text" class="form-control m-2" name="crit-apla"></td>
+                <td><input type="text" class="form-control m-2" name="dan-apla"></td>
+              </tr>
+            </table>
+
+            <input type="password" class="form-control m-2" name="editPasswd" placeholder="Contraseña" required>
+            <button type="submit" class="btn btn-primary m-2">Guardar</button>
+          </div>
+        </form>
+
+        <hr>
         <h3 class="mx-auto">Editar armas</h3>
 
         <?php
-        $tipos_arma = array(
-          "Pequeña",
-          "Corta",
-          "Una mano",
-          "Mano y media",
-          "Dos manos",
-          "Grande",
-          "De asta"
-        );
         $num = 0;
 
         foreach ($tipos_arma as $tipo) { ?>
           <div class="titulo-desplegable d-flex justify-content-between" data-toggle="collapse" data-target="#tipo-<?=$num?>">
             <div>
-              <?= $tipo ?>
+              <?=$tipo?>
             </div>
             <div>
-              <?=GetIcono("fd");?>
+              <?=GetIcono("fd")?>
             </div>
           </div>
 
@@ -357,36 +403,48 @@ include "../res/herramientas.php";
             if ($armas->num_rows > 0) {
               while ($arma = $armas->fetch_assoc()) { ?>
 
-                <div class="tarjeta-arma">
-                  <h4><?=utf8_encode($arma["nom"])?></h4>
-                  <p><?=utf8_encode($arma["descr"])?></p>
-                  <table class="table">
-                    <tr>
-                      <td></td>
-                      <td>Impacto</td>
-                      <td>Crítico</td>
-                      <td>Daño</td>
-                    </tr>
-                    <tr>
-                      <td>Cortante</td>
-                      <td><?=if_null($arma["im_corte"]) ? "-" : utf8_encode($arma["im_corte"])?></td>
-                      <td><?=if_null($arma["crit_corte"]) ? "-" : utf8_encode($arma["crit_corte"])?></td>
-                      <td><?=if_null($arma["dan_corte"]) ? "-" : utf8_encode($arma["dan_corte"])?></td>
-                    </tr>
-                    <tr>
-                      <td>Penetrante</td>
-                      <td><?=if_null($arma["im_pen"]) ? "-" : utf8_encode($arma["im_pen"])?></td>
-                      <td><?=if_null($arma["crit_pen"]) ? "-" : utf8_encode($arma["crit_pen"])?></td>
-                      <td><?=if_null($arma["dan_pen"]) ? "-" : utf8_encode($arma["dan_pen"])?></td>
-                    </tr>
-                    <tr>
-                      <td>Aplastante</td>
-                      <td><?=if_null($arma["im_apla"]) ? "-" : utf8_encode($arma["im_apla"])?></td>
-                      <td><?=if_null($arma["crit_apla"]) ? "-" : utf8_encode($arma["crit_apla"])?></td>
-                      <td><?=if_null($arma["dan_apla"]) ? "-" : utf8_encode($arma["dan_apla"])?></td>
-                    </tr>
-                  </table>
-                </div>
+                <form method="post">
+                  <div class="tarjeta-arma form-group">
+                    <input type="text" class="form-control m-2" name="nom" placeholder="Nombre" value="<?=utf8_encode($arma["nom"])?>">
+                    <input type="text" class="form-control m-2" name="descr" placeholder="Descripción" value="<?=utf8_encode($arma["descr"])?>">
+                    <select class="form-control m-2" name="tipo">
+                      <?php foreach ($tipos_arma as $tipo) {
+                        echo "<option value=\"$tipo\"" . ($tipo === utf8_encode($arma["tipo"]) ? " selected" : "") . ">";
+                        echo $tipo_local;
+                        echo "</option>";
+                      } ?>
+                    </select>
+                    <table class="table table-bordered m-2">
+                      <tr>
+                        <td></td>
+                        <td>Impacto</td>
+                        <td>Crítico</td>
+                        <td>Daño</td>
+                      </tr>
+                      <tr>
+                        <th>Cortante</th>
+                        <td><input type="text" class="form-control m-2" name="im-corte" value="<?=utf8_encode($arma["im-corte"])?>"></td>
+                        <td><input type="text" class="form-control m-2" name="crit-corte" value="<?=utf8_encode($arma["crit-corte"])?>"></td>
+                        <td><input type="text" class="form-control m-2" name="dan-corte" value="<?=utf8_encode($arma["dan-corte"])?>"></td>
+                      </tr>
+                      <tr>
+                        <th>Penetrante</th>
+                        <td><input type="text" class="form-control m-2" name="im-pen" value="<?=utf8_encode($arma["im-pen"])?>"></td>
+                        <td><input type="text" class="form-control m-2" name="crit-pen" value="<?=utf8_encode($arma["crit-pen"])?>"></td>
+                        <td><input type="text" class="form-control m-2" name="dan-pen" value="<?=utf8_encode($arma["dan-pen"])?>"></td>
+                      </tr>
+                      <tr>
+                        <th>Aplastante</th>
+                        <td><input type="text" class="form-control m-2" name="im-apla" value="<?=utf8_encode($arma["im-apla"])?>"></td>
+                        <td><input type="text" class="form-control m-2" name="crit-apla" value="<?=utf8_encode($arma["crit-apla"])?>"></td>
+                        <td><input type="text" class="form-control m-2" name="dan-apla" value="<?=utf8_encode($arma["dan-apla"])?>"></td>
+                      </tr>
+                    </table>
+
+                    <input type="password" class="form-control m-2" name="editPasswd" placeholder="Contraseña" required>
+                    <button type="submit" class="btn btn-primary m-2">Guardar</button>
+                  </div>x
+                </form>
 
               <?php }
             } ?>
