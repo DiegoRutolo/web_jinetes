@@ -14,33 +14,43 @@ const modeloPj=
         },
       "Enano":
         {
-          "Fue":,
-          "Des":,
-          "Con":,
-          "Car":,
-          "Int":,
-          "Sab":,
-          "Tamaño":
+          "Fue":35,
+          "Des":25,
+          "Con":35,
+          "Car":30,
+          "Int":30,
+          "Sab":25,
+          "Tamaño":-5
         },
       "Elfo":
         {
-          "Fue":,
-          "Des":,
-          "Con":,
-          "Car":,
-          "Int":,
-          "Sab":,
-          "Tamaño":
+          "Fue":25,
+          "Des":35,
+          "Con":25,
+          "Car":30,
+          "Int":30,
+          "Sab":35,
+          "Tamaño":0
         },
       "Duende":
         {
-          "Fue":,
-          "Des":,
-          "Con":,
-          "Car":,
-          "Int":,
-          "Sab":,
-          "Tamaño":
+          "Fue":25,
+          "Des":40,
+          "Con":20,
+          "Car":35,
+          "Int":30,
+          "Sab":30,
+          "Tamaño":-5
+        },
+      "Barbaro":
+        {
+          "Fue":35,
+          "Des":30,
+          "Con":35,
+          "Car":30,
+          "Int":25,
+          "Sab":25,
+          "Tamaño":5
         }
     },
     "Clases":
