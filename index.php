@@ -54,14 +54,6 @@
 
     <?=Footer();?>
 
-    <div class="twitter-link" data-toggle="tooltip" title="Síguenos en Twitter">
-      <a href="https://twitter.com/JinetesDeKal?ref_src=twsrc%5Etfw" target="_blank" rel="noreferrer" class="twitter-follow-button" data-show-count="false">
-        <img src="/res/img/twitter.ico.png" alt="Twitter">
-        <span></span>
-      </a>
-      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-    </div>
-
     <script>
       $(document).ready(function() {
         $('[data-toggle="tooltip"]').tooltip();
