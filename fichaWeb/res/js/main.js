@@ -188,7 +188,7 @@ function descargar() {
 	var a = document.getElementById('linkDescarga');
 	a.href = 'data:' + data;
 	a.download = fileName;
-	a.click();
+	//a.click();
 }
 
 function botonSubir() {
