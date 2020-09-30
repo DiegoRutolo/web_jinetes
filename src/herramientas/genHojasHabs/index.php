@@ -28,10 +28,10 @@
     <link rel="stylesheet" type="text/css" href="https://jinetes.rutolo.eu/res/style.css">
 
     <?php
-      $server = "localhost";
-      $creds = file("../../creds.txt");
-      $usuario = trim($creds[2]);
-      $passwd = trim($creds[3]);
+      $server = "web_jinetes_mysql";
+      $usuario = GetSecret("db_user");
+      $passwd = GetSecret("db_passwd");
+      $editPasswd = GetSecret("edit_passwd");
     ?>
   </head>
   <body>

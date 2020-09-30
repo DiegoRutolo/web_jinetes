@@ -24,11 +24,10 @@
     <link rel="stylesheet" type="text/css" href="/res/style.css">
 
     <?php
-    $server = "localhost";
-    $creds = file("../creds.txt");
-    $usuario = trim($creds[0]);
-    $passwd = trim($creds[1]);
-    $editPasswd = trim($creds[4]);
+    $server = "web_jinetes_mysql";
+    $usuario = GetSecret("db_user");
+    $passwd = GetSecret("db_passwd");
+    $editPasswd = GetSecret("edit_passwd");
     ?>
 
   </head>

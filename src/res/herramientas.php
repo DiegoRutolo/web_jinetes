@@ -121,4 +121,16 @@
     return $str;
   }
 
+  function GetSecret($val='') {
+    $filename = ""
+    if ($val === "db_user") {
+      $filename = "../secrets/secret_mysql_user_name"
+    } elseif ($val === "db_passwd") {
+      $filename = "../secrets/secret_mysql_user_password"
+    } elseif ($val === "edit_passwd") {
+      $filename = "../secrets/secret_web_edit_password"
+    }
+
+    return trim(file($filename)[0])
+  }
 ?>
